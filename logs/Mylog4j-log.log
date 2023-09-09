@@ -1,0 +1,60 @@
+[INFO ] 2023-09-09 14:34:55.352 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-09 14:34:55.358 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-09 15:07:15.247 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-09 15:07:15.250 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-09 15:07:24.099 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-09 15:07:24.194 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:07:24.195 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:07:24.195 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:07:24.217 [main] LoggerLoad - Admin is on dashboard page after Login
+[INFO ] 2023-09-09 15:07:25.009 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:07:25.010 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:07:25.011 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:07:25.015 [main] LoggerLoad - Admin is on dashboard page after Login
+[INFO ] 2023-09-09 15:07:25.392 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:07:25.392 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:07:25.392 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:07:25.394 [main] LoggerLoad - Admin is on dashboard page after Login
+[INFO ] 2023-09-09 15:07:25.756 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:07:25.756 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:07:25.756 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:07:25.760 [main] LoggerLoad - Admin is on dashboard page after Login
+[INFO ] 2023-09-09 15:07:26.478 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:07:26.479 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:07:26.479 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:07:26.481 [main] LoggerLoad - Admin is on dashboard page after Login
+[INFO ] 2023-09-09 15:07:26.839 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:07:26.839 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:07:26.840 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:07:26.841 [main] LoggerLoad - Admin is on dashboard page after Login
+[INFO ] 2023-09-09 15:07:26.930 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:07:26.930 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:07:26.930 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:07:26.932 [main] LoggerLoad - Admin is on dashboard page after Login
+[INFO ] 2023-09-09 15:07:26.953 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 15:07:26.956 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-09 15:08:19.903 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-09 15:08:19.907 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-09 15:08:23.818 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-09 15:08:23.891 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:08:23.892 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:08:23.892 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:08:23.905 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:08:23.906 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:08:23.906 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:08:23.912 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:08:23.912 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:08:23.912 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:08:23.917 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:08:23.917 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:08:23.917 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:08:23.922 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:08:23.922 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:08:23.923 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:08:23.928 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:08:23.929 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:08:23.929 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:08:23.933 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 15:08:23.934 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 15:08:23.934 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 15:08:23.936 [main] LoggerLoad - Closing Driver
