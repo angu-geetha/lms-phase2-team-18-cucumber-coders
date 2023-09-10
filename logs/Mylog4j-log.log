@@ -770,3 +770,30 @@
 [INFO ] 2023-09-09 22:57:06.240 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
 [INFO ] 2023-09-09 22:57:06.257 [main] LoggerLoad - Steps Failed , Taking Screenshot
 [INFO ] 2023-09-09 22:57:06.260 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 01:23:47.583 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 01:23:47.587 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 01:23:52.592 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 01:23:52.678 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 01:23:52.678 [main] LoggerLoad - [@tag] : Verify Delete icon in the data table
+[INFO ] 2023-09-10 01:23:52.678 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 01:23:52.699 [main] LoggerLoad - Admin is on dashboard page after Login
+[INFO ] 2023-09-10 01:23:53.182 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 01:23:53.190 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 01:27:32.065 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 01:27:32.072 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 01:27:37.006 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 01:27:37.119 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 01:27:37.121 [main] LoggerLoad - [@tag] : Verify check box in the data table
+[INFO ] 2023-09-10 01:27:37.121 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 01:27:37.158 [main] LoggerLoad - Admin is on dashboard page after Login
+[INFO ] 2023-09-10 01:27:37.736 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 01:27:37.751 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 01:32:58.601 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 01:32:58.604 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 01:33:02.718 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 01:33:02.807 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 01:33:02.807 [main] LoggerLoad - [@tag] : Verify sort icon in the data table
+[INFO ] 2023-09-10 01:33:02.808 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 01:33:02.829 [main] LoggerLoad - Admin is on dashboard page after Login
+[INFO ] 2023-09-10 01:33:03.248 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 01:33:03.257 [main] LoggerLoad - Closing Driver
