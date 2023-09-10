@@ -34,7 +34,9 @@ public class BasePage {
 	
 	@FindBy(xpath = ".//*[@id=\"id of the table\"]/table/thead/tr/th") static List<WebElement> tableHeaders;
 	@FindBy(xpath = ".//*[@id=\"id of the table\"]/table/thead/tr") static List<WebElement> tablerows;
-
+    
+	@FindBy(xpath = "xpath for title heading in the current Page']")
+	static WebElement headingElmt;
 
 	public BasePage() {
 		PageFactory.initElements(driver, this);
@@ -225,6 +227,11 @@ public class BasePage {
 			throw(new Exception("exception on row checkbox"));
 		}
 		return dataList;
+	}
+
+	public String getPopUpPageHeadingString () {
+		return headingElmt.getText();
+		
 	}
 
 }
