@@ -243,5 +243,60 @@ public class BaseSD extends Commonclass {
 		}
 		
 	}
+	
+	@Then("Admin should see a popup  with  heading {string}")
+	public void admin_should_see_a_popup_with_heading(String string) {
+	    
+	}
+	
+	@Then("Admin should see input fields Text  {string}")
+	public void admin_should_see_input_fields_text(String string) {
+	    
+	    
+	}
+
+	@Then("{string} textbox should be  present in {string} details popup window")
+	public void textbox_should_be_present_in_details_popup_window(String string, String string2) {
+	    
+	    
+	}
+
+	@Then("Admin should see dropdown option for Batch Number")
+	public void admin_should_see_dropdown_option_for_batch_number() {
+	    
+	    
+	}
+
+	@Then("Admin should see dropdown option for Program name")
+	public void admin_should_see_dropdown_option_for_program_name() {
+	    
+	    
+	}
+
+	@Then("Admin should see  calendar icon for assignment due date")
+	public void admin_should_see_calendar_icon_for_assignment_due_date() {
+	    
+	    
+	}
+
+	@Then("Admin should see  save button in the {string} popup window")
+	public void admin_should_see_save_button_in_the_popup_window(String string) {
+	    
+	    
+	}
+
+	@Then("Admin should see  close button on the {string} popup window")
+	public void admin_should_see_close_button_on_the_popup_window(String string) {
+	    
+	    
+	}
+
+	@Then("Admin should see  cancel button in the {string} popup window")
+	public void admin_should_see_cancel_button_in_the_popup_window(String string) {
+	    
+	    
+	}
+
+
 
 }
