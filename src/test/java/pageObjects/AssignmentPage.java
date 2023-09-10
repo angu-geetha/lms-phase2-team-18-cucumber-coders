@@ -2,6 +2,7 @@ package pageObjects;
 
 import static org.testng.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -29,9 +30,7 @@ public class AssignmentPage extends BasePage{
 
 
 
-	@FindBy(xpath = ".//*[@id=\"id of the table\"]/table/thead/tr/th") static List<WebElement> tableHeaders;
-	@FindBy(xpath = ".//*[@id=\"id of the table\"]/table/thead/tr") static List<WebElement> tablerows;
-
+	
 
 	static WebElement checkboxElmt;
 	static WebElement asignmtName;
@@ -39,6 +38,7 @@ public class AssignmentPage extends BasePage{
 	static WebElement asignmtDueDate;
 	static WebElement asignmtGrade;
 	static WebElement asignmtEditDelete;
+    String assignmentPageUrl = ConfigReader.getProperty("assignmentPageUrl");;
 
 
 
@@ -47,7 +47,12 @@ public class AssignmentPage extends BasePage{
 		super();
 		PageFactory.initElements(driver, this);
 	}
+	
+	public void assignment_page() {
 
+		driver.get(assignmentPageUrl);
+
+	}
 	public String verifyManageAssignmentPage() {
 		return  manageAssignmentTitleElmt.getText();
 	}
@@ -116,61 +121,7 @@ public class AssignmentPage extends BasePage{
 
 	}
 
-	public void validateEditIconForRows() throws Exception {
-		try {
-			for (Iterator iterator = tablerows.iterator(); iterator.hasNext();) {
-				WebElement rowElement = (WebElement) iterator.next();
-				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
-				if(cells.size() > 0 && cells.get(5)!= null) {
-					cells.get(5).findElement(By.id("id of the edit button")).isDisplayed();
-				} else if(cells.size() > 0) {
-					throw(new Exception("exception on row edit"));
-				}
-
-			}
-		}catch (Exception e) {
-			throw(new Exception("exception on row edit"));
-		}
-
-
-	}
-
-	public void validateDeleteIconForRows() throws Exception {
-		try {
-			for (Iterator iterator = tablerows.iterator(); iterator.hasNext();) {
-				WebElement rowElement = (WebElement) iterator.next();
-				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
-				if(cells.size() > 0 && cells.get(5)!= null) {
-					cells.get(5).findElement(By.id("id of the Delete button")).isDisplayed();
-				} else if(cells.size() > 0) {
-					throw(new Exception("exception on row delete"));
-				}
-
-			}
-		}catch (Exception e) {
-			throw(new Exception("exception on row delete"));
-		}
-		
-	}
-
-	public void validateCheckBoxForRows() throws Exception {
-		try {
-			for (Iterator iterator = tablerows.iterator(); iterator.hasNext();) {
-				WebElement rowElement = (WebElement) iterator.next();
-				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
-				if(cells.size() > 0 && cells.get(0)!= null) {
-					cells.get(0).findElement(By.id("id of the Checkbox button")).isDisplayed();
-					
-				} else if(cells.size() > 0) {
-					throw(new Exception("exception on row checkbox"));
-				}
-
-			}
-		}catch (Exception e) {
-			throw(new Exception("exception on row checkbox"));
-		}
-		
-	}
+	
 
 	public void validateSortElmtForHeaders() {
 		if(!tableHeaders.isEmpty() && tableHeaders.size() >0) {
@@ -197,6 +148,10 @@ public class AssignmentPage extends BasePage{
 		}
 		
 	}
+
+	
+
+	
 	
 	
 
