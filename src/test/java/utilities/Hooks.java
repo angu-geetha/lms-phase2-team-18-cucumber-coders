@@ -3,6 +3,10 @@ package utilities;
 
 
 
+import java.io.ByteArrayInputStream;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import dataProviders.ConfigReader;
@@ -12,6 +16,7 @@ import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
+
 
 public class Hooks {
 	
@@ -42,11 +47,11 @@ public class Hooks {
 	@AfterStep
 	public void afterstep(Scenario scenario) {
 		if (scenario.isFailed()) {
-			LoggerLoad.logError("Steps Failed , Taking Screenshot");
-			/*final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-			scenario.attach(screenshot, "image/png", "My screenshot");
-			Allure.addAttachment("Myscreenshot",
-					new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));*/
+			LoggerLoad.logInfo("Steps Failed , Taking Screenshot");
+			//final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+			//scenario.attach(screenshot, "image/png", "My screenshot");
+			//Allure.addAttachment("Myscreenshot",
+					//new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
 		
 		}
 	}
