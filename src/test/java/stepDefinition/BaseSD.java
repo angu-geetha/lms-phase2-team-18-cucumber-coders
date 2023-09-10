@@ -296,6 +296,114 @@ public class BaseSD extends Commonclass {
 	    
 	    
 	}
+	
+	//common method to verify the Add New button
+	@Then("Admin should see {string} button on the {string} page")
+	public void admin_should_see_button_on_the_page(String addBtnName, String pageName) {
+		boolean addNewButtonDisplayed;
+		try {
+				switch(pageName) {
+				case "Manage Program":
+					addNewButtonDisplayed=programPage.verifyAddButtonDisplayed(addBtnName);
+					LoggerLoad.logInfo("verify Add new button is displayed : ");
+					if (addNewButtonDisplayed) {
+						assertFalse(false, "Add button is displayed in Program page");
+					} else {
+						assertFalse(true, "Add button is not displayed in Program page");
+					}
+				case "Manage Assignment":
+					addNewButtonDisplayed=assignmentPage.verifyAddButtonDisplayed(addBtnName);
+					LoggerLoad.logInfo("verify Add new button is displayed : ");
+					if (addNewButtonDisplayed) {
+						assertFalse(false, "Add button is displayed in Assignment page");
+					} else {
+						assertFalse(true, "Add button is not displayed in Assignment page");
+					}
+				}
+
+		} catch (Exception e) {
+			LoggerLoad.logError(e.getMessage());
+			assertFalse(false, "Failed - Admin should see "+addBtnName+" button on the "+pageName+" page");
+		}
+
+	}
+	
+	//Common method to verify entries along with Pagination
+	@Then("Admin should see text Showing x to y of z entries along with pagination icon on {string} page")
+	public void admin_should_see_text_showing_x_to_y_of_z_entries_along_with_pagination_icon_on_page(String pageName) {
+	  try {
+		  switch(pageName) {
+		  case "Program":
+			    LoggerLoad.logInfo("verify correct footer is displayed in Program page : ");
+			    if(programPage.verifyPaginationEntriesText("Programs")) {
+			    	assertFalse(false,"Correct entry details are displayed in Program Page");
+			    }else {
+			    	assertFalse(false,"Correct entry details are not displayed in Program Page");
+			    }
+		  case "Assignment":
+			    LoggerLoad.logInfo("verify correct entry details are displayed in Assignment page : ");
+			    if(assignmentPage.verifyPaginationEntriesText("Assignments")) {
+			    	assertFalse(false,"Correct entry details are displayed in Assignments Page");
+			    }else {
+			    	assertFalse(false,"Correct entry details are not displayed in Assignments Page");
+			    }
+		   			  
+		  }
+	  } catch(Exception e) {
+		  LoggerLoad.logError(e.getMessage());
+			assertFalse(false, "Correct entry details are not displayed in "+pageName+" page");
+	  }  
+	    
+	}
+	
+	
+	//Common method to verify the footer text
+	@Then("Admin should see correct footer text on {string} page")
+	public void admin_should_see_correct_footer_text_on_page(String pageName) {
+		try {
+			  switch(pageName) {
+			  case "Program":
+				    LoggerLoad.logInfo("verify correct footer is displayed in Program page : ");
+				    if(programPage.verifyFooter("Programs")) {
+				    	assertFalse(false,"Correct Footer displayed in Program Page");
+				    }else {
+				    	assertFalse(false,"Correct Footer is not displayed in Program Page");
+				    }
+			  case "Assignment":
+				    LoggerLoad.logInfo("verify correct footer is displayed in Program page : ");
+				    if(programPage.verifyFooter("Assignments")) {
+				    	assertFalse(false,"Correct Footer displayed in Assignments Page");
+				    }else {
+				    	assertFalse(false,"Correct Footer is not displayed in Assignments Page");
+				    }
+			   			  
+			  }
+		  } catch(Exception e) {
+			  LoggerLoad.logError(e.getMessage());
+				assertFalse(false, "Correct Footer is not displayed in "+pageName+" page");
+		  }  
+		    
+	}
+	
+	//Common method to verify the no.of rows displayed in a page is 5
+	@Then("Admin should see {int} records displayed on the {string} page")
+	public void admin_should_see_records_displayed_on_the_page(Integer number, String pageName) {
+	    try {
+	    	switch(pageName) {
+	    		case "Program":
+	    			  LoggerLoad.logInfo("verify correct number of records(5) are displayed in Program page : ");
+	    			  if(programPage.verifyRecordCountinPage(number)) {
+	    				  assertFalse(false, number+"records are displayed in Program Page");
+	    			  } else {
+	    				  assertFalse(false, number+"records are not displayed in Program Page");
+	    			  }
+	    	}
+	    } catch (Exception e) {
+	    	 LoggerLoad.logError(e.getMessage());
+				assertFalse(false, "Correct number of records are not displayed in "+pageName+" page");
+	    }
+	}
+
 
 
 
