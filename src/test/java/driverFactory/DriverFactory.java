@@ -12,6 +12,7 @@ import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.LoggerLoad;
 
+
 public class DriverFactory {
 
 	public static WebDriver driver;
