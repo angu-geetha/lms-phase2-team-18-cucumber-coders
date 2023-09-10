@@ -2,7 +2,10 @@ package stepDefinition;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import dataProviders.ConfigReader;
@@ -14,6 +17,9 @@ import pageObjects.BasePage;
 import utilities.LoggerLoad;
 
 public class BaseSD extends Commonclass {
+	
+	
+	
 
 	public BaseSD() {
 
@@ -168,6 +174,74 @@ public class BaseSD extends Commonclass {
 
 		}
 
+	}
+	
+	@Then("Edit Icon in each row of data table only  when entries are available")
+	public void edit_icon_in_each_row_of_data_table_only_when_entries_are_available() {
+		try {
+			basePage.validateEditIconForRows();
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Edit Icon in each row of data table only  when entries are available");
+		}
+
+	}
+
+	@Then("Delete Icon in each row of data table only  when entries are available")
+	public void delete_icon_in_each_row_of_data_table_only_when_entries_are_available() {
+		try {
+			basePage.validateDeleteIconForRows();
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Delete Icon in each row of data table only  when entries are available");
+		}
+	}
+
+	@Then("Admin should see check box in the all rows  of data table when entries available")
+	public void admin_should_see_check_box_in_the_all_rows_of_data_table_when_entries_available() {
+		try {
+			basePage.validateCheckBoxForRows();
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Admin should see check box in the all rows  of data table when entries available");
+		}
+	}
+	
+	@When("Admin enters {string} into search box  from {string} and {string}")
+	public void admin_enters_valid_into_search_box_from_and(String feildName, String dataKey, String sheetName) {
+		try {
+			excelDataMap = ExcelReader.getData(dataKey, sheetName);
+			basePage.sendDataToSearchString(excelDataMap.get("feildValue"));
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Admin enters valid {string} into search box  from {string} and {string}");
+		}
+	}
+
+	@Then("Displays entries with that {string} from {string} and {string}")
+	public void displays_entries_with_that(String feildName, String dataKey, String sheetName) {
+		try {
+			excelDataMap = ExcelReader.getData(dataKey, sheetName);
+			List<String> searchData = basePage.getDataForSearch(feildName);
+			for (Iterator iterator = searchData.iterator(); iterator.hasNext();) {
+				String searchValue = (String) iterator.next();
+				assertTrue(searchValue.contains(excelDataMap.get("feildValue")));
+			}
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Displays entries with that {string} from {string} and {string}");
+		}
+		
+	}
+
+	@Then("Displays empty details in the data table")
+	public void displays_empty_details_in_the_data_table() {
+		try {
+			
+			assertTrue(basePage.isEmptyTable(), "Table is empty");
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Displays empty details in the data table");
+		}
+		
 	}
 
 }
