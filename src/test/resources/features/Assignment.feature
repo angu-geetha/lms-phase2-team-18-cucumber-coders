@@ -88,19 +88,29 @@ Feature: Assignment.feature
   Scenario Outline: Verify data table on the manage assignment page
     Given Admin is on dashboard page after Login
     When Admin clicks assignment button on the navigation bar
-    Then Admin should see data table on the manage assignment page With following column headers "<Columnheaders>"
-
-    Examples: 
-      | Columnheaders          |
-      | check box symbol       |
-      | Assignment name        |
-      | Assignment description |
-      | Assignment Due Date    |
-      | Assignment Grade       |
-      | Edit                   |
-      | Delete                 |
+    Then Admin should see data table on the manage assignment page With following column headers "<sheetName>" with "<dataKey>"
+		 Examples: 
+      | dataKey | sheetName|
+      | validate_column_headers |assignment|
+    
 
   Scenario: Verify Edit icon in the data table
     Given Admin is on dashboard page after Login
     When Admin clicks assignment button on the navigation bar
     Then Edit Icon in each row of data table only  when entries are available
+  
+   Scenario: Verify Delete icon in the data table
+    Given Admin is on dashboard page after Login
+    When Admin clicks assignment button on the navigation bar
+    Then Delete Icon in each row of data table only  when entries are available
+    
+  Scenario: Verify check box in the data table
+    Given Admin is on dashboard page after Login
+    When Admin clicks assignment button on the navigation bar
+    Then Admin should see check box in the all rows  of data table when entries available
+    
+  Scenario: Verify sort icon in the data table
+    Given Admin is on dashboard page after Login
+    When Admin clicks assignment button on the navigation bar
+    Then Admin should see sort icon near the column headers except for Edit and Delete
+  

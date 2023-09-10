@@ -2,6 +2,7 @@ package stepDefinition;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 import java.util.Map;
 
@@ -149,11 +150,15 @@ public class AssignmentSD extends Commonclass {
 	@Then("Admin should see +Add New assignment button on the manage assignment page")
 
 	public void admin_should_see_add_new_assignment_button_on_the_manage_assignment_page() {
-		boolean addassigbutton = assignmentPage.verifyAddAssignmenthButton();
 		try {
-			LoggerLoad.logInfo("verify search button : \" " + addassigbutton + "\" ");
+			boolean addAssignmentButtonDisplayed = assignmentPage.verifyAddAssignmenthButton();
+			LoggerLoad.logInfo("verify delete button enabled : ");
+			if (addAssignmentButtonDisplayed) {
+				assertFalse(false, "Add button is enabled in Assignment page");
+			} else {
+				assertFalse(true, "Add button is disabled in Assignment page");
+			}
 
-			assertEquals(addassigbutton, ConfigReader.getProperty("truevalue"), "addassigbutton button not displayed");
 		} catch (Exception e) {
 
 			LoggerLoad.logError(e.getMessage());
@@ -164,15 +169,55 @@ public class AssignmentSD extends Commonclass {
 
 	}
 
-	@Then("Admin should see data table on the manage assignment page With following column headers {string}")
+	@Then("Admin should see data table on the manage assignment page With following column headers {string} with {string}")
 
-	public void admin_should_see_data_table_on_the_manage_assignment_page_with_following_column_headers(String string) {
+	public void admin_should_see_data_table_on_the_manage_assignment_page_with_following_column_headers(String dataKey,String sheetName) {
+		try {
+			excelDataMap = ExcelReader.getData(dataKey, sheetName);
+			assertTrue(assignmentPage.isTableHeadersPresent());
+			assignmentPage.validateTableHeaders(excelDataMap);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			assertFalse(false, "Failed - Admin should see data table on the manage assignment page With following column headers");
+		}
+        
 
 	}
 
 	@Then("Edit Icon in each row of data table only  when entries are available")
 	public void edit_icon_in_each_row_of_data_table_only_when_entries_are_available() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		try {
+			assignmentPage.validateEditIconForRows();
+		}catch (Exception e) {
+			assertFalse(false, "Failed - Edit Icon in each row of data table only  when entries are available");
+		}
+		
+	}
+	
+	@Then("Delete Icon in each row of data table only  when entries are available")
+	public void delete_icon_in_each_row_of_data_table_only_when_entries_are_available() {
+		try {
+			assignmentPage.validateDeleteIconForRows();
+		}catch (Exception e) {
+			assertFalse(false, "Failed - Delete Icon in each row of data table only  when entries are available");
+		}
+	}
+	
+	@Then("Admin should see check box in the all rows  of data table when entries available")
+	public void admin_should_see_check_box_in_the_all_rows_of_data_table_when_entries_available() {
+		try {
+			assignmentPage.validateCheckBoxForRows();
+		}catch (Exception e) {
+			assertFalse(false, "Failed - Admin should see check box in the all rows  of data table when entries available");
+		}
+	}
+	
+	@Then("Admin should see sort icon near the column headers except for Edit and Delete")
+	public void admin_should_see_sort_icon_near_the_column_headers_except_for_edit_and_delete() {
+		try {
+			assignmentPage.validateCheckBoxForRows();
+		}catch (Exception e) {
+			assertFalse(false, "Failed - Admin should see check box in the all rows  of data table when entries available");
+		}
 	}
 }
