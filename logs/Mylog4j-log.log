@@ -58,3 +58,715 @@
 [INFO ] 2023-09-09 15:08:23.934 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
 [INFO ] 2023-09-09 15:08:23.934 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
 [INFO ] 2023-09-09 15:08:23.936 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-09 21:34:39.150 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-09 21:34:39.153 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-09 21:34:43.968 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-09 21:34:44.076 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:44.076 [main] LoggerLoad - [@tag] : Verify landing in manage assignment page
+[INFO ] 2023-09-09 21:34:44.076 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:44.094 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:44.553 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:44.554 [main] LoggerLoad - [@tag] : Capture the response time to navigate to manage assignment page
+[INFO ] 2023-09-09 21:34:44.554 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:44.555 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:44.806 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:44.807 [main] LoggerLoad - [@tag] : : Verify manage assignment page Header
+[INFO ] 2023-09-09 21:34:44.807 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:44.808 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:45.019 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:45.019 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:34:45.019 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:45.020 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:45.082 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:45.083 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:34:45.083 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:45.083 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:45.147 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:45.147 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:34:45.147 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:45.149 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:45.210 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:45.210 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:34:45.211 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:45.211 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:45.275 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:45.276 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:34:45.276 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:45.277 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:45.340 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:45.341 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:34:45.341 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:45.342 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:45.775 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:45.776 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:34:45.776 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:45.777 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:45.850 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:45.850 [main] LoggerLoad - [@tag] : Verify delete icon below the header
+[INFO ] 2023-09-09 21:34:45.850 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:45.851 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:45.962 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:45.963 [main] LoggerLoad - [@tag] : Verify search bar on the manage assignment page
+[INFO ] 2023-09-09 21:34:45.963 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:45.963 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:46.147 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:46.148 [main] LoggerLoad - [@tag] : Verify add new assignment button  on manage assignment page
+[INFO ] 2023-09-09 21:34:46.148 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:46.149 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:46.206 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:46.207 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:34:46.207 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:46.208 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:46.269 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:46.270 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:34:46.271 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:46.272 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:46.337 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:46.337 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:34:46.337 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:46.339 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:46.405 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:46.405 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:34:46.406 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:46.407 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:46.480 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:46.481 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:34:46.481 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:46.482 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:46.554 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:46.555 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:34:46.555 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:46.556 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:46.960 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:46.961 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:34:46.961 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:46.962 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:47.036 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:34:47.037 [main] LoggerLoad - [@tag] : Verify Edit icon in the data table
+[INFO ] 2023-09-09 21:34:47.037 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:34:47.039 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:34:47.243 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-09 21:37:10.203 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-09 21:37:10.207 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-09 21:37:14.434 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-09 21:37:14.502 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:14.502 [main] LoggerLoad - [@tag] : Verify landing in manage assignment page
+[INFO ] 2023-09-09 21:37:14.503 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:14.524 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:15.200 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:15.897 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:15.903 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:15.917 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:15.924 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:15.925 [main] LoggerLoad - [@tag] : Capture the response time to navigate to manage assignment page
+[INFO ] 2023-09-09 21:37:15.925 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:15.925 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:16.294 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:16.358 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:16.364 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:16.366 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:16.372 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:16.372 [main] LoggerLoad - [@tag] : : Verify manage assignment page Header
+[INFO ] 2023-09-09 21:37:16.372 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:16.373 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:16.509 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:16.560 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:16.568 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:16.570 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:16.578 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:16.579 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:37:16.579 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:16.580 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:16.736 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:16.777 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:16.784 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:16.785 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:16.790 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:16.790 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:37:16.790 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:16.791 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:16.969 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:17.004 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:17.010 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:17.011 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:17.015 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:17.016 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:37:17.016 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:17.016 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:17.160 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:17.240 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:17.249 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:17.251 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:17.258 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:17.258 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:37:17.258 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:17.259 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:17.414 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:17.461 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:17.468 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:17.470 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:17.475 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:17.476 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:37:17.476 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:17.476 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:17.672 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:17.713 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:17.722 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:17.724 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:17.729 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:17.729 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:37:17.730 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:17.731 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:17.874 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:17.912 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:17.918 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:17.919 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:17.922 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:17.923 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 21:37:17.923 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:17.923 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:18.107 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:18.153 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:18.159 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:18.161 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:18.166 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:18.166 [main] LoggerLoad - [@tag] : Verify delete icon below the header
+[INFO ] 2023-09-09 21:37:18.166 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:18.167 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:18.309 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:18.382 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:18.390 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:18.392 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:18.398 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:18.398 [main] LoggerLoad - [@tag] : Verify search bar on the manage assignment page
+[INFO ] 2023-09-09 21:37:18.399 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:18.400 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:18.550 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:18.588 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:18.595 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:18.597 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:18.601 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:18.602 [main] LoggerLoad - [@tag] : Verify add new assignment button  on manage assignment page
+[INFO ] 2023-09-09 21:37:18.602 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:18.602 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:18.793 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:18.833 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:18.840 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:18.842 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:18.847 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:18.847 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:37:18.847 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:18.848 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:19.028 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:19.058 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:19.065 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:19.067 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:19.071 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:19.071 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:37:19.071 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:19.071 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:19.225 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:19.253 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:19.259 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:19.260 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:19.263 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:19.264 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:37:19.264 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:19.265 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:19.420 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:19.464 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:19.471 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:19.472 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:19.477 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:19.477 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:37:19.477 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:19.478 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:19.632 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:19.691 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:19.699 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:19.700 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:19.704 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:19.704 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:37:19.704 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:19.704 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:19.848 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:19.882 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:19.890 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:19.891 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:19.894 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:19.894 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:37:19.895 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:19.895 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:20.100 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:20.133 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:20.140 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:20.142 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:20.146 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:20.146 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 21:37:20.146 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:20.146 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:20.340 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:20.365 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:20.371 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:20.372 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:20.375 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 21:37:20.375 [main] LoggerLoad - [@tag] : Verify Edit icon in the data table
+[INFO ] 2023-09-09 21:37:20.375 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 21:37:20.376 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 21:37:20.525 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 21:37:20.574 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 21:37:20.579 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 21:37:20.581 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 21:37:20.582 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-09 22:26:37.750 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-09 22:26:37.755 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-09 22:26:42.975 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-09 22:26:43.048 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:43.049 [main] LoggerLoad - [@tag] : Verify landing in manage assignment page
+[INFO ] 2023-09-09 22:26:43.049 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:43.070 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:43.422 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:44.109 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:44.116 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:44.129 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:44.136 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:44.137 [main] LoggerLoad - [@tag] : Capture the response time to navigate to manage assignment page
+[INFO ] 2023-09-09 22:26:44.137 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:44.138 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:44.210 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:44.298 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:44.306 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:44.308 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:44.317 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:44.317 [main] LoggerLoad - [@tag] : : Verify manage assignment page Header
+[INFO ] 2023-09-09 22:26:44.317 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:44.319 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:44.380 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:44.438 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:44.448 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:44.450 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:44.458 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:44.458 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:26:44.459 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:44.460 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:44.527 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:44.580 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:44.590 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:44.591 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:44.599 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:44.600 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:26:44.600 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:44.601 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:44.667 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:44.720 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:44.728 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:44.730 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:44.738 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:44.738 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:26:44.738 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:44.741 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:45.016 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:45.095 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:45.102 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:45.104 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:45.110 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:45.110 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:26:45.111 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:45.112 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:45.177 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:45.219 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:45.225 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:45.226 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:45.233 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:45.234 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:26:45.234 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:45.235 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:45.285 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:45.329 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:45.337 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:45.338 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:45.342 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:45.343 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:26:45.343 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:45.344 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:45.560 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:45.603 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:45.610 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:45.611 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:45.616 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:45.617 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:26:45.617 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:45.618 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:45.674 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:45.713 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:45.721 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:45.723 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:45.728 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:45.728 [main] LoggerLoad - [@tag] : Verify delete icon below the header
+[INFO ] 2023-09-09 22:26:45.728 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:45.730 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:45.793 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:45.838 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:45.846 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:45.847 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:45.851 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:45.851 [main] LoggerLoad - [@tag] : Verify search bar on the manage assignment page
+[INFO ] 2023-09-09 22:26:45.851 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:45.852 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:45.901 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:45.943 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:45.951 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:45.953 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:45.957 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:45.957 [main] LoggerLoad - [@tag] : Verify add new assignment button  on manage assignment page
+[INFO ] 2023-09-09 22:26:45.958 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:45.959 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:46.148 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:46.207 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:46.215 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:46.216 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:46.221 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:46.221 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:26:46.222 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:46.223 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:46.309 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:46.344 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:46.351 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:46.352 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:46.357 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:46.357 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:26:46.357 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:46.358 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:46.417 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:46.452 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:46.459 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:46.460 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:46.466 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:46.466 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:26:46.466 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:46.469 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:46.537 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:46.587 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:46.594 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:46.595 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:46.600 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:46.600 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:26:46.600 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:46.601 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:46.826 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:46.861 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:46.869 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:46.870 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:46.874 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:46.874 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:26:46.874 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:46.875 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:46.942 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:46.975 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:46.982 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:46.983 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:46.988 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:46.988 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:26:46.988 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:46.989 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:47.045 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:47.080 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:47.089 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:47.090 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:47.095 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:47.095 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:26:47.095 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:47.096 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:47.153 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:47.215 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:47.222 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:47.223 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:47.226 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:26:47.226 [main] LoggerLoad - [@tag] : Verify Edit icon in the data table
+[INFO ] 2023-09-09 22:26:47.226 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:26:47.227 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:26:47.498 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:26:47.535 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:26:47.543 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:26:47.544 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:26:47.546 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-09 22:52:08.747 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-09 22:52:08.751 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-09 22:52:14.505 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-09 22:52:14.583 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:14.583 [main] LoggerLoad - [@tag] : Verify landing in manage assignment page
+[INFO ] 2023-09-09 22:52:14.584 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:14.605 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:15.338 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:16.104 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:16.110 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:16.125 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:16.132 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:16.132 [main] LoggerLoad - [@tag] : Capture the response time to navigate to manage assignment page
+[INFO ] 2023-09-09 22:52:16.132 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:16.134 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:16.481 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:16.566 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:16.573 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:16.575 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:16.583 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:16.583 [main] LoggerLoad - [@tag] : : Verify manage assignment page Header
+[INFO ] 2023-09-09 22:52:16.584 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:16.586 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:16.735 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:16.793 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:16.802 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:16.803 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:16.811 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:16.811 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:52:16.811 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:16.813 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:16.988 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:17.050 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:17.057 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:17.057 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:17.061 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:17.062 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:52:17.062 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:17.063 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:17.213 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:17.257 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:17.265 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:17.266 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:17.273 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:17.273 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:52:17.273 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:17.275 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:17.469 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:17.510 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:17.516 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:17.517 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:17.521 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:17.521 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:52:17.521 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:17.522 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:17.661 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:17.706 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:17.712 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:17.714 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:17.720 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:17.720 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:52:17.720 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:17.721 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:17.900 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:17.977 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:17.985 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:17.986 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:17.991 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:17.991 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:52:17.992 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:17.993 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:18.145 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:18.179 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:18.184 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:18.185 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:18.188 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:18.189 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-09 22:52:18.189 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:18.190 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:18.375 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:18.407 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:18.413 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:18.414 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:18.418 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:18.418 [main] LoggerLoad - [@tag] : Verify delete icon below the header
+[INFO ] 2023-09-09 22:52:18.418 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:18.420 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:18.556 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:18.587 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:18.592 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:18.593 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:18.596 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:18.596 [main] LoggerLoad - [@tag] : Verify search bar on the manage assignment page
+[INFO ] 2023-09-09 22:52:18.596 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:18.596 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:18.795 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:18.832 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:18.840 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:18.841 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:18.846 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:18.846 [main] LoggerLoad - [@tag] : Verify add new assignment button  on manage assignment page
+[INFO ] 2023-09-09 22:52:18.846 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:18.848 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:19.002 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:19.039 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:19.046 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:19.048 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:19.053 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:19.053 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:52:19.053 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:19.054 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:19.243 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:19.295 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:19.301 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:19.302 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:19.305 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:19.305 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:52:19.305 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:19.306 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:19.449 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:19.476 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:19.483 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:19.485 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:19.490 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:19.491 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:52:19.491 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:19.493 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:19.702 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:19.747 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:19.754 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:19.755 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:19.759 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:19.760 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:52:19.760 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:19.761 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:19.978 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:20.002 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:20.008 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:20.011 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:20.016 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:20.016 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:52:20.016 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:20.018 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:20.159 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:20.183 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:20.189 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:20.190 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:20.194 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:20.194 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:52:20.194 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:20.195 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:20.367 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:20.428 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:20.437 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:20.438 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:20.442 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:20.443 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:52:20.443 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:20.444 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:20.604 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:20.626 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:20.634 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:20.636 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:20.640 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:52:20.640 [main] LoggerLoad - [@tag] : Verify Edit icon in the data table
+[INFO ] 2023-09-09 22:52:20.640 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:52:20.642 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:52:20.800 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:52:20.827 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:52:20.833 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:52:20.834 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:52:20.835 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-09 22:53:46.723 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-09 22:53:46.727 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-09 22:53:50.815 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-09 22:53:50.884 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:53:50.884 [main] LoggerLoad - [@tag] : Verify search bar on the manage assignment page
+[INFO ] 2023-09-09 22:53:50.885 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:53:50.905 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:53:51.193 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:53:51.908 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:53:51.914 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:53:51.932 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:53:51.941 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:53:51.941 [main] LoggerLoad - [@tag] : Verify add new assignment button  on manage assignment page
+[INFO ] 2023-09-09 22:53:51.941 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:53:51.943 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:53:52.017 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:53:52.090 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:53:52.096 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:53:52.097 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:53:52.105 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:53:52.105 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:53:52.105 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:53:52.107 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:53:52.160 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:53:52.209 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:53:52.216 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:53:52.218 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:53:52.224 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:53:52.225 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:53:52.225 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:53:52.227 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:53:52.282 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:53:52.324 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:53:52.331 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:53:52.332 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:53:52.339 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:53:52.339 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:53:52.339 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:53:52.341 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:53:52.397 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:53:52.446 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:53:52.454 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:53:52.456 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:53:52.463 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:53:52.463 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:53:52.464 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:53:52.466 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:53:52.521 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:53:52.597 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:53:52.605 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:53:52.607 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:53:52.613 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:53:52.613 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:53:52.613 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:53:52.615 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:53:52.854 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:53:52.891 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:53:52.896 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:53:52.898 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:53:52.904 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:53:52.904 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:53:52.904 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:53:52.906 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:53:52.958 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:53:52.997 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:53:53.005 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:53:53.006 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:53:53.011 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:53:53.011 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-09 22:53:53.011 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:53:53.012 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:53:53.069 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:53:53.106 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:53:53.113 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:53:53.115 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:53:53.120 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:53:53.120 [main] LoggerLoad - [@tag] : Verify Edit icon in the data table
+[INFO ] 2023-09-09 22:53:53.120 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:53:53.122 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:53:53.181 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:53:53.222 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:53:53.229 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:53:53.231 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:53:53.232 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-09 22:55:04.624 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-09 22:55:04.628 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-09 22:55:08.532 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-09 22:55:08.595 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:55:08.595 [main] LoggerLoad - [@tag] : Verify search bar on the manage assignment page
+[INFO ] 2023-09-09 22:55:08.595 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:55:08.617 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:55:08.912 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:55:09.581 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:55:09.588 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:55:09.600 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:55:09.602 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-09 22:57:00.567 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-09 22:57:00.571 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-09 22:57:05.146 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-09 22:57:05.210 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-09 22:57:05.210 [main] LoggerLoad - [@tag] : Verify search bar on the manage assignment page
+[INFO ] 2023-09-09 22:57:05.210 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-09 22:57:05.230 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-09 22:57:05.550 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-09 22:57:06.233 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-09 22:57:06.240 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-09 22:57:06.257 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-09 22:57:06.260 [main] LoggerLoad - Closing Driver

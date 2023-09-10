@@ -17,19 +17,15 @@ public class AssignmentPage extends BasePage{
 	
 	@FindBy (xpath="xpath for maanage assignment Title']")static WebElement manageAssignmentTitleElmt;
 	@FindBy (xpath="xpath for maanage assignment Header']")static WebElement manageAssignmentheaderElmt;
-	@FindBy (xpath="xpath for maanage assignment Header']")static WebElement    lmsheaderElmt;
-@FindBys ( {
-		
-		@FindBy (xpath="xpath for student link']"),
-		@FindBy (xpath="xpath for program link']"),
-		@FindBy (xpath="xpath for Batchlink']"),
-		@FindBy (xpath="xpath for Classlink']"),
-		@FindBy (xpath="xpath for Userlink']"),
-		@FindBy (xpath="xpath for Assignmentlink']"),
-		@FindBy (xpath="xpath for Attendancelink']")
-		
-		
-	})static List< WebElement> headerLinks;  
+	@FindBy (xpath="xpath for maanage LMS Header']")static WebElement    lmsheaderElmt;
+	
+	
+	@FindBy (xpath="xpath for  addassignment button']")static WebElement    addassignmentElmt;
+	@FindBy (xpath="xpath for  datatable ']")  static WebElement  datatableElement;
+	
+	
+	@FindBy (xpath="xpath for  checkbox button']")static WebElement    checkboxElement;	
+	
 	
 	
 	public AssignmentPage() {
@@ -66,4 +62,40 @@ public class AssignmentPage extends BasePage{
 		return textname;
 	}
 	
+	
+	
+	
+	public Boolean verifyAddAssignmenthButton() {
+		boolean addassigbutton;
+		return addassigbutton =addassignmentElmt.isDisplayed();
+	}
+	
+
+
+public Boolean verifyDataTable() {
+	boolean datatable;
+	
+	//return datatable =datatableElement.isd
+	return true;
+}
+public String verifyColumnHeaders(String columnheaders) {
+	String textname = null;
+	/*	try {
+	for (Iterator iterator = datatableElement.iterator(); iterator.hasNext();) {
+			WebElement webElement = (WebElement) iterator.next();
+			if (webElement.getText().contains(columnheaders)) {
+				 textname=webElement.getText();
+				break;
+			}
+
+		}
+	} catch (Exception e) {
+		// TODO: handle exception
+	}
+	
+	*/
+		return "";
+}
+
+
 }

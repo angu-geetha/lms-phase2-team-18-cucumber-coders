@@ -13,223 +13,166 @@ import io.cucumber.java.en.When;
 import pageObjects.AssignmentPage;
 import utilities.LoggerLoad;
 
+public class AssignmentSD extends Commonclass {
 
-public class AssignmentSD {
+	Map<String, String> excelDataMap;
 
-AssignmentPage assignmentPage = new AssignmentPage();
+	@When("Admin clicks assignment button on the navigation bar")
 
-Map<String, String> excelDataMap;
+	public void admin_clicks_assignment_button_on_the_navigation_bar() {
 
-static long startTime;
+		try {
 
-static long endTime;
+			assignmentPage.selectHeaderLink("Assignment");
 
-static long  totalTime;
+			LoggerLoad.logInfo("Admin clicks assignment button on the navigation bar");
 
-@Given("Admin is in login page")
+		} catch (Exception e) {
 
-public void admin_is_in_login_page() {
+			LoggerLoad.logError(e.getMessage());
 
-LoggerLoad.logInfo("Admin is in login page");
+			assertFalse(false, "Failed - Admin clicks assignment button on the navigation bar");
 
-assignmentPage.login_page();
+		}
 
-}
+	}
 
-@When("Admin enter valid credentials and clicks login button")
+	@Then("Get the response time for navigation from dashboard page to manage assignment page")
 
-public void admin_enter_valid_credentials_and_clicks_login_button() {
+	public void get_the_response_time_for_navigation_from_dashboard_page_to_manage_assignment_page() {
+		LoggerLoad.logInfo("Get the response time for navigation from dashboard page to manage assignment page");
+		try {
+			endTime = System.currentTimeMillis();
 
-LoggerLoad.logInfo("Admin enter valid credentials and clicks login button");
+			totalTime = endTime - startTime;
 
-excelDataMap = null;
+			LoggerLoad.logInfo(
+					" response time for navigation from dashboard page to manage assignment page ::" + totalTime);
 
-String userName=null, password=null;
+			if (totalTime > Integer.parseInt(ConfigReader.getProperty("MaxResponsetime"))) {
+				assertFalse(true, "responsetime exceeded");
+			} else {
+				assertFalse(false, "responsetime exceeded");
+			}
 
-try {
+		} catch (Exception e) {
 
-excelDataMap = ExcelReader.getData("valid_login", "login");
+			LoggerLoad.logError(e.getMessage());
 
-if (null != excelDataMap && excelDataMap.size() > 0) 
+			assertFalse(false, "Failed - Admin should validate response time");
 
-{
+		}
 
-userName = excelDataMap.get("userName") ;
+	}
 
-password = excelDataMap.get("password") ;
+	
+	@When("Admin clicks assignment button on the navigation bar and get all text from the portal page {string}")
 
-}
+	public void admin_clicks_assignment_button_on_the_navigation_bar_and_get_all_text_from_the_portal_page(
+			String headerlinks) {
+		try {
 
-assignmentPage.doLogin(userName, password);
+			/*
+			 * assignmentPage.selectModuleLinks("Assignment");
+			 * 
+			 * LoggerLoad.logInfo("Admin clicks assignment button on the navigation bar");
+			 * 
+			 * textname = assignmentPage.textModuleLinks(headerlinks);
+			 */
 
-} catch (Exception e) {
+		} catch (Exception e) {
 
-// TODO Auto-generated catch block
+			LoggerLoad.logError(e.getMessage());
 
-e.printStackTrace();
+			assertFalse(false, "Failed - Admin clicks {string} button on the navigation bar");
 
-}
+		}
 
-}
+	}
 
-@Then("Admin should land on dashboard page")
+	@Then("Admin should see correct spelling for the all the fields")
 
-public void admin_should_land_on_dashboard_page() {
+	public void admin_should_see_correct_spelling_for_the_all_the_fields() {
 
-LoggerLoad.logInfo("Admin should land on dashboard page");
-
-String Title = assignmentPage.verifyDashboardPage();
-
-LoggerLoad.logInfo("Title of the Dashboard Page : \" " + Title + "\" ");
-
-assertEquals(Title, ConfigReader.getProperty("dashboardTitle"), "Title do not match");
-
-}
-
-@Given("Admin is on dashboard page after Login")
-
-public void admin_is_on_dashboard_page_after_login() {
-
-LoggerLoad.logInfo("Admin is on dashboard page after Login");
-
-assignmentPage.dashboardPage();
-
-startTime = System.currentTimeMillis();
-
-}
-
-@When("Admin clicks assignment button on the navigation bar")
-
-public void admin_clicks_assignment_button_on_the_navigation_bar() {
-
-
-
-try {
-
-assignmentPage.selectModuleLinks("Assignment");
-
-LoggerLoad.logInfo("Admin clicks assignment button on the navigation bar");
-
-} catch (Exception e) {
-
-LoggerLoad.logError(e.getMessage());
-
-assertFalse(false, "Failed - Admin clicks {string} button on the navigation bar");
-
-}
-
-}
-
-@Then("Admin should see URL with UrlName")
-
-public void admin_should_see_url_with_url_name() {
-
-try {
-
-String Title = assignmentPage.verifyManageAssignmentPage();
-
-LoggerLoad.logInfo("Title of the Manage Assignment Page : \" " + Title + "\" ");
-
-assertEquals(Title, ConfigReader.getProperty("manageAssignmentTitle"), "Title do not match");
-
-} catch (Exception e) {
-
-LoggerLoad.logError(e.getMessage());
-
-assertFalse(false, "Failed - Admin should see URL with {string}");
-
-}
-
-}
-
-@Then("Get the response time for navigation from dashboard page to manage assignment page")
-
-public void get_the_response_time_for_navigation_from_dashboard_page_to_manage_assignment_page() {
-
-try {  endTime = System.currentTimeMillis();
-
-totalTime = endTime - startTime;
-
-ConfigReader.setProperty("responsetime", "totalTime");
-
-System.out.println("Total Page Load Time: " + totalTime + " milliseconds");
-
-LoggerLoad.logInfo("Get the response time for navigation from dashboard page to manage assignment page");
-
-assertEquals(totalTime, ConfigReader.getProperty("responsetime"), "responsetime do not match");
-
-} catch (Exception e) {
-
-LoggerLoad.logError(e.getMessage());
-
-assertFalse(false, "Failed - Admin should validate response time");
-
-}
-
-}
-
-@Then("Admin should see header with UrlName")
-
-public void admin_should_see_header_with_url_name() {
-
-
-
-try {
-
-String header = assignmentPage.verifyManageAssignmentPageHeader();
-
-LoggerLoad.logInfo("header of the Manage Assignment Page : \" " + header + "\" ");
-
-assertEquals(header, ConfigReader.getProperty("manageAssignmentHeader"), "header do not match");
-
-} catch (Exception e) {
-
-LoggerLoad.logError(e.getMessage());
-
-assertFalse(false, "Failed - Admin should see URL with {string}");
-
-}
-
-}
-
-@When("Admin clicks assignment button on the navigation bar and get all text from the portal page {string}")
-
-public void admin_clicks_assignment_button_on_the_navigation_bar_and_get_all_text_from_the_portal_page(String string) {
-
-
-
-}
-
-@Then("Admin should see correct spelling for the all the fields")
-
-public void admin_should_see_correct_spelling_for_the_all_the_fields() {
-
-
-
-}
-
-@Then("Admin should see disabled delete icon below the UrlName")
-
-public void admin_should_see_disabled_delete_icon_below_the_url_name() {
-
-}
-
-@Then("Admin should see search bar on the manage assignment page")
-
-public void admin_should_see_search_bar_on_the_manage_assignment_page() {
-
-}
-
-@Then("Admin should see +Add New assignment button on the manage assignment page")
-
-public void admin_should_see_add_new_assignment_button_on_the_manage_assignment_page() {
-
-}
-
-@Then("Admin should see data table on the manage assignment page With following column headers {string}")
-
-public void admin_should_see_data_table_on_the_manage_assignment_page_with_following_column_headers(String string) {
-
-}
-
+		/*
+		 * String Title = assignmentPage.verifyManageAssignmentPage();
+		 * 
+		 * LoggerLoad.logInfo("Title of the Manage Assignment Page : \" " + Title +
+		 * "\" ");
+		 * 
+		 * assertEquals(Title, ConfigReader.getProperty("manageAssignmentTitle"),
+		 * "Title do not match");
+		 * 
+		 * String header = assignmentPage.verifyManageAssignmentPageHeader();
+		 * 
+		 * LoggerLoad.logInfo("header of the Manage Assignment Page : \" " + header +
+		 * "\" ");
+		 * 
+		 * assertEquals(header, ConfigReader.getProperty("manageAssignmentHeader"),
+		 * "header do not match");
+		 * 
+		 * String LMSheader = assignmentPage.verifyLMSPageHeader();
+		 * 
+		 * LoggerLoad.logInfo("header of the Learning Management System Page : \" " +
+		 * LMSheader + "\" ");
+		 * 
+		 * assertEquals(header, ConfigReader.getProperty("LMSHeader"),
+		 * "header do not match");
+		 * 
+		 * switch (textname) { case "Student": assertEquals(textname,
+		 * ConfigReader.getProperty("Studentext"), "header do not match"); break; case
+		 * "Program": assertEquals(textname, ConfigReader.getProperty("Programtext"),
+		 * "header do not match"); break;
+		 * 
+		 * case "Batch": assertEquals(textname, ConfigReader.getProperty("Batchtext"),
+		 * "header do not match"); break;
+		 * 
+		 * case "Class": assertEquals(textname, ConfigReader.getProperty("Classtext"),
+		 * "header do not match"); break;
+		 * 
+		 * case "User": assertEquals(textname, ConfigReader.getProperty("Usertext"),
+		 * "header do not match"); break;
+		 * 
+		 * case "Assignment": assertEquals(textname,
+		 * ConfigReader.getProperty("Assignmenttext"), "header do not match"); break;
+		 * case "Attendance": assertEquals(textname,
+		 * ConfigReader.getProperty("Attendancetext"), "header do not match"); break;
+		 * default: break; }
+		 */
+
+	}
+
+	
+
+	
+
+	@Then("Admin should see +Add New assignment button on the manage assignment page")
+
+	public void admin_should_see_add_new_assignment_button_on_the_manage_assignment_page() {
+		boolean addassigbutton = assignmentPage.verifyAddAssignmenthButton();
+		try {
+			LoggerLoad.logInfo("verify search button : \" " + addassigbutton + "\" ");
+
+			assertEquals(addassigbutton, ConfigReader.getProperty("truevalue"), "addassigbutton button not displayed");
+		} catch (Exception e) {
+
+			LoggerLoad.logError(e.getMessage());
+
+			assertFalse(false, "Failed - Admin should see +Add New assignment button on the manage assignment page");
+
+		}
+
+	}
+
+	@Then("Admin should see data table on the manage assignment page With following column headers {string}")
+
+	public void admin_should_see_data_table_on_the_manage_assignment_page_with_following_column_headers(String string) {
+
+	}
+
+	@Then("Edit Icon in each row of data table only  when entries are available")
+	public void edit_icon_in_each_row_of_data_table_only_when_entries_are_available() {
+		// Write code here that turns the phrase above into concrete actions
+		throw new io.cucumber.java.PendingException();
+	}
 }

@@ -24,25 +24,33 @@ Feature: Assignment.feature
     When Admin enter valid credentials  and clicks login button
     Then Admin should land on dashboard page
 
-  Scenario: Verify landing in manage assignment page
+  Scenario Outline: Verify landing in manage assignment page
     Given Admin is on dashboard page after Login
     When Admin clicks assignment button on the navigation bar
-    Then Admin should see URL with UrlName
+    Then Admin should see URL with "<UrlName>"
+
+    Examples: 
+      | UrlName                |
+      | manageAssignmentHeader |
 
   Scenario: Capture the response time to navigate to manage assignment page
     Given Admin is on dashboard page after Login
     When Admin clicks assignment button on the navigation bar
     Then Get the response time for navigation from dashboard page to manage assignment page
 
-  Scenario: Verify manage assignment page Header
+  Scenario Outline: : Verify manage assignment page Header
     Given Admin is on dashboard page after Login
     When Admin clicks assignment button on the navigation bar
-    Then Admin should see header with UrlName
+    Then Admin should see header with "<UrlName>"
+
+    Examples: 
+      | UrlName    |
+      | Assignment |
 
   Scenario Outline: Validate text in manage assignment page
     Given Admin is on dashboard page after Login
     When Admin clicks assignment button on the navigation bar and get all text from the portal page "<Columnheaders>"
-    Then Admin should see correct spelling for the all the fields "
+    Then Admin should see correct spelling for the all the fields
 
     Examples: 
       | Columnheaders |
@@ -54,15 +62,23 @@ Feature: Assignment.feature
       | Assignment    |
       | Attendance    |
 
-  Scenario: Verify delete icon below the header
+  Scenario Outline: Verify delete icon below the header
     Given Admin is on dashboard page after Login
     When Admin clicks assignment button on the navigation bar
-    Then Admin should see disabled delete icon below the UrlName
+    Then Admin should see disabled delete icon below the "<UrlName>"
 
-  Scenario: Verify search bar on the manage assignment page
+    Examples: 
+      | UrlName                |
+      | manageAssignmentHeader |
+
+  Scenario Outline: Verify search bar on the manage assignment page
     Given Admin is on dashboard page after Login
     When Admin clicks assignment button on the navigation bar
-    Then Admin should see search bar on the manage assignment page
+    Then Admin should see search bar on the "<UrlName>"
+
+    Examples: 
+      | UrlName                |
+      | manage assignment page |
 
   Scenario: Verify add new assignment button  on manage assignment page
     Given Admin is on dashboard page after Login
@@ -79,22 +95,12 @@ Feature: Assignment.feature
       | check box symbol       |
       | Assignment name        |
       | Assignment description |
-      | Assignment Date        |
+      | Assignment Due Date    |
       | Assignment Grade       |
       | Edit                   |
       | Delete                 |
 
-  Scenario Outline: Validate text in manage assignment page
+  Scenario: Verify Edit icon in the data table
     Given Admin is on dashboard page after Login
-    When Admin clicks assignment button on the navigation bar and get all text from the portal page "<Columnheaders>"
-    Then Admin should see correct spelling for the all the fields
-
-    Examples: 
-      | Columnheaders |
-      | Student       |
-      | Program       |
-      | Batch         |
-      | Class         |
-      | User          |
-      | Assignment    |
-      | Attendance    |
+    When Admin clicks assignment button on the navigation bar
+    Then Edit Icon in each row of data table only  when entries are available
