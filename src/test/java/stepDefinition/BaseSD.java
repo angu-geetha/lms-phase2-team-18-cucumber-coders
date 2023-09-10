@@ -245,8 +245,14 @@ public class BaseSD extends Commonclass {
 	}
 	
 	@Then("Admin should see a popup  with  heading {string}")
-	public void admin_should_see_a_popup_with_heading(String string) {
-	    
+	public void admin_should_see_a_popup_with_heading(String headingTitle) {
+	    try {
+			String heading = basePage.getPopUpPageHeadingString();
+			assertEquals(heading, headingTitle);
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Admin should see a popup  with  heading {string}");
+		}
 	}
 	
 	@Then("Admin should see input fields Text  {string}")
@@ -293,7 +299,6 @@ public class BaseSD extends Commonclass {
 
 	@Then("Admin should see  cancel button in the {string} popup window")
 	public void admin_should_see_cancel_button_in_the_popup_window(String string) {
-	    
 	    
 	}
 	
