@@ -213,7 +213,10 @@ public class AssignmentSD extends Commonclass {
 		}
 	}
 
-	
+	@When("Admin click +Add new assignment button")
+	public void admin_click_add_new_assignment_button() {
+	   
+	}
 
 
 
