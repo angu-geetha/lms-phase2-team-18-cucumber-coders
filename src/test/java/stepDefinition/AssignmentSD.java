@@ -218,7 +218,62 @@ public class AssignmentSD extends Commonclass {
 	   
 	}
 
+	@When("Admin clicks + add new  button on manage assignment page")
+	public void admin_clicks_add_new_button_on_manage_assignment_page() {
+	    try {
+			assignmentPage.clickAddNewButton();
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Admin clicks + add new  button on manage assignment page");
+		}
+	}
 
+	
+
+	@Given("Admin is in  assignment details popup window")
+	public void admin_is_in_assignment_details_popup_window() {
+		  try {
+			    assignmentPage.assignment_page();
+				assignmentPage.clickAddNewButton();
+			} catch (Exception e) {
+				assertFalse(false,
+						"Failed - Admin clicks + add new  button on manage assignment page");
+			}
+	}
+
+	@When("Admin enters data for add assignment from {string} and {string}")
+	public void admin_enters_data_for_add_assignment_from_and(String dataKey, String sheetName) {
+		try {
+			excelDataMap = ExcelReader.getData(dataKey, sheetName);
+			assignmentPage.addNewAssignmentDetails(excelDataMap);
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Admin enters data for add assignment from {string} and {string}");
+		}
+		
+	}
+
+	@Then("Admin should see new assignment details is added in the data table from {string} and {string}")
+	public void admin_should_see_new_assignment_details_is_added_in_the_data_table(String dataKey, String sheetName) {
+		try {
+			excelDataMap = ExcelReader.getData(dataKey, sheetName);
+			List<String> getAssignmentRow = assignmentPage.getDataForSearch("name");
+			assertTrue(getAssignmentRow.contains(excelDataMap.get("programName")));
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Admin should see new assignment details is added in the data table from {string} and {string}");
+		}
+	}
+
+	@Then("Error message should appear in alert")
+	public void error_message_should_appear_in_alert() {
+		assertTrue(!assignmentPage.getErrorElementg().isBlank(), assignmentPage.getErrorElementg());
+	}
+
+	@Then("Error message with {string} should be displayed from {string} and {string}")
+	public void error_message_with_should_be_displayed_from_and(String dataKey, String sheetName, String message) {
+	   assertEquals(assignmentPage.getErrorElementg(), message);
+	}
 
 	
 
