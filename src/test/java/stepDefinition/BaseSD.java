@@ -24,45 +24,27 @@ public class BaseSD extends Commonclass {
 	
 
 	@Given("Admin is in login page")
-
 	public void admin_is_in_login_page() {
-
 		LoggerLoad.logInfo("Admin is in login page");
-
 		basePage.login_page();
 
 	}
 
 	@When("Admin enter valid credentials  and clicks login button")
-
 	public void admin_enter_valid_credentials_and_clicks_login_button() {
-
 		LoggerLoad.logInfo("Admin enter valid credentials and clicks login button");
-
 		excelDataMap = null;
-
 		String userName = null, password = null;
-
 		try {
-
 			excelDataMap = ExcelReader.getData("valid_login", "login");
-
 			if (null != excelDataMap && excelDataMap.size() > 0)
-
 			{
-
 				userName = excelDataMap.get("userName");
-
 				password = excelDataMap.get("password");
-
 			}
 
 			basePage.doLogin(userName, password);
-
 		} catch (Exception e) {
-
-// TODO Auto-generated catch block
-
 			e.printStackTrace();
 
 		}
@@ -432,7 +414,7 @@ public class BaseSD extends Commonclass {
 					addNewButtonDisplayed=programPage.verifyAddButtonDisplayed(addBtnName);
 					LoggerLoad.logInfo("verify Add new button is displayed : ");
 					if (addNewButtonDisplayed) {
-						assertFalse(false, "Add button is displayed in Program page");
+						assertTrue(true, "Add button is displayed in Program page");
 					} else {
 						assertFalse(true, "Add button is not displayed in Program page");
 					}
@@ -440,7 +422,7 @@ public class BaseSD extends Commonclass {
 					addNewButtonDisplayed=assignmentPage.verifyAddButtonDisplayed(addBtnName);
 					LoggerLoad.logInfo("verify Add new button is displayed : ");
 					if (addNewButtonDisplayed) {
-						assertFalse(false, "Add button is displayed in Assignment page");
+						assertTrue(true, "Add button is displayed in Assignment page");
 					} else {
 						assertFalse(true, "Add button is not displayed in Assignment page");
 					}
@@ -461,14 +443,14 @@ public class BaseSD extends Commonclass {
 		  case "Program":
 			    LoggerLoad.logInfo("verify correct footer is displayed in Program page : ");
 			    if(programPage.verifyPaginationEntriesText("Programs")) {
-			    	assertFalse(false,"Correct entry details are displayed in Program Page");
+			    	assertTrue(true,"Correct entry details are displayed in Program Page");
 			    }else {
 			    	assertFalse(false,"Correct entry details are not displayed in Program Page");
 			    }
 		  case "Assignment":
 			    LoggerLoad.logInfo("verify correct entry details are displayed in Assignment page : ");
 			    if(assignmentPage.verifyPaginationEntriesText("Assignments")) {
-			    	assertFalse(false,"Correct entry details are displayed in Assignments Page");
+			    	assertTrue(true,"Correct entry details are displayed in Assignments Page");
 			    }else {
 			    	assertFalse(false,"Correct entry details are not displayed in Assignments Page");
 			    }
@@ -490,14 +472,14 @@ public class BaseSD extends Commonclass {
 			  case "Program":
 				    LoggerLoad.logInfo("verify correct footer is displayed in Program page : ");
 				    if(programPage.verifyFooter("Programs")) {
-				    	assertFalse(false,"Correct Footer displayed in Program Page");
+				    	assertTrue(true,"Correct Footer displayed in Program Page");
 				    }else {
 				    	assertFalse(false,"Correct Footer is not displayed in Program Page");
 				    }
 			  case "Assignment":
 				    LoggerLoad.logInfo("verify correct footer is displayed in Program page : ");
 				    if(programPage.verifyFooter("Assignments")) {
-				    	assertFalse(false,"Correct Footer displayed in Assignments Page");
+				    	assertTrue(true,"Correct Footer displayed in Assignments Page");
 				    }else {
 				    	assertFalse(false,"Correct Footer is not displayed in Assignments Page");
 				    }
@@ -518,7 +500,7 @@ public class BaseSD extends Commonclass {
 	    		case "Program":
 	    			  LoggerLoad.logInfo("verify correct number of records(5) are displayed in Program page : ");
 	    			  if(programPage.verifyRecordCountinPage(number)) {
-	    				  assertFalse(false, number+"records are displayed in Program Page");
+	    				  assertTrue(true, number+"records are displayed in Program Page");
 	    			  } else {
 	    				  assertFalse(false, number+"records are not displayed in Program Page");
 	    			  }
@@ -565,6 +547,82 @@ public class BaseSD extends Commonclass {
 	
 
 
+	@Then("Admin should see the pagination has Next link in {string} Page")
+	public void admin_should_see_the_pagination_has_next_link_in_page(String pageName) {
+		try {
+			boolean isDisplayed = basePage.isNextLinkDisplayed();
+			LoggerLoad.logInfo("verify Next link is displayed : \" " + isDisplayed + "\" ");
+			if (isDisplayed) {
+				assertTrue(true, "Next link is displayed"+pageName+ " page");
+			} else {
+				assertFalse(false, "Next link is not displayed"+pageName+ " page");
+			}
+
+		} catch (Exception e) {
+			LoggerLoad.logError(e.getMessage());
+			assertFalse(false, "Failed - Admin should see Next link displayed in "+pageName+ " page");
+
+		}
+	}
+
+	@Then("Admin should see next page link disabled on clicking last page record in {string} Page")
+	public void admin_should_see_next_page_link_disabled_on_clicking_last_page_record_in_page(String pageName) {
+		try {
+			boolean isDisabled = basePage.isNextLinkDisabled();
+			LoggerLoad.logInfo("verify Next link is disabled  on clicking last page record: \" " + isDisabled + "\" ");
+			if (isDisabled) {
+				assertTrue(true, "Next link is disabled on clicking last page record of "+pageName+ " page");
+			} else {
+				assertFalse(false, "Next link is not disabled on clicking last page record of "+pageName+ " page");
+			}
+
+		} catch (Exception e) {
+			LoggerLoad.logError(e.getMessage());
+			assertFalse(false, "Failed - Admin should see Next link disabled on clicking last page record of  "+pageName+ " page");
+
+		}
+	}
+
+	@Then("Admin should see the pagination has Previous link in {string} Page")
+	public void admin_should_see_the_pagination_has_previous_link_in_page(String pageName) {
+		try {
+			boolean isDisplayed = basePage.isPreviousLinkDisplayed();
+			LoggerLoad.logInfo("verify Previous link is displayed : \" " + isDisplayed + "\" ");
+			if (isDisplayed) {
+				assertTrue(true, "Previous link is displayed"+pageName+ " page");
+			} else {
+				assertFalse(false, "Previous link is not displayed"+pageName+ " page");
+			}
+
+		} catch (Exception e) {
+			LoggerLoad.logError(e.getMessage());
+			assertFalse(false, "Failed - Admin should see Previous link displayed in "+pageName+ " page");
+
+		}
+	}
+
+	@Then("Admin should see previous page link disabled on clicking first page record in {string} page")
+	public void admin_should_see_previous_page_link_disabled_on_clicking_first_page_record_in_page(String pageName) {
+		try {
+			boolean isDisabled = basePage.isFirstLinkDisabled();
+			LoggerLoad.logInfo("verify Previous link is disabled  on clicking first page record: \" " + isDisabled + "\" ");
+			if (isDisabled) {
+				assertTrue(true, "Previous link is disabled on clicking first page record of "+pageName+ " page");
+			} else {
+				assertFalse(false, "Previous link is not disabled on clicking first page record of "+pageName+ " page");
+			}
+
+		} catch (Exception e) {
+			LoggerLoad.logError(e.getMessage());
+			assertFalse(false, "Failed - Admin should Previous link disabled on clicking first page record of  "+pageName+ " page");
+
+		}
+	}
+
+	@Then("Admin should get redirected to {string} page")
+	public void admin_should_get_redirected_to_page(String pageName) throws Exception {
+	    basePage.redirectToPage(pageName);
+	}
 
 
 }

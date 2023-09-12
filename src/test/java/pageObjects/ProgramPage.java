@@ -1,12 +1,17 @@
 package pageObjects;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import dataProviders.ConfigReader;
 
 public class ProgramPage extends BasePage {
 	
@@ -59,6 +64,17 @@ public class ProgramPage extends BasePage {
 	@FindBy(xpath="//button[@type='Save']") static WebElement btnSave;	
 	@FindBy(xpath="//button[@type='Close']") static WebElement iconClose;
 	
+	static WebElement checkboxElmt;
+	static WebElement programName;
+	static WebElement programDesc;
+	static WebElement programStatus;
+	static WebElement asignmtEditDelete;
+    String programPageUrl = ConfigReader.getProperty("programPageUrl");
+	
+    
+    public void program_page() {
+		driver.get(programPageUrl);
+	}
 	
 	public String verifyManageProgramPage() {
 		return  programpageTitle.getText();
@@ -79,6 +95,33 @@ public class ProgramPage extends BasePage {
 			return false;
 		}
 		return false;
+
+	}
+	
+	public void validateTableHeaders(Map<String, String> excelDataMap) {
+
+		if(!tableHeaders.isEmpty() && tableHeaders.size() >0) {
+			checkboxElmt = tableHeaders.get(0);
+			programName = tableHeaders.get(1);
+			programDesc = tableHeaders.get(2);
+			programStatus = tableHeaders.get(3);
+			asignmtEditDelete = tableHeaders.get(4);
+
+			if(checkboxElmt.isDisplayed() && checkboxElmt.getText().contains(excelDataMap.get("checkBox"))
+					&&	programName.isDisplayed() && programName.getText().contains(excelDataMap.get("programName"))
+					&&	programDesc.isDisplayed() && programDesc.getText().contains(excelDataMap.get("programDesc"))
+					&&	programStatus.isDisplayed() && programStatus.getText().contains(excelDataMap.get("programDueDate"))
+					&&	asignmtEditDelete.isDisplayed() && asignmtEditDelete.getText().contains(excelDataMap.get("editOrDelete"))
+					) {
+				assertTrue(true, "Program table has all headers");
+			}
+			else {
+				assertTrue(false, "Program table has mismatch headers");
+			}
+
+		} else {
+			assertTrue(false, "Program table has mismatch headers");
+		}
 
 	}
 	

@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,6 +22,16 @@ public class BasePage {
 	// Get URLS from Config
 	String loginURL = ConfigReader.getProperty("loginPageUrl");
 	String dashboardUrl = ConfigReader.getProperty("dashboardUrl");
+	
+	@FindBy(linkText="student") static WebElement studentLink;
+	@FindBy(linkText="Program") static WebElement programLink;
+	@FindBy(linkText="Batch") static WebElement batchLink;
+	@FindBy(linkText="class") static WebElement classLink;
+	@FindBy(linkText="user") static WebElement userLink;
+	@FindBy(linkText="Assignment") static WebElement assignmentLink;
+	@FindBy(linkText="Attendance") static WebElement attendanceLink;
+	@FindBy(linkText="Logout") static WebElement logoutLink;
+
 
 	// Login Page Elements
 	@FindBy(xpath = "xpath for User field']")
@@ -53,19 +64,20 @@ public class BasePage {
 	// Pagination Related Elmts - Common for all pages
 	static String totalRowsAllPages;
 	static int totalRowsinpage;
+
+	
+	//Pagination	
+		@FindBy(xpath="")	static WebElement firstPageicon;	
+		@FindBy(xpath="") static WebElement lastPageicon;	
+		@FindBy(id="example.previous") static WebElement prevlink;		
+		@FindBy(id="example.next") static WebElement nextlink;	
+		@FindBy(xpath="//span[@class='pagination'][@label,contains(text(),\"currentpage)]") static WebElement currentPage;
+		
+		static String nextButtonClass = nextlink.getAttribute("class");
+		static String currentPageNumber = currentPage.getText();
+
 	static int count = 0;
 
-	// Pagination
-	@FindBy(xpath = "")
-	static WebElement firstPageicon;
-	@FindBy(xpath = "")
-	static WebElement lastPageicon;
-	@FindBy(id = "example.previous")
-	static WebElement forwardlink;
-	@FindBy(id = "example.next")
-	static WebElement nextlink;
-	@FindBy(xpath = "//span[@class='pagination'][@label,contains(text(),\"currentpage)]")
-	static WebElement currentPage;
 
 	// Data Table Elmts - Common for all pages
 	@FindBy(xpath = ".//*[@id=\"id of the table\"]/table/thead/tr/th")
@@ -165,8 +177,7 @@ public class BasePage {
 	}
 
 	public Boolean verifySearchButton() {
-
-		return SearchElmt.isDisplayed();
+		return SearchElmt.isDisplayed() && SearchElmt.getText().contains("Search...");
 	}
 
 	public void validateEditIconForRows(String page) throws Exception {
@@ -316,6 +327,54 @@ public class BasePage {
 			return false;
 
 	}
+
+	
+	
+	public boolean isNextLinkDisplayed() {
+		if(!nextlink.isDisplayed()) return true;
+		else return false;
+	}
+	
+	public boolean isPreviousLinkDisplayed() {
+		if(!prevlink.isDisplayed()) return true;
+		else return false;
+	}
+	
+	public boolean isNextLinkDisabled() {
+		//Get Total no.of pages count
+		int paginationSize = driver.findElements(By.xpath("//span/a[@class='paginate_button]")).size();
+
+		//Click on the last page
+		driver.findElement(By.xpath("//span/a[@class='paginate_button]["+paginationSize+"]")).click();
+		
+		//verify the Next link is disabled
+		if(!nextlink.isEnabled()) return true;
+		else return false;
+	}
+	
+	public boolean isFirstLinkDisabled() {
+		//Click on the first page link
+		driver.findElement(By.xpath("//span/a[@class='paginate_button][1]")).click();
+		
+		//verify the Next link is disabled
+		if(!prevlink.isEnabled()) return true;
+		else return false;
+	}
+
+	public void redirectToPage(String pageName) throws Exception {
+		switch(pageName) {
+		case "Student": studentLink.click(); break;
+		case "Program": programLink.click();break;
+		case "Batch": batchLink.click();break;
+		case "Class": classLink.click();break;
+		case "User": userLink.click();break;
+		case "Attendance": attendanceLink.click();break;
+		case "Assignment": assignmentLink.click();break;
+		case "Logout": logoutLink.click();break;
+		default:
+			throw(new Exception("Unable to redirect to the specified page"));
+		}
+		}
 
 	public int getRowCountinPage() {
 		totalRowsinpage = tablerows.size();

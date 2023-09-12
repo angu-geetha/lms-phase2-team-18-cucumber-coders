@@ -99,39 +99,99 @@ Feature: Program Page Verification
     Examples: 
       | PageName |
       | Manage Program |
+      
+   Scenario Outline: Verify delete icon below the Manage Program header
+    Given Admin is on dashboard page after Login
+    When Admin clicks program button on the navigation bar
+    Then Admin should see disabled delete icon below the "<UrlName>"
 
-  @tag1
-  Scenario Outline: Manage Program Validation
-    Given Admin is on Dashboard page after login
-    When Admin clicks "<linksbutton>" on the navigation bar
-    Then Admin should see url with "<UrlName>"
-    And Admin should see heading with text "<Heading>" on the page
-    And Admin should see text "Showing x to y of z entries" along with pagination icon below table
-    And Admin should see footer as "In total there are z programs"
-    And Admin should see Delete button on top left disabled by default
-    And Admin should see "<newButton>" button above data table
-    And Admin should see 5 records displayed on the "<linksbutton>" page
-    And Admin should see datatable with column headers "detailed list"
-    ## typically under table/tbody/tr/th 
-    ## can we pass parameters as maps or hashtable? (Program Name, Program Description, Program Status, Edit,Delete
-    And Admin should see sort icon beside columns header beside Edit and Delete
-    And Admin should see checkbox on left side for all rows in the table
-    And Admin should see Edit and Delete button on each row of data table
-    And Admin should see search bar with text as Search
+    Examples: 
+      | UrlName                |
+      | manageProgramHeader |
+
+  Scenario Outline: Verify search bar on the manage Program page with search text as "Search..."
+    Given Admin is on dashboard page after Login
+    When Admin clicks program button on the navigation bar
+    Then Admin should see search bar on the "<UrlName>"
+
+    Examples: 
+      | UrlName                |
+      | manage program page |
+      
+    Scenario Outline: Verify data table for column headers on the manage program page
+    Given Admin is on dashboard page after Login
+    When Admin clicks program button on the navigation bar
+    Then Admin should see data table on the manage program page With following column headers "<sheetName>" with "<dataKey>"
+		 Examples: 
+      | dataKey | sheetName|
+      | validate_column_headers |program|
+      
+    Scenario: Verify Edit icon in the data table
+    Given Admin is on dashboard page after Login
+    When Admin clicks program button on the navigation bar
+    Then Edit Icon in each row of data table only  when entries are available
+  
+   Scenario: Verify Delete icon in the data table
+    Given Admin is on dashboard page after Login
+    When Admin clicks program button on the navigation bar
+    Then Delete Icon in each row of data table only  when entries are available
     
-    Examples:
-    |linksbutton | UrlName 			 | Heading 				| newButton 			|
-    |Program 		 |Manage Program | Manage Program | + A New Program |
+  Scenario: Verify check box in the data table
+    Given Admin is on dashboard page after Login
+    When Admin clicks program button on the navigation bar
+    Then Admin should see check box in the all rows  of data table when entries available
     
-    Scenario Outline: Search Program with various parameters
-    	Given Admin is on "<Manage Program>" page after login
-    	When Admin enters "<searchphrase>" into the search box
-    	Then Admin should see the programs displayed on the "<searchcriteria>"
-    	
-    	Examples:
-    	|modulename			| Searchphrase |	searchcriteria	|
-    	|Manage Program  |programname		| programname			|
+  Scenario: Verify sort icon in the data table
+    Given Admin is on dashboard page after Login
+    When Admin clicks program button on the navigation bar
+    Then Admin should see sort icon near the column headers except for Edit and Delete
+    
+  Scenario Outline: Verify pagination has Next page link
+    Given Admin is on dashboard page after Login
+    When Admin clicks program button on the navigation bar
+    Then Admin should see the pagination has Next link in "<module>" Page
+     Examples: 
+      | module       |
+      | Program |
     
     
+  Scenario Outline: Verify Next page link is disabled on clicking last page record
+    Given Admin is on dashboard page after Login
+    When Admin clicks program button on the navigation bar
+    Then Admin should see next page link disabled on clicking last page record in "<module>" Page
+    Examples: 
+      | module       |
+      | Program |
+    
+    Scenario Outline: Verify pagination has Previous page link
+    Given Admin is on dashboard page after Login
+    When Admin clicks program button on the navigation bar
+    Then Admin should see the pagination has Previous link in "<module>" Page
+    Examples: 
+      | module       |
+      | Program |
+    
+    Scenario Outline: Verify Admin can see previous link disabled on clicking first page record
+    Given Admin is on dashboard page after Login
+    When Admin clicks program button on the navigation bar
+    Then Admin should see previous page link disabled on clicking first page record in "<module>" page
+    Examples: 
+      | module       |
+      | Program |
+  
+  Scenario Outline: Verify Admin can navigate from Program page to other pages
+    Given Admin is on dashboard page after Login
+    When Admin clicks program button on the navigation bar
+    Then Admin should get redirected to "<module>" page
+    Examples: 
+      | module     |
+      | Student    |
+      | Batch      |
+      | Class      |
+      | User       |
+      | Assignment |
+      | Attendance |
+      | Logout     |
+      
 
   
