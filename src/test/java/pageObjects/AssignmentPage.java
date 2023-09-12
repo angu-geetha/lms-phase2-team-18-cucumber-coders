@@ -38,7 +38,7 @@ public class AssignmentPage extends BasePage{
 	static WebElement asignmtDueDate;
 	static WebElement asignmtGrade;
 	static WebElement asignmtEditDelete;
-    String assignmentPageUrl = ConfigReader.getProperty("assignmentPageUrl");;
+    String assignmentPageUrl = ConfigReader.getProperty("assignmentPageUrl");
 
 
 
