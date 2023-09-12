@@ -927,6 +927,7 @@
 [INFO ] 2023-09-10 14:37:29.573 [main] LoggerLoad - Admin enter valid credentials and clicks login button
 [INFO ] 2023-09-10 14:37:29.677 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
 [INFO ] 2023-09-10 14:37:29.750 [main] LoggerLoad - Closing Driver
+<<<<<<< HEAD
 [INFO ] 2023-09-10 17:05:57.043 [main] LoggerLoad - Loading Config file
 [INFO ] 2023-09-10 17:05:57.048 [main] LoggerLoad - Testing on chrome
 [INFO ] 2023-09-10 17:06:00.978 [main] LoggerLoad - Initializing driver for : chrome
@@ -1342,3 +1343,793 @@
 [INFO ] 2023-09-11 15:01:29.762 [main] LoggerLoad - [] : Verify Program details popup window
 [INFO ] 2023-09-11 15:01:29.763 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
 [INFO ] 2023-09-11 15:01:29.797 [main] LoggerLoad - Closing Driver
+=======
+[INFO ] 2023-09-10 22:45:19.494 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 22:45:19.498 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 22:45:24.060 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 22:45:24.190 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:45:24.191 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with mandatory or optional feilds
+[INFO ] 2023-09-10 22:45:24.191 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:45:24.204 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:45:24.223 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:45:24.224 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with mandatory or optional feilds
+[INFO ] 2023-09-10 22:45:24.224 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:45:24.226 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:45:24.239 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:45:24.240 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with invalid data
+[INFO ] 2023-09-10 22:45:24.240 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:45:24.242 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:45:24.260 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:45:24.261 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with invalid data
+[INFO ] 2023-09-10 22:45:24.261 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:45:24.263 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:45:24.276 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:45:24.277 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 22:45:24.277 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:45:24.279 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:45:24.293 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:45:24.294 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 22:45:24.294 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:45:24.297 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:45:24.308 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:45:24.309 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 22:45:24.309 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:45:24.311 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:45:24.320 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:45:24.320 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 22:45:24.320 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:45:24.322 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:45:24.333 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:45:24.334 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 22:45:24.334 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:45:24.335 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:45:24.348 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:45:24.348 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 22:45:24.348 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:45:24.350 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:45:24.351 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 22:50:07.753 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 22:50:07.757 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 22:50:12.016 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 22:50:12.116 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:50:12.117 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with mandatory or optional feilds
+[INFO ] 2023-09-10 22:50:12.117 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:50:12.126 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:50:12.140 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:50:12.140 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with mandatory or optional feilds
+[INFO ] 2023-09-10 22:50:12.140 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:50:12.142 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:50:12.151 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:50:12.151 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with invalid data
+[INFO ] 2023-09-10 22:50:12.152 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:50:12.153 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:50:12.162 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:50:12.162 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with invalid data
+[INFO ] 2023-09-10 22:50:12.162 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:50:12.164 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:50:12.173 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:50:12.174 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 22:50:12.174 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:50:12.175 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:50:12.183 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:50:12.183 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 22:50:12.184 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:50:12.185 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:50:12.194 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:50:12.194 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 22:50:12.194 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:50:12.195 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:50:12.203 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:50:12.204 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 22:50:12.204 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:50:12.206 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:50:12.214 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:50:12.214 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 22:50:12.214 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:50:12.215 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:50:12.228 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:50:12.228 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 22:50:12.228 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:50:12.229 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:50:12.231 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 22:52:13.710 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 22:52:13.713 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 22:52:17.820 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 22:52:17.900 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:52:17.901 [main] LoggerLoad - [@tag] : Verify Assignment details popup window
+[INFO ] 2023-09-10 22:52:17.901 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:52:17.913 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:52:17.930 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:52:17.930 [main] LoggerLoad - [@tag] : Verify input fields in Assignment details popup window
+[INFO ] 2023-09-10 22:52:17.931 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:52:17.933 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:52:17.945 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:52:17.945 [main] LoggerLoad - [@tag] : Verify text box present in Assignment details popup window
+[INFO ] 2023-09-10 22:52:17.945 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:52:17.947 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:52:17.958 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:52:17.958 [main] LoggerLoad - [@tag] : Verify drop down in Batch Number  in Assignment details popup window
+[INFO ] 2023-09-10 22:52:17.958 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:52:17.960 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:52:17.968 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:52:17.968 [main] LoggerLoad - [@tag] : Verify drop down in Program name  in Assignment details popup window
+[INFO ] 2023-09-10 22:52:17.968 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:52:17.970 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:52:17.978 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:52:17.978 [main] LoggerLoad - [@tag] : Verify calendar icon in Assignment due date  in Assignment details popup window
+[INFO ] 2023-09-10 22:52:17.978 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:52:17.980 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:52:17.987 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:52:17.988 [main] LoggerLoad - [@tag] : Verify save button is present in Assignment details popup window
+[INFO ] 2023-09-10 22:52:17.988 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:52:17.990 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:52:17.997 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:52:17.998 [main] LoggerLoad - [@tag] : Verify close button in  Assignment details popup window
+[INFO ] 2023-09-10 22:52:17.998 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:52:17.999 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:52:18.008 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:52:18.008 [main] LoggerLoad - [@tag] : Verify cancel button is present in Assignment details popup window
+[INFO ] 2023-09-10 22:52:18.009 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:52:18.011 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:52:18.013 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 22:56:06.627 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 22:56:06.634 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 22:56:11.765 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 22:56:11.859 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:56:11.860 [main] LoggerLoad - [@tag] : Verify Assignment details popup window
+[INFO ] 2023-09-10 22:56:11.860 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:56:11.870 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:56:11.882 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:56:11.882 [main] LoggerLoad - [@tag] : Verify input fields in Assignment details popup window
+[INFO ] 2023-09-10 22:56:11.883 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:56:11.884 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:56:11.894 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:56:11.895 [main] LoggerLoad - [@tag] : Verify text box present in Assignment details popup window
+[INFO ] 2023-09-10 22:56:11.895 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:56:11.897 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:56:11.905 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:56:11.906 [main] LoggerLoad - [@tag] : Verify drop down in Batch Number  in Assignment details popup window
+[INFO ] 2023-09-10 22:56:11.906 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:56:11.908 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:56:11.918 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:56:11.918 [main] LoggerLoad - [@tag] : Verify drop down in Program name  in Assignment details popup window
+[INFO ] 2023-09-10 22:56:11.918 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:56:11.921 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:56:11.931 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:56:11.932 [main] LoggerLoad - [@tag] : Verify calendar icon in Assignment due date  in Assignment details popup window
+[INFO ] 2023-09-10 22:56:11.932 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:56:11.933 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:56:11.942 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:56:11.942 [main] LoggerLoad - [@tag] : Verify save button is present in Assignment details popup window
+[INFO ] 2023-09-10 22:56:11.943 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:56:11.944 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:56:11.950 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:56:11.950 [main] LoggerLoad - [@tag] : Verify close button in  Assignment details popup window
+[INFO ] 2023-09-10 22:56:11.950 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:56:11.952 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:56:11.958 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:56:11.958 [main] LoggerLoad - [@tag] : Verify cancel button is present in Assignment details popup window
+[INFO ] 2023-09-10 22:56:11.958 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:56:11.960 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:56:11.961 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 22:58:04.961 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 22:58:04.966 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 22:58:09.972 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 22:58:10.069 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:58:10.069 [main] LoggerLoad - [@tag] : Verify Assignment details popup window
+[INFO ] 2023-09-10 22:58:10.069 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:58:10.087 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:58:10.103 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:58:10.104 [main] LoggerLoad - [@tag] : Verify input fields in Assignment details popup window
+[INFO ] 2023-09-10 22:58:10.104 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:58:10.107 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:58:10.125 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:58:10.125 [main] LoggerLoad - [@tag] : Verify text box present in Assignment details popup window
+[INFO ] 2023-09-10 22:58:10.125 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:58:10.128 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:58:10.141 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:58:10.142 [main] LoggerLoad - [@tag] : Verify drop down in Batch Number  in Assignment details popup window
+[INFO ] 2023-09-10 22:58:10.142 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:58:10.145 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:58:10.157 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:58:10.157 [main] LoggerLoad - [@tag] : Verify drop down in Program name  in Assignment details popup window
+[INFO ] 2023-09-10 22:58:10.158 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:58:10.160 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:58:10.170 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:58:10.171 [main] LoggerLoad - [@tag] : Verify calendar icon in Assignment due date  in Assignment details popup window
+[INFO ] 2023-09-10 22:58:10.171 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:58:10.174 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:58:10.183 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:58:10.183 [main] LoggerLoad - [@tag] : Verify save button is present in Assignment details popup window
+[INFO ] 2023-09-10 22:58:10.183 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:58:10.185 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:58:10.203 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:58:10.204 [main] LoggerLoad - [@tag] : Verify close button in  Assignment details popup window
+[INFO ] 2023-09-10 22:58:10.204 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:58:10.206 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:58:10.215 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 22:58:10.215 [main] LoggerLoad - [@tag] : Verify cancel button is present in Assignment details popup window
+[INFO ] 2023-09-10 22:58:10.215 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 22:58:10.217 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 22:58:10.218 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 23:03:01.644 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 23:03:01.647 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 23:03:06.017 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 23:03:06.086 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.086 [main] LoggerLoad - [@tag] : Verify landing in manage assignment page
+[INFO ] 2023-09-10 23:03:06.086 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.095 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.105 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.105 [main] LoggerLoad - [@tag] : Capture the response time to navigate to manage assignment page
+[INFO ] 2023-09-10 23:03:06.105 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.107 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.114 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.115 [main] LoggerLoad - [@tag] : : Verify manage assignment page Header
+[INFO ] 2023-09-10 23:03:06.115 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.116 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.124 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.124 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:03:06.124 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.126 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.132 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.132 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:03:06.133 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.135 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.141 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.141 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:03:06.141 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.142 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.148 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.148 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:03:06.148 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.149 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.155 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.155 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:03:06.155 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.156 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.161 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.162 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:03:06.162 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.163 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.169 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.169 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:03:06.169 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.170 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.177 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.177 [main] LoggerLoad - [@tag] : Verify delete icon below the header
+[INFO ] 2023-09-10 23:03:06.177 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.178 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.184 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.184 [main] LoggerLoad - [@tag] : Verify search bar on the manage assignment page
+[INFO ] 2023-09-10 23:03:06.184 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.186 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.191 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.191 [main] LoggerLoad - [@tag] : Verify add new assignment button  on manage assignment page
+[INFO ] 2023-09-10 23:03:06.191 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.192 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.197 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.198 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-10 23:03:06.198 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.199 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.204 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.204 [main] LoggerLoad - [@tag] : Verify Edit icon in the data table
+[INFO ] 2023-09-10 23:03:06.204 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.210 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.215 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.216 [main] LoggerLoad - [@tag] : Verify Delete icon in the data table
+[INFO ] 2023-09-10 23:03:06.216 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.218 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.222 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.222 [main] LoggerLoad - [@tag] : Verify check box in the data table
+[INFO ] 2023-09-10 23:03:06.222 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.223 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.228 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:03:06.228 [main] LoggerLoad - [@tag] : Verify sort icon in the data table
+[INFO ] 2023-09-10 23:03:06.228 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:03:06.230 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:03:06.231 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 23:05:25.146 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 23:05:25.150 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 23:05:28.965 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 23:05:29.046 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:05:29.046 [main] LoggerLoad - [@tag] : Verify Assignment details popup window
+[INFO ] 2023-09-10 23:05:29.046 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:05:29.057 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:05:29.070 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:05:29.071 [main] LoggerLoad - [@tag] : Verify input fields in Assignment details popup window
+[INFO ] 2023-09-10 23:05:29.071 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:05:29.073 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:05:29.082 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:05:29.083 [main] LoggerLoad - [@tag] : Verify text box present in Assignment details popup window
+[INFO ] 2023-09-10 23:05:29.083 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:05:29.086 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:05:29.095 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:05:29.095 [main] LoggerLoad - [@tag] : Verify drop down in Batch Number  in Assignment details popup window
+[INFO ] 2023-09-10 23:05:29.095 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:05:29.097 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:05:29.108 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:05:29.108 [main] LoggerLoad - [@tag] : Verify drop down in Program name  in Assignment details popup window
+[INFO ] 2023-09-10 23:05:29.108 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:05:29.110 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:05:29.117 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:05:29.117 [main] LoggerLoad - [@tag] : Verify calendar icon in Assignment due date  in Assignment details popup window
+[INFO ] 2023-09-10 23:05:29.117 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:05:29.119 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:05:29.128 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:05:29.129 [main] LoggerLoad - [@tag] : Verify save button is present in Assignment details popup window
+[INFO ] 2023-09-10 23:05:29.129 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:05:29.130 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:05:29.140 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:05:29.140 [main] LoggerLoad - [@tag] : Verify close button in  Assignment details popup window
+[INFO ] 2023-09-10 23:05:29.140 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:05:29.142 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:05:29.149 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:05:29.149 [main] LoggerLoad - [@tag] : Verify cancel button is present in Assignment details popup window
+[INFO ] 2023-09-10 23:05:29.149 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:05:29.151 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:05:29.153 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 23:08:37.375 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 23:08:37.380 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 23:08:41.642 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 23:08:41.724 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:08:41.725 [main] LoggerLoad - [@tag] : Verify Assignment details popup window
+[INFO ] 2023-09-10 23:08:41.725 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:08:41.735 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:08:41.746 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:08:41.746 [main] LoggerLoad - [@tag] : Verify input fields in Assignment details popup window
+[INFO ] 2023-09-10 23:08:41.747 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:08:41.748 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:08:41.758 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:08:41.758 [main] LoggerLoad - [@tag] : Verify text box present in Assignment details popup window
+[INFO ] 2023-09-10 23:08:41.758 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:08:41.760 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:08:41.769 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:08:41.769 [main] LoggerLoad - [@tag] : Verify drop down in Batch Number  in Assignment details popup window
+[INFO ] 2023-09-10 23:08:41.770 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:08:41.771 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:08:41.779 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:08:41.779 [main] LoggerLoad - [@tag] : Verify drop down in Program name  in Assignment details popup window
+[INFO ] 2023-09-10 23:08:41.780 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:08:41.782 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:08:41.790 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:08:41.791 [main] LoggerLoad - [@tag] : Verify calendar icon in Assignment due date  in Assignment details popup window
+[INFO ] 2023-09-10 23:08:41.791 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:08:41.793 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:08:41.802 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:08:41.803 [main] LoggerLoad - [@tag] : Verify save button is present in Assignment details popup window
+[INFO ] 2023-09-10 23:08:41.803 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:08:41.804 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:08:41.812 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:08:41.812 [main] LoggerLoad - [@tag] : Verify close button in  Assignment details popup window
+[INFO ] 2023-09-10 23:08:41.813 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:08:41.814 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:08:41.820 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:08:41.820 [main] LoggerLoad - [@tag] : Verify cancel button is present in Assignment details popup window
+[INFO ] 2023-09-10 23:08:41.820 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:08:41.822 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:08:41.823 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 23:09:40.660 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 23:09:40.664 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 23:09:44.837 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 23:09:44.906 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:44.906 [main] LoggerLoad - [@tag] : Verify landing in manage assignment page
+[INFO ] 2023-09-10 23:09:44.906 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:44.916 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:44.927 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:44.927 [main] LoggerLoad - [@tag] : Capture the response time to navigate to manage assignment page
+[INFO ] 2023-09-10 23:09:44.927 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:44.929 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:44.939 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:44.939 [main] LoggerLoad - [@tag] : : Verify manage assignment page Header
+[INFO ] 2023-09-10 23:09:44.939 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:44.941 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:44.951 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:44.952 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:09:44.952 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:44.954 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:44.961 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:44.961 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:09:44.961 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:44.963 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:44.969 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:44.969 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:09:44.970 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:44.971 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:44.981 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:44.982 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:09:44.982 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:44.983 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:44.992 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:44.992 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:09:44.992 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:44.994 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:45.001 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:45.001 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:09:45.001 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:45.003 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:45.015 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:45.015 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:09:45.015 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:45.017 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:45.024 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:45.024 [main] LoggerLoad - [@tag] : Verify delete icon below the header
+[INFO ] 2023-09-10 23:09:45.024 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:45.026 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:45.032 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:45.033 [main] LoggerLoad - [@tag] : Verify search bar on the manage assignment page
+[INFO ] 2023-09-10 23:09:45.033 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:45.035 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:45.040 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:45.040 [main] LoggerLoad - [@tag] : Verify add new assignment button  on manage assignment page
+[INFO ] 2023-09-10 23:09:45.040 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:45.042 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:45.049 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:45.050 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-10 23:09:45.050 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:45.051 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:45.058 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:45.058 [main] LoggerLoad - [@tag] : Verify Edit icon in the data table
+[INFO ] 2023-09-10 23:09:45.059 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:45.061 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:45.067 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:45.068 [main] LoggerLoad - [@tag] : Verify Delete icon in the data table
+[INFO ] 2023-09-10 23:09:45.068 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:45.070 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:45.074 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:45.075 [main] LoggerLoad - [@tag] : Verify check box in the data table
+[INFO ] 2023-09-10 23:09:45.075 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:45.076 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:45.080 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:09:45.080 [main] LoggerLoad - [@tag] : Verify sort icon in the data table
+[INFO ] 2023-09-10 23:09:45.080 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:09:45.081 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:09:45.083 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 23:11:45.324 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 23:11:45.328 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 23:11:49.572 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 23:11:49.670 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:49.670 [main] LoggerLoad - [@tag] : Verify landing in manage assignment page
+[INFO ] 2023-09-10 23:11:49.671 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:49.702 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:50.394 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:51.071 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:51.078 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:51.093 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:51.104 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:51.104 [main] LoggerLoad - [@tag] : Capture the response time to navigate to manage assignment page
+[INFO ] 2023-09-10 23:11:51.104 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:51.109 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:51.471 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:51.564 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:51.572 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:51.574 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:51.587 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:51.587 [main] LoggerLoad - [@tag] : : Verify manage assignment page Header
+[INFO ] 2023-09-10 23:11:51.588 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:51.596 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:51.747 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:51.837 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:51.846 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:51.847 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:51.859 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:51.859 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:11:51.860 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:51.868 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:52.033 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:52.088 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:52.097 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:52.099 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:52.110 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:52.111 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:11:52.111 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:52.117 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:52.273 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:52.320 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:52.328 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:52.329 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:52.340 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:52.340 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:11:52.340 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:52.343 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:52.506 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:52.550 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:52.557 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:52.559 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:52.570 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:52.570 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:11:52.571 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:52.574 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:52.731 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:52.776 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:52.784 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:52.786 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:52.795 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:52.795 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:11:52.795 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:52.805 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:52.955 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:53.023 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:53.029 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:53.030 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:53.035 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:53.035 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:11:53.036 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:53.037 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:53.198 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:53.236 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:53.248 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:53.250 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:53.259 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:53.260 [main] LoggerLoad - [@tag] : Validate text in manage assignment page
+[INFO ] 2023-09-10 23:11:53.260 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:53.264 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:53.458 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:53.486 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:53.494 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:53.495 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:53.500 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:53.500 [main] LoggerLoad - [@tag] : Verify delete icon below the header
+[INFO ] 2023-09-10 23:11:53.500 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:53.502 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:53.645 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:53.678 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:53.686 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:53.687 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:53.693 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:53.693 [main] LoggerLoad - [@tag] : Verify search bar on the manage assignment page
+[INFO ] 2023-09-10 23:11:53.694 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:53.696 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:53.883 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:53.916 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:53.925 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:53.926 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:53.933 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:53.934 [main] LoggerLoad - [@tag] : Verify add new assignment button  on manage assignment page
+[INFO ] 2023-09-10 23:11:53.934 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:53.948 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:54.179 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:54.239 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:54.247 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:54.249 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:54.256 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:54.256 [main] LoggerLoad - [@tag] : Verify data table on the manage assignment page
+[INFO ] 2023-09-10 23:11:54.256 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:54.260 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:54.686 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:54.717 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:54.726 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:54.727 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:54.735 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:54.735 [main] LoggerLoad - [@tag] : Verify Edit icon in the data table
+[INFO ] 2023-09-10 23:11:54.735 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:54.739 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:54.891 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:54.926 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:54.935 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:54.937 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:54.945 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:54.946 [main] LoggerLoad - [@tag] : Verify Delete icon in the data table
+[INFO ] 2023-09-10 23:11:54.946 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:54.951 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:55.246 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:55.300 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:55.306 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:55.307 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:55.311 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:55.311 [main] LoggerLoad - [@tag] : Verify check box in the data table
+[INFO ] 2023-09-10 23:11:55.311 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:55.314 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:55.451 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:55.479 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:55.488 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:55.489 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:55.496 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:11:55.496 [main] LoggerLoad - [@tag] : Verify sort icon in the data table
+[INFO ] 2023-09-10 23:11:55.496 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:11:55.499 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:11:55.855 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:11:55.881 [main] LoggerLoad - Admin should land on dashboard page
+[INFO ] 2023-09-10 23:11:55.888 [main] LoggerLoad - Title of the Dashboard Page : " Heroku | Application Error" 
+[INFO ] 2023-09-10 23:11:55.890 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-10 23:11:55.891 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 23:14:00.916 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 23:14:00.920 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 23:14:05.857 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 23:14:05.933 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:05.933 [main] LoggerLoad - [@tag] : Verify Assignment details popup window
+[INFO ] 2023-09-10 23:14:05.933 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:05.959 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:06.266 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:06.939 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 23:14:07.085 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:07.086 [main] LoggerLoad - [@tag] : Verify input fields in Assignment details popup window
+[INFO ] 2023-09-10 23:14:07.086 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:07.094 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:07.153 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:07.270 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 23:14:07.362 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:07.363 [main] LoggerLoad - [@tag] : Verify text box present in Assignment details popup window
+[INFO ] 2023-09-10 23:14:07.363 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:07.370 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:07.435 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:07.503 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 23:14:07.594 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:07.595 [main] LoggerLoad - [@tag] : Verify drop down in Batch Number  in Assignment details popup window
+[INFO ] 2023-09-10 23:14:07.595 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:07.601 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:07.921 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:07.986 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[ERROR] 2023-09-10 23:14:08.055 [main] LoggerLoad - Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+[INFO ] 2023-09-10 23:14:08.063 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:08.063 [main] LoggerLoad - [@tag] : Verify drop down in Program name  in Assignment details popup window
+[INFO ] 2023-09-10 23:14:08.063 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:08.069 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:08.129 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:08.184 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[ERROR] 2023-09-10 23:14:08.389 [main] LoggerLoad - Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+[INFO ] 2023-09-10 23:14:08.402 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:08.403 [main] LoggerLoad - [@tag] : Verify calendar icon in Assignment due date  in Assignment details popup window
+[INFO ] 2023-09-10 23:14:08.403 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:08.411 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:08.479 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:08.532 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[ERROR] 2023-09-10 23:14:08.615 [main] LoggerLoad - Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+[INFO ] 2023-09-10 23:14:08.622 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:08.622 [main] LoggerLoad - [@tag] : Verify save button is present in Assignment details popup window
+[INFO ] 2023-09-10 23:14:08.623 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:08.625 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:08.702 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:08.792 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[ERROR] 2023-09-10 23:14:08.967 [main] LoggerLoad - Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+[INFO ] 2023-09-10 23:14:08.985 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:08.985 [main] LoggerLoad - [@tag] : Verify close button in  Assignment details popup window
+[INFO ] 2023-09-10 23:14:08.985 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:08.989 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:09.062 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:09.131 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[ERROR] 2023-09-10 23:14:09.391 [main] LoggerLoad - Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+[INFO ] 2023-09-10 23:14:09.398 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:09.398 [main] LoggerLoad - [@tag] : Verify cancel button is present in Assignment details popup window
+[INFO ] 2023-09-10 23:14:09.398 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:09.402 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:10.240 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:10.327 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[ERROR] 2023-09-10 23:14:10.399 [main] LoggerLoad - Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+[INFO ] 2023-09-10 23:14:10.401 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-10 23:14:23.560 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-10 23:14:23.563 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-10 23:14:28.379 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-10 23:14:28.511 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:28.512 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with mandatory or optional feilds
+[INFO ] 2023-09-10 23:14:28.512 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:28.542 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:28.913 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:29.540 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 23:14:29.564 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:29.565 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with mandatory or optional feilds
+[INFO ] 2023-09-10 23:14:29.566 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:29.580 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:29.678 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:29.773 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 23:14:29.791 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:29.791 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with invalid data
+[INFO ] 2023-09-10 23:14:29.792 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:29.798 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:29.856 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:29.907 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 23:14:29.920 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:29.921 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with invalid data
+[INFO ] 2023-09-10 23:14:29.921 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:29.924 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:29.991 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:30.055 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 23:14:30.070 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:30.070 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 23:14:30.070 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:30.075 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:30.155 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:30.211 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 23:14:30.229 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:30.229 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 23:14:30.229 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:30.237 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:30.522 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:30.597 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 23:14:30.608 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:30.608 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 23:14:30.608 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:30.611 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:30.667 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:30.706 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 23:14:30.716 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:30.716 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 23:14:30.717 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:30.720 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:30.767 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:30.817 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 23:14:30.829 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:30.830 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 23:14:30.830 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:30.834 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:31.064 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:31.109 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 23:14:31.122 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-10 23:14:31.123 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-10 23:14:31.123 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-10 23:14:31.126 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-10 23:14:31.211 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-10 23:14:31.248 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-10 23:14:31.250 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-11 00:29:27.132 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-11 00:29:27.136 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-11 00:29:32.386 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-11 00:29:32.470 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 00:29:32.470 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with mandatory or optional feilds
+[INFO ] 2023-09-11 00:29:32.470 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 00:29:32.499 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 00:29:33.295 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 00:29:33.980 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 00:29:34.228 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 00:29:34.229 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with mandatory or optional feilds
+[INFO ] 2023-09-11 00:29:34.229 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 00:29:34.235 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 00:29:34.280 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 00:29:34.343 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 00:29:34.559 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 00:29:34.560 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with invalid data
+[INFO ] 2023-09-11 00:29:34.560 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 00:29:34.566 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 00:29:34.621 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 00:29:34.676 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 00:29:35.153 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-11 00:29:35.167 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 00:29:35.167 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with invalid data
+[INFO ] 2023-09-11 00:29:35.167 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 00:29:35.172 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 00:29:35.233 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 00:29:35.284 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 00:29:35.593 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-11 00:29:35.603 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 00:29:35.604 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-11 00:29:35.604 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 00:29:35.608 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 00:29:35.673 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 00:29:35.718 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 00:29:35.842 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-11 00:29:35.852 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 00:29:35.853 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-11 00:29:35.853 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 00:29:35.857 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 00:29:36.089 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 00:29:36.154 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 00:29:36.294 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-11 00:29:36.302 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 00:29:36.302 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-11 00:29:36.302 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 00:29:36.305 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 00:29:36.372 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 00:29:36.400 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 00:29:36.529 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-11 00:29:36.535 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 00:29:36.535 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-11 00:29:36.535 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 00:29:36.537 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 00:29:36.602 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 00:29:36.638 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 00:29:36.763 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-11 00:29:36.771 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 00:29:36.771 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-11 00:29:36.771 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 00:29:36.774 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 00:29:36.829 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 00:29:36.859 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 00:29:36.989 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-11 00:29:36.997 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 00:29:36.997 [main] LoggerLoad - [@tag] : Validate admin able to add new assignment with missing data
+[INFO ] 2023-09-11 00:29:36.997 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 00:29:37.000 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 00:29:37.322 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 00:29:37.381 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 00:29:37.505 [main] LoggerLoad - Steps Failed , Taking Screenshot
+[INFO ] 2023-09-11 00:29:37.506 [main] LoggerLoad - Closing Driver
+>>>>>>> branch 'Program' of https://github.com/angu-geetha/lms-phase2-team-18-cucumber-coders.git

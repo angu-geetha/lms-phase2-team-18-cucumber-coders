@@ -4,9 +4,12 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import org.openqa.selenium.WebElement;
 
 import dataProviders.ConfigReader;
 import dataProviders.ExcelReader;
@@ -19,11 +22,6 @@ import utilities.LoggerLoad;
 public class BaseSD extends Commonclass {
 	
 	
-	
-
-	public BaseSD() {
-
-	}
 
 	@Given("Admin is in login page")
 	public void admin_is_in_login_page() {
@@ -227,56 +225,183 @@ public class BaseSD extends Commonclass {
 	}
 	
 	@Then("Admin should see a popup  with  heading {string}")
-	public void admin_should_see_a_popup_with_heading(String string) {
-	    
+	public void admin_should_see_a_popup_with_heading(String headingTitle) {
+	    try {
+			String heading = basePage.getPopUpPageHeadingString();
+			assertEquals(heading, headingTitle);
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Admin should see a popup  with  heading {string}");
+		}
 	}
 	
 	@Then("Admin should see input fields Text  {string}")
-	public void admin_should_see_input_fields_text(String string) {
-	    
+	public void admin_should_see_input_fields_text(String page) {
+		try {
+			ArrayList<String> inputFeilds= null;
+			List<WebElement> webElmts = basePage.getInputFeilds();
+			switch (page) {
+			case "Assignment":
+				inputFeilds = getNewAssignmentInputFeilds();
+				for (Iterator iterator = webElmts.iterator(); iterator.hasNext();) {
+					WebElement webElement = (WebElement) iterator.next();
+					if(inputFeilds.contains(webElement.getText())) {
+						LoggerLoad.logInfo("Feild is present in the page");
+					} else {
+						assertFalse(false,
+								"Failed - Feild is not present in the page");
+					}
+				}
+				break;
+
+			default:
+				break;
+			}
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Admin should see input fields Text  {string}");
+		}
 	    
 	}
 
 	@Then("{string} textbox should be  present in {string} details popup window")
-	public void textbox_should_be_present_in_details_popup_window(String string, String string2) {
-	    
+	public void textbox_should_be_present_in_details_popup_window(String noOfTextBox, String page) {
+	    try {
+	    	List<WebElement> webElmts = basePage.getTextBoxesinPage();
+	    	assertEquals(Integer.parseInt(noOfTextBox), webElmts.size());
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Admin should see input fields Text  {string}");
+		}
 	    
 	}
 
 	@Then("Admin should see dropdown option for Batch Number")
 	public void admin_should_see_dropdown_option_for_batch_number() {
-	    
+		try {
+			boolean batchdropdowndisplayed = basePage.verifyDropdown();
+			LoggerLoad.logInfo("verify batch Dropdown button is displayed \" " + batchdropdowndisplayed + "\" ");
+			if (batchdropdowndisplayed) {
+				assertFalse(true, "Dropdown button is displayed ");
+			} else {
+				assertFalse(false, "Dropdown button is  not displayed");
+			}
+
+		} catch (Exception e) {
+
+			LoggerLoad.logError(e.getMessage());
+
+			assertFalse(false, "Admin should see dropdown option for Batch Number ");
+
+		}
 	    
 	}
 
 	@Then("Admin should see dropdown option for Program name")
 	public void admin_should_see_dropdown_option_for_program_name() {
-	    
+		try {
+			boolean progdropdowndisplayed = basePage.verifyProgramDropdown();
+			LoggerLoad.logInfo("verify program Dropdown button is displayed  \" " + progdropdowndisplayed + "\" ");
+			if (progdropdowndisplayed) {
+				assertFalse(true, "Dropdown button is displayed ");
+			} else {
+				assertFalse(false, "Dropdown button is  not displayed");
+			}
+
+		} catch (Exception e) {
+
+			LoggerLoad.logError(e.getMessage());
+
+			assertFalse(false, "Admin should see dropdown option for Program name ");
+
+		}
 	    
 	}
 
 	@Then("Admin should see  calendar icon for assignment due date")
 	public void admin_should_see_calendar_icon_for_assignment_due_date() {
-	    
+		try {
+			boolean calendarvalue = basePage.verifyCalenderIcon();
+			LoggerLoad.logInfo("verify calendar icon is displayed \" " + calendarvalue + "\" ");
+			if (calendarvalue) {
+				assertFalse(true, "calendar icon is displayed ");
+			} else {
+				assertFalse(false, "calendar icon is  not displayed");
+			}
+
+		} catch (Exception e) {
+
+			LoggerLoad.logError(e.getMessage());
+
+			assertFalse(false, "Admin should see  calendar icon for assignment due date ");
+
+		}
 	    
 	}
 
 	@Then("Admin should see  save button in the {string} popup window")
-	public void admin_should_see_save_button_in_the_popup_window(String string) {
-	    
+	public void admin_should_see_save_button_in_the_popup_window(String heading) {
+		try {
+			boolean savebuttondisp = basePage.verifysavebutton();
+			LoggerLoad.logInfo("verify save button is displayed \" " + savebuttondisp + "\" ");
+			if (savebuttondisp) {
+				assertFalse(true, "save button is displayed for " + heading);
+			} else {
+				assertFalse(false, "save button is  not displayed for" + heading );
+			}
+
+		} catch (Exception e) {
+
+			LoggerLoad.logError(e.getMessage());
+
+			assertFalse(false, "Admin should see  save button in the {string} popup window for " + heading);
+
+		}
 	    
 	}
 
 	@Then("Admin should see  close button on the {string} popup window")
-	public void admin_should_see_close_button_on_the_popup_window(String string) {
-	    
+	public void admin_should_see_close_button_on_the_popup_window(String heading) {
+		try {
+			boolean closebtn = basePage.verifyclosebutton();
+			LoggerLoad.logInfo("verify close button is displayed \" " + closebtn + "\" ");
+			if (closebtn) {
+				assertFalse(true, "close button is displayed for " + heading);
+			} else {
+				assertFalse(false, "close button is  not displayed for" + heading);
+			}
+
+		} catch (Exception e) {
+
+			LoggerLoad.logError(e.getMessage());
+
+			assertFalse(false, "Admin should see  close button on the {string} popup window for " + heading);
+
+		}
 	    
 	}
 
 	@Then("Admin should see  cancel button in the {string} popup window")
-	public void admin_should_see_cancel_button_in_the_popup_window(String string) {
+	public void admin_should_see_cancel_button_in_the_popup_window(String heading) {
+		try {
+			boolean cancelbt = basePage.verifycancelbutton();
+			LoggerLoad.logInfo("verify cancel button is displayed \" " + cancelbt + "\" ");
+			if (cancelbt) {
+				assertFalse(true, "cancel button is displayed for " + heading);
+			} else {
+				assertFalse(false, "cancel button is  not displayed for" + heading);
+			}
+
+		} catch (Exception e) {
+
+			LoggerLoad.logError(e.getMessage());
+
+			assertFalse(false, "Admin should see  cancel button in the {string} popup window for" + heading);
+
+		}
 	    
-	    
+		
+		
 	}
 	
 	//common method to verify the Add New button

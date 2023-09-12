@@ -1,5 +1,6 @@
 package stepDefinition;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import pageObjects.AssignmentPage;
@@ -12,6 +13,24 @@ public class Commonclass {
 	BasePage basePage = new BasePage();
 	AssignmentPage assignmentPage = new AssignmentPage();
 	ProgramPage programPage = new ProgramPage();
+	
+	ArrayList<String> newAssignmentInputFeilds = new ArrayList<>();
+	
+	public ArrayList<String>  getNewAssignmentInputFeilds() {
+		
+		newAssignmentInputFeilds.add("Program name");
+		newAssignmentInputFeilds.add("batch number");
+		newAssignmentInputFeilds.add("Assignment Name");
+		newAssignmentInputFeilds.add("Assignment Description");
+		newAssignmentInputFeilds.add("grade by");
+		newAssignmentInputFeilds.add("Assignment due date");
+		newAssignmentInputFeilds.add("Assignment File1");
+		newAssignmentInputFeilds.add("Assignment File2");
+		newAssignmentInputFeilds.add("Assignment File3");
+		newAssignmentInputFeilds.add("Assignment File4");
+		newAssignmentInputFeilds.add("Assignment File5");
+		return newAssignmentInputFeilds ;
+	}
 	static long startTime;
 	static long endTime;
 	static long totalTime;
