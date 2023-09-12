@@ -55,7 +55,7 @@ Feature: Assignment.feature
       
  Scenario Outline: Verify Edit assignment popup window
    Given Admin is on manage assignment page
-    When Admin clicks Edit button in data table
+    When Admin clicks Edit button in data table for "Assignmemt"
     Then Edit popup window appears with heading "<heading title>"
     
     Examples: 
@@ -65,6 +65,20 @@ Feature: Assignment.feature
     
   Scenario Outline: Verify values in popup window
    Given Admin is on manage assignment page
-    When Admin clicks Edit button in data table
+    When Admin clicks Edit button in data table for "Assignmemt"
     Then Edit popup window appears with same row values in the all fields
   
+ Scenario Outline: Verify Delete Assignment alert
+   Given Admin is on manage assignment page
+    When Admin clicks delete button in data table for "Assignmemt"
+    Then Admin should see dialog box for "Assignment" 
+    
+ Scenario Outline: Verify  accept enabled in alert
+   Given Admin is on manage assignment page
+    When Admin clicks delete button in data table for "Assignmemt"
+    Then Alert should have "yes" button to accept  
+    
+  Scenario Outline: Verify reject enabled in alert
+   Given Admin is on manage assignment page
+    When Admin clicks delete button in data table
+    Then Alert should have "No" button to accept 

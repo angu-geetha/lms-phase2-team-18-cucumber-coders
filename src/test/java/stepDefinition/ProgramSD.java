@@ -69,9 +69,6 @@ public class ProgramSD extends Commonclass {
 	   
 	}
 
-	@Then("Admin should see a popup  with  heading {string}")
-	public void admin_should_see_a_popup_with_heading(String string) {
-	    
-	}
+	
 	
 }

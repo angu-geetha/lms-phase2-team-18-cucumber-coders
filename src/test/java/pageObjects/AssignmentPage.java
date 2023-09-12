@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -109,7 +110,17 @@ public class AssignmentPage extends BasePage{
 
 
 	public void clickAddNewButton() {
+		parentWindowHandler = driver.getWindowHandle(); // Store your parent window
 		addassignmentElmt.click();
+		
+		subWindowHandler = null;
+
+		Set<String> handles = driver.getWindowHandles(); // get all window handles
+		Iterator<String> iterator = handles.iterator();
+		while (iterator.hasNext()){
+		    subWindowHandler = iterator.next();
+		}
+		driver.switchTo().window(subWindowHandler); // switch to popup window
 	}
 
 
@@ -322,7 +333,11 @@ public void validateAssignmentDetailsOfEdit(ArrayList<String> rowData) {
 	}
 	
 	
-	
+	public ArrayList<String> navigateToAssignmentDeletePage() throws Exception{
+		assignment_page();
+		return clickDeleteIconForRows("Assignemnt");
+		
+	}
 
 }
 
