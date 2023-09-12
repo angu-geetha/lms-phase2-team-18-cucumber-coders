@@ -1715,3 +1715,131 @@
 [INFO ] 2023-09-11 00:29:37.381 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
 [INFO ] 2023-09-11 00:29:37.505 [main] LoggerLoad - Steps Failed , Taking Screenshot
 [INFO ] 2023-09-11 00:29:37.506 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-11 20:55:04.929 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-11 20:55:04.933 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-11 20:55:10.312 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-11 20:55:10.401 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 20:55:10.402 [main] LoggerLoad - [@tag] : Validate valid search box function for Assignment
+[INFO ] 2023-09-11 20:55:10.402 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 20:55:10.432 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 20:55:10.836 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 20:55:11.573 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 20:55:11.816 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 20:55:11.816 [main] LoggerLoad - [@tag] : Validate valid search box function for Assignment
+[INFO ] 2023-09-11 20:55:11.816 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 20:55:11.824 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 20:55:11.876 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 20:55:11.943 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 20:55:12.142 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 20:55:12.142 [main] LoggerLoad - [@tag] : Validate valid search box function for Assignment
+[INFO ] 2023-09-11 20:55:12.142 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 20:55:12.148 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 20:55:12.210 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 20:55:12.269 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 20:55:12.704 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 20:55:12.707 [main] LoggerLoad - [@tag] : Validate valid search box function for Assignment
+[INFO ] 2023-09-11 20:55:12.711 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 20:55:12.720 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 20:55:12.888 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 20:55:12.930 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 20:55:13.107 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 20:55:13.107 [main] LoggerLoad - [@tag] : Validate invalid search box function for Assignment
+[INFO ] 2023-09-11 20:55:13.107 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 20:55:13.112 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 20:55:13.176 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 20:55:13.216 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 20:55:13.345 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 20:55:13.346 [main] LoggerLoad - [@tag] : Validate invalid search box function for Assignment
+[INFO ] 2023-09-11 20:55:13.346 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 20:55:13.349 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 20:55:13.664 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 20:55:13.732 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 20:55:13.857 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 20:55:13.858 [main] LoggerLoad - [@tag] : Validate invalid search box function for Assignment
+[INFO ] 2023-09-11 20:55:13.858 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 20:55:13.862 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 20:55:14.297 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 20:55:14.333 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 20:55:14.467 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 20:55:14.467 [main] LoggerLoad - [@tag] : Validate invalid search box function for Assignment
+[INFO ] 2023-09-11 20:55:14.467 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 20:55:14.471 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 20:55:14.697 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 20:55:14.726 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 20:55:14.874 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 20:55:14.875 [main] LoggerLoad - [@tag] : Verify Edit assignment popup window
+[INFO ] 2023-09-11 20:55:14.875 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 20:55:14.878 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 20:55:14.936 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 20:55:14.974 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 20:55:15.060 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 20:55:15.060 [main] LoggerLoad - [@tag] : Verify values in popup window
+[INFO ] 2023-09-11 20:55:15.061 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 20:55:15.065 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 20:55:15.371 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 20:55:15.400 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 20:55:15.477 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-11 22:11:46.128 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-11 22:11:46.132 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-11 22:11:51.036 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-11 22:11:51.121 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 22:11:51.122 [main] LoggerLoad - [@tag] : Validate valid search box function for Assignment
+[INFO ] 2023-09-11 22:11:51.122 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 22:11:51.150 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 22:11:51.493 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 22:11:52.210 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 22:11:52.443 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 22:11:52.443 [main] LoggerLoad - [@tag] : Validate valid search box function for Assignment
+[INFO ] 2023-09-11 22:11:52.443 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 22:11:52.449 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 22:11:52.497 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 22:11:52.560 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 22:11:52.747 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 22:11:52.747 [main] LoggerLoad - [@tag] : Validate valid search box function for Assignment
+[INFO ] 2023-09-11 22:11:52.747 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 22:11:52.753 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 22:11:52.812 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 22:11:52.858 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 22:11:53.275 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 22:11:53.275 [main] LoggerLoad - [@tag] : Validate valid search box function for Assignment
+[INFO ] 2023-09-11 22:11:53.275 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 22:11:53.282 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 22:11:53.364 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 22:11:53.451 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 22:11:53.590 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 22:11:53.591 [main] LoggerLoad - [@tag] : Validate invalid search box function for Assignment
+[INFO ] 2023-09-11 22:11:53.591 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 22:11:53.593 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 22:11:53.647 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 22:11:53.688 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 22:11:53.805 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 22:11:53.805 [main] LoggerLoad - [@tag] : Validate invalid search box function for Assignment
+[INFO ] 2023-09-11 22:11:53.806 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 22:11:53.809 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 22:11:53.874 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 22:11:53.908 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 22:11:54.033 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 22:11:54.033 [main] LoggerLoad - [@tag] : Validate invalid search box function for Assignment
+[INFO ] 2023-09-11 22:11:54.034 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 22:11:54.038 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 22:11:54.366 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 22:11:54.394 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 22:11:54.505 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 22:11:54.505 [main] LoggerLoad - [@tag] : Validate invalid search box function for Assignment
+[INFO ] 2023-09-11 22:11:54.506 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 22:11:54.508 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 22:11:54.565 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 22:11:54.631 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 22:11:55.029 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 22:11:55.030 [main] LoggerLoad - [@tag] : Verify Edit assignment popup window
+[INFO ] 2023-09-11 22:11:55.030 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 22:11:55.035 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 22:11:55.094 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 22:11:55.118 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 22:11:55.201 [main] LoggerLoad - ===============================================================================================
+[INFO ] 2023-09-11 22:11:55.202 [main] LoggerLoad - [@tag] : Verify values in popup window
+[INFO ] 2023-09-11 22:11:55.202 [main] LoggerLoad - -----------------------------------------------------------------------------------------------
+[INFO ] 2023-09-11 22:11:55.205 [main] LoggerLoad - Admin is in login page
+[INFO ] 2023-09-11 22:11:55.359 [main] LoggerLoad - Admin enter valid credentials and clicks login button
+[INFO ] 2023-09-11 22:11:55.382 [main] LoggerLoad - Admin clicks assignment button on the navigation bar
+[INFO ] 2023-09-11 22:11:55.448 [main] LoggerLoad - Closing Driver

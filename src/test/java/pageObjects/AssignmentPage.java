@@ -1,5 +1,6 @@
 package pageObjects;
 
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -27,6 +28,12 @@ public class AssignmentPage extends BasePage{
 
 	@FindBy (xpath="xpath for  addassignment button']")static WebElement    addassignmentElmt;
 	@FindBy (xpath="xpath for  datatable ']")  static WebElement  datatableElement;
+	
+	@FindBy(xpath = "//select")
+	static WebElement batchdropdown;
+	@FindBy(xpath = "//select")
+	static WebElement programdropdown;
+	
 
 	@FindBy (xpath="xpath for  asignmtNameTxtBox")  static WebElement  asignmtNameTxtBox;
 	@FindBy (xpath="xpath for  asignmtDescTxtBox")  static WebElement  asignmtDescTxtBox;
@@ -180,6 +187,21 @@ public class AssignmentPage extends BasePage{
 		 }
 		 
 	  }
+  
+  public boolean verifyDropdown() {
+		if (batchdropdown.isDisplayed()) {
+			return true;
+		} else
+			return false;
+
+	}
+
+	public boolean verifyProgramDropdown() {
+		if (programdropdown.isDisplayed()) {
+			return true;
+		} else
+			return false;
+	}
 	public void addNewAssignmentDetails(Map<String, String> excelDataMap) {
 		
 		if(!excelDataMap.get("programName").isEmpty()) {
@@ -226,6 +248,69 @@ public class AssignmentPage extends BasePage{
 			asignmtFile5TxtBox.sendKeys(excelDataMap.get("assigFile5"));
 		}
 		savebtn.click();
+		
+	}
+	
+	
+public void validateAssignmentDetailsOfEdit(ArrayList<String> rowData) {
+		
+		//TODO - Check if selected programName is in rowData
+		//TODO - Check if selected batchNo is in rowData
+		boolean isRowDataMatch = true;
+		if(!asignmtNameTxtBox.getText().isEmpty()) {
+			if(!rowData.contains(asignmtNameTxtBox.getText())) {
+				assertFalse(false, "not matched");
+				return ;
+			}
+		}
+		if(!asignmtDescTxtBox.getText().isEmpty()) {
+			if(!rowData.contains(asignmtDescTxtBox.getText())) {
+				assertFalse(false, "not matched");
+				return ;
+			}
+		}
+		if(!asignmtDueDateTxtBox.getText().isEmpty()) {
+			if(!rowData.contains(asignmtDueDateTxtBox.getText())) {
+				assertFalse(false, "not matched");
+				return ;
+			}
+		}
+		if(!gradeByTxtBox.getText().isEmpty()) {
+			if(!rowData.contains(gradeByTxtBox.getText())) {
+				assertFalse(false, "not matched");
+				return ;
+			}
+		}
+		if(!asignmtFile2TxtBox.getText().isEmpty()) {
+			if(!rowData.contains(asignmtFile2TxtBox.getText())) {
+				assertFalse(false, "not matched");
+				return ;
+			}
+		}
+		if(!asignmtFile1TxtBox.getText().isEmpty()) {
+			if(!rowData.contains(asignmtFile3TxtBox.getText())) {
+				assertFalse(false, "not matched");
+				return ;
+			}
+		}
+		if(!asignmtFile3TxtBox.getText().isEmpty()) {
+			if(!rowData.contains(asignmtFile3TxtBox.getText())) {
+				assertFalse(false, "not matched");
+				return ;
+			}
+		}
+		if(!asignmtFile4TxtBox.getText().isEmpty()) {
+			if(!rowData.contains(asignmtFile4TxtBox.getText())) {
+				assertFalse(false, "not matched");
+				return ;
+			}
+		}
+		if(!asignmtFile5TxtBox.getText().isEmpty()) {
+			if(!rowData.contains(asignmtFile5TxtBox.getText())) {
+				assertFalse(false, "not matched");
+				return ;
+			}
+		}
 		
 	}
 

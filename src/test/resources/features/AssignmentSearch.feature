@@ -50,6 +50,21 @@ Feature: Assignment.feature
       | invalid_assgn_desc		|assignmentSearchBox	|desc					|
       | invalid_assgn_duedate	|assignmentSearchBox	|dueDate			|
       | invalid_assgn_grade		|assignmentSearchBox	|grade				|
-
-  
+      
+      
+      
+ Scenario Outline: Verify Edit assignment popup window
+   Given Admin is on manage assignment page
+    When Admin clicks Edit button in data table
+    Then Edit popup window appears with heading "<heading title>"
+    
+    Examples: 
+    |heading title      |
+    | Assignment Details |
+    
+    
+  Scenario Outline: Verify values in popup window
+   Given Admin is on manage assignment page
+    When Admin clicks Edit button in data table
+    Then Edit popup window appears with same row values in the all fields
   

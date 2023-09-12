@@ -174,20 +174,20 @@ public class BaseSD extends Commonclass {
 
 	}
 	
-	@Then("Edit Icon in each row of data table only  when entries are available")
-	public void edit_icon_in_each_row_of_data_table_only_when_entries_are_available() {
+	@Then("Edit Icon in each row of data table only  when entries are available for {string}")
+	public void edit_icon_in_each_row_of_data_table_only_when_entries_are_available(String page) {
 		try {
-			basePage.validateEditIconForRows();
+			basePage.validateEditIconForRows(page);
 		} catch (Exception e) {
 			assertFalse(false, "Failed - Edit Icon in each row of data table only  when entries are available");
 		}
 
 	}
 
-	@Then("Delete Icon in each row of data table only  when entries are available")
-	public void delete_icon_in_each_row_of_data_table_only_when_entries_are_available() {
+	@Then("Delete Icon in each row of data table only  when entries are available for {string}")
+	public void delete_icon_in_each_row_of_data_table_only_when_entries_are_available(String page) {
 		try {
-			basePage.validateDeleteIconForRows();
+			basePage.validateDeleteIconForRows(page);
 		} catch (Exception e) {
 			assertFalse(false, "Failed - Delete Icon in each row of data table only  when entries are available");
 		}
@@ -297,7 +297,7 @@ public class BaseSD extends Commonclass {
 	@Then("Admin should see dropdown option for Batch Number")
 	public void admin_should_see_dropdown_option_for_batch_number() {
 		try {
-			boolean batchdropdowndisplayed = basePage.verifyDropdown();
+			boolean batchdropdowndisplayed = assignmentPage.verifyDropdown();
 			LoggerLoad.logInfo("verify batch Dropdown button is displayed \" " + batchdropdowndisplayed + "\" ");
 			if (batchdropdowndisplayed) {
 				assertFalse(true, "Dropdown button is displayed ");
@@ -318,7 +318,7 @@ public class BaseSD extends Commonclass {
 	@Then("Admin should see dropdown option for Program name")
 	public void admin_should_see_dropdown_option_for_program_name() {
 		try {
-			boolean progdropdowndisplayed = basePage.verifyProgramDropdown();
+			boolean progdropdowndisplayed = assignmentPage.verifyProgramDropdown();
 			LoggerLoad.logInfo("verify program Dropdown button is displayed  \" " + progdropdowndisplayed + "\" ");
 			if (progdropdowndisplayed) {
 				assertFalse(true, "Dropdown button is displayed ");
@@ -528,6 +528,41 @@ public class BaseSD extends Commonclass {
 				assertFalse(false, "Correct number of records are not displayed in "+pageName+" page");
 	    }
 	}
+
+	@When("Admin clicks Edit button in data table")
+	public void admin_clicks_edit_button_in_data_table() {
+		try {
+			rowData=basePage.clickEditIconForRows();
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Admin clicks Edit button in data table");
+		}
+		
+		
+	}
+
+	
+	
+		
+		
+	
+
+
+	@Then("Edit popup window appears with heading {string}")
+	public void edit_popup_window_appears_with_heading(String headingTitle) {
+		try {
+			String heading = basePage.getPopUpPageHeadingString();
+			assertEquals(heading, headingTitle);
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Admin should see a popup  with  heading {string}");
+		}
+	}
+	
+
+	
+		
+		
+	
 
 
 
