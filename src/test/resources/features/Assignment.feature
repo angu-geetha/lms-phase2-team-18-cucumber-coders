@@ -97,12 +97,12 @@ Feature: Assignment.feature
   Scenario: Verify Edit icon in the data table
     Given Admin is on dashboard page after Login
     When Admin clicks assignment button on the navigation bar
-    Then Edit Icon in each row of data table only  when entries are available
+    Then Edit Icon in each row of data table only  when entries are available for "Assignment"
   
    Scenario: Verify Delete icon in the data table
     Given Admin is on dashboard page after Login
     When Admin clicks assignment button on the navigation bar
-    Then Delete Icon in each row of data table only  when entries are available
+    Then Delete Icon in each row of data table only  when entries are available for "Assignment"
     
   Scenario: Verify check box in the data table
     Given Admin is on dashboard page after Login

@@ -275,6 +275,13 @@ public class AssignmentSD extends Commonclass {
 	   assertEquals(assignmentPage.getErrorElementg(), message);
 	}
 
-	
+	@Then("Edit popup window appears with same row values in the all fields")
+	public void edit_popup_window_appears_with_same_row_values_in_the_all_fields() {
+	   try {
+		   assignmentPage.validateAssignmentDetailsOfEdit(rowData);
+	} catch (Exception e) {
+		assertFalse(false, "Failed - Edit popup window appears with heading {string}");
+	}
+	}
 
 }
