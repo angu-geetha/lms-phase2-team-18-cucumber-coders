@@ -7,6 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(plugin = { "pretty", "html:target/dsAlgoReport.html" }, // reporting purpose
 		monochrome = false, // console output
+		dryRun=true,
 		tags = "todo", // tags from feature file
 		features = { "src/test/resources/features" }, // location of feature files
 		glue = { "stepDefinition", "utilities" }) // location of step definition files
