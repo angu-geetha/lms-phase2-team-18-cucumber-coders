@@ -19,6 +19,7 @@ import io.cucumber.java.en.When;
 import pageObjects.BasePage;
 import utilities.LoggerLoad;
 
+
 public class BaseSD extends Commonclass {
 	
 	
@@ -511,23 +512,17 @@ public class BaseSD extends Commonclass {
 	    }
 	}
 
-	@When("Admin clicks Edit button in data table")
-	public void admin_clicks_edit_button_in_data_table() {
+	@When("Admin clicks Edit button in data table for {string}")
+	public void admin_clicks_edit_button_in_data_table(String page) {
 		try {
-			rowData=basePage.clickEditIconForRows();
+			rowData=basePage.clickEditIconForRows(page);
 		} catch (Exception e) {
 			assertFalse(false, "Failed - Admin clicks Edit button in data table");
 		}
 		
 		
 	}
-
 	
-	
-		
-		
-	
-
 
 	@Then("Edit popup window appears with heading {string}")
 	public void edit_popup_window_appears_with_heading(String headingTitle) {
@@ -541,7 +536,100 @@ public class BaseSD extends Commonclass {
 	}
 	
 
+	@When("Admin clicks delete button in data table for {string}")
+	public void admin_clicks_delete_button_in_data_table_for(String page) {
+		try {
+			rowData=basePage.clickDeleteIconForRows(page);
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Admin clicks Edit button in data table");
+		}
+		
+	}
+
+	@Then("Admin should see dialog box for {string}")
+	public void admin_should_see_dialog_box_for(String page) {
+	    try {
+	    	String confirmText = basePage.verifyPopUpforDelete(page);
+	    	assertTrue(confirmText.contains("Are you sure you want to delele"));
+		} catch (Exception e) {
+			assertFalse(false, "Admin should see dialog box for {string}");
+		}
+	}
+
 	
+
+	@Then("Alert should have {string} button to accept")
+	public void alert_should_have_button_to_accept(String buttonName) {
+		try {
+			basePage.verifyAlertButtons(buttonName);
+		} catch (Exception e) {
+			assertFalse(false, "Admin should see dialog box for {string}");
+		}
+
+	    
+	}
+	
+	
+	@Given("Admin is in delete alert for {string}")
+	public void admin_is_in_delete_alert(String page) {
+		try {
+			switch (page) {
+			case "Assignmemt":
+				rowData = assignmentPage.navigateToAssignmentDeletePage();
+				break;
+
+			default:
+				break;
+			}
+			
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Admin is in delete alert for {string}");
+		}
+	}
+
+	@When("Admin clicks {string} button")
+	public void admin_clicks_button(String buttonName) {
+		try {
+			basePage.clickAlertButtons(buttonName);
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Admin clicks {string} button");
+		}
+	   
+	}
+
+	@Then("Redirected to assignment page and selected assignment details are deleted from the data table")
+	public void redirected_to_assignment_page_and_selected_assignment_details_are_deleted_from_the_data_table() {
+	     
+	      try {
+	    	  assignmentPage.verifyManageAssignmentPage();
+	    	  basePage.sendDataToSearchString(rowData.get(0));     
+			  List<String> result =  basePage.getDataForSearch("name");
+			  if(result.size() == 0) {
+				  assertTrue(true, "Item Deleted");
+			  }else {
+				  assertFalse(false, "Item did not get Deleted");
+			  }
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Redirected to assignment page and selected assignment details are deleted from the data table");
+		}
+	}
+
+	@Then("Redirected to assignment page and selected assignment details are not deleted from the data table")
+	public void redirected_to_assignment_page_and_selected_assignment_details_are_not_deleted_from_the_data_table() {
+		 try {
+	    	  assignmentPage.verifyManageAssignmentPage();
+	    	  basePage.sendDataToSearchString(rowData.get(0));     
+			  List<String> result =  basePage.getDataForSearch("name");
+			  if(result.size() > 0) {
+				  assertTrue(true, "Item did not get Deleted");
+			  }else {
+				  assertFalse(false, "Item  Deleted");
+			  }
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Redirected to assignment page and selected assignment details are not deleted from the data table");
+		}
+	}
+
 		
 		
 	

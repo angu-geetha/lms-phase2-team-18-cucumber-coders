@@ -1,10 +1,15 @@
 package pageObjects;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +23,7 @@ import driverFactory.DriverFactory;
 public class BasePage {
 
 	WebDriver driver = DriverFactory.getdriver();
-
+	
 	// Get URLS from Config
 	String loginURL = ConfigReader.getProperty("loginPageUrl");
 	String dashboardUrl = ConfigReader.getProperty("dashboardUrl");
@@ -72,9 +77,7 @@ public class BasePage {
 		@FindBy(id="example.previous") static WebElement prevlink;		
 		@FindBy(id="example.next") static WebElement nextlink;	
 		@FindBy(xpath="//span[@class='pagination'][@label,contains(text(),\"currentpage)]") static WebElement currentPage;
-		
-		static String nextButtonClass = nextlink.getAttribute("class");
-		static String currentPageNumber = currentPage.getText();
+	
 
 	static int count = 0;
 
@@ -113,6 +116,18 @@ public class BasePage {
 
 	@FindBy(xpath = "//button[text()='Cancel']")
 	static WebElement cancelbtn;
+	
+	
+	//Delete Alert components
+	String parentWindowHandler;
+	String subWindowHandler;
+	Alert deleteAlert;
+	@FindBy(xpath = "//button[text()='Delete Alert Yes ']")
+	static WebElement yes;
+	@FindBy(xpath = "//button[text()='Delete Alert No ']")
+	static WebElement no;
+	
+
 
 	public BasePage() {
 		PageFactory.initElements(driver, this);
@@ -221,7 +236,7 @@ public class BasePage {
 					break;
 
 				default:
-					throw (new Exception("exception on row edit"));
+					throw (new Exception("exception on row delete"));
 				}
 
 			}
@@ -319,7 +334,100 @@ public class BasePage {
 		}
 		return dataList;
 	}
+	
+	public ArrayList<String> clickEditIconForRows(String page) throws Exception {
 
+		ArrayList<String> rowData = new ArrayList<>();
+		try {
+			for (Iterator iterator = tablerows.iterator(); iterator.hasNext();) {
+				WebElement rowElement = (WebElement) iterator.next();
+				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
+
+				for (Iterator iterator2 = cells.iterator(); iterator2.hasNext();) {
+					WebElement webElement = (WebElement) iterator2.next();
+					rowData.add(webElement.getText());
+				}
+				switch (page) {
+				case "Assignment":
+				if (cells.size() > 0 && cells.get(5) != null) {
+					cells.get(5).findElement(By.id("id of the edit button")).isDisplayed();
+					if (cells.get(5).findElement(By.id("id of the edit button")).isDisplayed()) {
+						parentWindowHandler = driver.getWindowHandle(); // Store your parent window
+						subWindowHandler = null;
+						cells.get(5).findElement(By.id("id of the edit button")).click();
+						Set<String> handles = driver.getWindowHandles(); // get all window handles
+						Iterator<String> iterator3 = handles.iterator();
+						while (iterator3.hasNext()){
+						    subWindowHandler = iterator3.next();
+						}
+						driver.switchTo().window(subWindowHandler); // switch to popup window
+						
+						return rowData;
+					} else if (cells.size() < 0) {
+						throw (new Exception("exception on row edit"));
+					}
+
+				}
+				break;
+
+				default:
+					throw (new Exception("exception on row edit"));
+				}
+
+
+			}
+		} catch (Exception e) {
+			throw (new Exception("exception on edit button click "));
+		}
+		return rowData;
+	}
+
+	public ArrayList<String> clickDeleteIconForRows(String page) throws Exception {
+
+		ArrayList<String> rowData = new ArrayList<>();
+		try {
+			for (Iterator iterator = tablerows.iterator(); iterator.hasNext();) {
+				WebElement rowElement = (WebElement) iterator.next();
+				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
+
+				for (Iterator iterator2 = cells.iterator(); iterator2.hasNext();) {
+					WebElement webElement = (WebElement) iterator2.next();
+					rowData.add(webElement.getText());
+				}
+				switch (page) {
+				case "Assignment":
+				if (cells.size() > 0 && cells.get(5) != null) {
+					cells.get(5).findElement(By.id("id of the Delete button")).isDisplayed();
+					if (cells.get(5).findElement(By.id("id of the Delete button")).isDisplayed()) {
+						parentWindowHandler = driver.getWindowHandle(); // Store your parent window
+						subWindowHandler = null;
+						cells.get(5).findElement(By.id("id of the Delete button")).click();
+						Set<String> handles = driver.getWindowHandles(); // get all window handles
+						Iterator<String> iterator3 = handles.iterator();
+						while (iterator3.hasNext()){
+						    subWindowHandler = iterator3.next();
+						}
+						driver.switchTo().window(subWindowHandler); // switch to popup window
+						return rowData;
+					} else if (cells.size() < 0) {
+						throw (new Exception("exception on row Delete"));
+					}
+
+				}
+				break;
+
+				default:
+					throw (new Exception("exception on row Delete"));
+				}
+
+
+			}
+		} catch (Exception e) {
+			throw (new Exception("exception on Delete button click "));
+		}
+		return rowData;
+	}
+	
 	public Boolean verifyAddButtonDisplayed(String addBtnName) {
 		if (AddNewElmt.getText().contains(addBtnName)) {
 			return AddNewElmt.isDisplayed();
@@ -466,34 +574,41 @@ public class BasePage {
 			return false;
 	}
 
-	public ArrayList<String> clickEditIconForRows() throws Exception {
-
-		ArrayList<String> rowData = new ArrayList<>();
-		try {
-			for (Iterator iterator = tablerows.iterator(); iterator.hasNext();) {
-				WebElement rowElement = (WebElement) iterator.next();
-				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
-
-				for (Iterator iterator2 = cells.iterator(); iterator2.hasNext();) {
-					WebElement webElement = (WebElement) iterator2.next();
-					rowData.add(webElement.getText());
-				}
-				if (cells.size() > 0 && cells.get(5) != null) {
-					cells.get(5).findElement(By.id("id of the edit button")).isDisplayed();
-					if (cells.get(5).findElement(By.id("id of the edit button")).isDisplayed()) {
-						cells.get(5).findElement(By.id("id of the edit button")).click();
-						return rowData;
-					} else if (cells.size() < 0) {
-						throw (new Exception("exception on row edit"));
-					}
-
-				}
-
-			}
-		} catch (Exception e) {
-			throw (new Exception("exception on edit button click "));
-		}
-		return rowData;
+	public String verifyPopUpforDelete(String page) {
+		
+		deleteAlert = (Alert) driver.switchTo().window(subWindowHandler);
+		return deleteAlert.getText();
 	}
+
+	public boolean verifyAlertButtons(String buttonName) {
+		boolean buttonDisplayed = false;
+		if(buttonName.contains("yes")) {
+			if(yes.isDisplayed()) {
+				buttonDisplayed = true;
+			} 
+		}else {
+			if(no.isDisplayed()) {
+				buttonDisplayed = true;
+			} 
+		}
+		return buttonDisplayed;
+	}
+
+	public void clickAlertButtons(String buttonName) {
+		if(buttonName.contains("yes")) {
+			if(yes.isDisplayed()) {
+				yes.click();
+			} 
+		}else {
+			if(no.isDisplayed()) {
+				no.click();
+			} 
+		}
+		
+	}
+
+	
+
+	
 
 }

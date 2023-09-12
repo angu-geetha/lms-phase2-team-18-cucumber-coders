@@ -23,7 +23,7 @@ Feature: Assignment.feature
     Given Admin is in login page
     When Admin enter valid credentials  and clicks login button
     And  Admin clicks assignment button on the navigation bar 
-    And Admin clicks Edit button in data table
+    And Admin clicks Edit button in data table for "Assignment"
     Then Admin should see a popup  with  heading "Assignment details"
 
     
