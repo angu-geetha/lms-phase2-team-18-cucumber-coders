@@ -106,6 +106,20 @@ public class BaseSD extends Commonclass {
 
 				assertEquals(header, ConfigReader.getProperty(urlName), "header do not match");
 				break;
+			case "Program":
+				String header1 = programPage.verifyManageProgramPageHeader();
+
+				LoggerLoad.logInfo("header of the Manage Program Page : \" " + header1 + "\" ");
+
+				assertEquals(header1, ConfigReader.getProperty(urlName), "header do not match");
+				break;
+			case "User":
+				String header2 = userPage.verifyManageUserPageHeader();
+
+				LoggerLoad.logInfo("header of the Manage Assignment Page : \" " + header2 + "\" ");
+
+				assertEquals(header2, ConfigReader.getProperty(urlName), "header do not match");
+				break;
 
 			default:
 				break;
@@ -462,8 +476,18 @@ public class BaseSD extends Commonclass {
 				} else {
 					assertFalse(true, "Add button is not displayed in Assignment page");
 				}
+			case "Manage User":
+				addNewButtonDisplayed = userPage.verifyAddButtonDisplayed(addBtnName);
+				LoggerLoad.logInfo("verify Add new button is displayed : ");
+				if (addNewButtonDisplayed) {
+					assertTrue(true, "Add button is displayed in User page");
+				} else {
+					assertFalse(true, "Add button is not displayed in User page");
+				}
 
 			}
+			
+			
 
 		} catch (Exception e) {
 			LoggerLoad.logError(e.getMessage());
@@ -472,6 +496,7 @@ public class BaseSD extends Commonclass {
 
 	}
 
+	
 	// Common method to verify entries along with Pagination
 	@Then("Admin should see text Showing x to y of z entries along with pagination icon on {string} page")
 	public void admin_should_see_text_showing_x_to_y_of_z_entries_along_with_pagination_icon_on_page(String pageName) {
@@ -632,7 +657,7 @@ public class BaseSD extends Commonclass {
 		}
 	}
 
-	@Then("Redirected to assignment page and selected assignment details are deleted from the data table for {string}")
+	@Then("Redirected to Assignment page and selected assignment details are deleted from the data table for {string}")
 	public void redirected_to_assignment_page_and_selected_assignment_details_are_deleted_from_the_data_table(
 			String deleteOption) {
 

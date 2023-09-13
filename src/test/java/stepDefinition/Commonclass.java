@@ -6,6 +6,7 @@ import java.util.Map;
 import pageObjects.AssignmentPage;
 import pageObjects.BasePage;
 import pageObjects.ProgramPage;
+import pageObjects.UserPage;
 
 public class Commonclass {
 	String baseUrl = "https://lms-api-hackathon-june2023-930a8b0f895d.herokuapp.com/lms";
@@ -13,6 +14,8 @@ public class Commonclass {
 	BasePage basePage = new BasePage();
 	AssignmentPage assignmentPage = new AssignmentPage();
 	ProgramPage programPage = new ProgramPage();
+	UserPage userPage = new UserPage();
+	
 	
 	ArrayList<String> newAssignmentInputFeilds = new ArrayList<>();
 	ArrayList<String> rowData = new ArrayList<>();

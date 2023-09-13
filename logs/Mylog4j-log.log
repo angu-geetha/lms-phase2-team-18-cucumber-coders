@@ -3357,3 +3357,19 @@ Session ID: 71b003c5564bb47a2eaaec759d16b92a
 [INFO ] 2023-09-13 03:18:16.815 [main] LoggerLoad - Admin enter valid credentials and clicks login button
 [INFO ] 2023-09-13 03:18:16.819 [main] LoggerLoad - Admin clicks program button on the navigation bar
 [INFO ] 2023-09-13 03:18:16.852 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-13 10:13:54.368 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-13 10:13:54.372 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-13 10:14:01.134 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-13 10:14:02.414 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-13 10:18:04.721 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-13 10:18:04.724 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-13 10:18:10.155 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-13 10:18:11.585 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-13 12:14:22.139 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-13 12:14:22.146 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-13 12:14:29.608 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-13 12:14:29.997 [main] LoggerLoad - Closing Driver
+[INFO ] 2023-09-13 13:09:28.175 [main] LoggerLoad - Loading Config file
+[INFO ] 2023-09-13 13:09:28.187 [main] LoggerLoad - Testing on chrome
+[INFO ] 2023-09-13 13:09:38.419 [main] LoggerLoad - Initializing driver for : chrome
+[INFO ] 2023-09-13 13:09:38.861 [main] LoggerLoad - Closing Driver
