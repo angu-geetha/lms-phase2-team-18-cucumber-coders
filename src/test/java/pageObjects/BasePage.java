@@ -23,26 +23,36 @@ import driverFactory.DriverFactory;
 public class BasePage {
 
 	WebDriver driver = DriverFactory.getdriver();
-	
+
 	// Get URLS from Config
 	String loginURL = ConfigReader.getProperty("loginPageUrl");
 	String dashboardUrl = ConfigReader.getProperty("dashboardUrl");
-	
-	@FindBy(linkText="student") static WebElement studentLink;
-	@FindBy(linkText="Program") static WebElement programLink;
-	@FindBy(linkText="Batch") static WebElement batchLink;
-	@FindBy(linkText="class") static WebElement classLink;
-	@FindBy(linkText="user") static WebElement userLink;
-	@FindBy(linkText="Assignment") static WebElement assignmentLink;
-	@FindBy(linkText="Attendance") static WebElement attendanceLink;
-	@FindBy(linkText="Logout") static WebElement logoutLink;
 
+	@FindBy(linkText = "student")
+	static WebElement studentLink;
+	@FindBy(linkText = "Program")
+	static WebElement programLink;
+	@FindBy(linkText = "Batch")
+	static WebElement batchLink;
+	@FindBy(linkText = "class")
+	static WebElement classLink;
+	@FindBy(linkText = "user")
+	static WebElement userLink;
+	@FindBy(linkText = "Assignment")
+	static WebElement assignmentLink;
+	@FindBy(linkText = "Attendance")
+	static WebElement attendanceLink;
+	@FindBy(linkText = "Logout")
+	static WebElement logoutLink;
 
 	// Login Page Elements
 	@FindBy(xpath = "xpath for User field']")
 	static WebElement user;
 	@FindBy(xpath = "xpath for Password Field']")
 	static WebElement pwd;
+
+	@FindBy(xpath = "xpath for Login button]")
+	static WebElement loginButtonElmt;
 
 	// Navigation Bar Elmt - has all the links of Navigation Bar
 	@FindBy(xpath = "xpath for retreving all the header elements']")
@@ -70,17 +80,19 @@ public class BasePage {
 	static String totalRowsAllPages;
 	static int totalRowsinpage;
 
-	
-	//Pagination	
-		@FindBy(xpath="")	static WebElement firstPageicon;	
-		@FindBy(xpath="") static WebElement lastPageicon;	
-		@FindBy(id="example.previous") static WebElement prevlink;		
-		@FindBy(id="example.next") static WebElement nextlink;	
-		@FindBy(xpath="//span[@class='pagination'][@label,contains(text(),\"currentpage)]") static WebElement currentPage;
-	
+	// Pagination
+	@FindBy(xpath = "")
+	static WebElement firstPageicon;
+	@FindBy(xpath = "")
+	static WebElement lastPageicon;
+	@FindBy(id = "example.previous")
+	static WebElement prevlink;
+	@FindBy(id = "example.next")
+	static WebElement nextlink;
+	@FindBy(xpath = "//span[@class='pagination'][@label,contains(text(),\"currentpage)]")
+	static WebElement currentPage;
 
 	static int count = 0;
-
 
 	// Data Table Elmts - Common for all pages
 	@FindBy(xpath = ".//*[@id=\"id of the table\"]/table/thead/tr/th")
@@ -116,9 +128,8 @@ public class BasePage {
 
 	@FindBy(xpath = "//button[text()='Cancel']")
 	static WebElement cancelbtn;
-	
-	
-	//Delete Alert components
+
+	// Delete Alert components
 	String parentWindowHandler;
 	String subWindowHandler;
 	Alert deleteAlert;
@@ -126,8 +137,6 @@ public class BasePage {
 	static WebElement yes;
 	@FindBy(xpath = "//button[text()='Delete Alert No ']")
 	static WebElement no;
-	
-
 
 	public BasePage() {
 		PageFactory.initElements(driver, this);
@@ -146,6 +155,7 @@ public class BasePage {
 			user.sendKeys(username);
 			pwd.clear();
 			pwd.sendKeys(password);
+			loginButtonElmt.click();
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -187,11 +197,16 @@ public class BasePage {
 		return url;
 	}
 
-	public Boolean verifyDeleteButtonEnabled() {
+	public boolean verifyDeleteButtonEnabled() {
 		return deleteElmt.isEnabled();
 	}
+	
+	public void clickDeleteButtonBelowHeader() {
+		deleteElmt.click();
+		
+	}
 
-	public Boolean verifySearchButton() {
+	public boolean verifySearchButton() {
 		return SearchElmt.isDisplayed() && SearchElmt.getText().contains("Search...");
 	}
 
@@ -265,7 +280,7 @@ public class BasePage {
 
 	}
 
-	public void sendDataToSearchString(String searchData) {
+	public void sendDataToSearchBox(String searchData) {
 		SearchElmt.clear();
 		SearchElmt.sendKeys(searchData);
 		// need to see if you need js action to pop out or keyboard enter
@@ -334,7 +349,7 @@ public class BasePage {
 		}
 		return dataList;
 	}
-	
+
 	public ArrayList<String> clickEditIconForRows(String page) throws Exception {
 
 		ArrayList<String> rowData = new ArrayList<>();
@@ -349,31 +364,30 @@ public class BasePage {
 				}
 				switch (page) {
 				case "Assignment":
-				if (cells.size() > 0 && cells.get(5) != null) {
-					cells.get(5).findElement(By.id("id of the edit button")).isDisplayed();
-					if (cells.get(5).findElement(By.id("id of the edit button")).isDisplayed()) {
-						parentWindowHandler = driver.getWindowHandle(); // Store your parent window
-						subWindowHandler = null;
-						cells.get(5).findElement(By.id("id of the edit button")).click();
-						Set<String> handles = driver.getWindowHandles(); // get all window handles
-						Iterator<String> iterator3 = handles.iterator();
-						while (iterator3.hasNext()){
-						    subWindowHandler = iterator3.next();
-						}
-						driver.switchTo().window(subWindowHandler); // switch to popup window
-						
-						return rowData;
-					} else if (cells.size() < 0) {
-						throw (new Exception("exception on row edit"));
-					}
+					if (cells.size() > 0 && cells.get(5) != null) {
+						cells.get(5).findElement(By.id("id of the edit button")).isDisplayed();
+						if (cells.get(5).findElement(By.id("id of the edit button")).isDisplayed()) {
+							parentWindowHandler = driver.getWindowHandle(); // Store your parent window
+							subWindowHandler = null;
+							cells.get(5).findElement(By.id("id of the edit button")).click();
+							Set<String> handles = driver.getWindowHandles(); // get all window handles
+							Iterator<String> iterator3 = handles.iterator();
+							while (iterator3.hasNext()) {
+								subWindowHandler = iterator3.next();
+							}
+							driver.switchTo().window(subWindowHandler); // switch to popup window
 
-				}
-				break;
+							return rowData;
+						} else if (cells.size() < 0) {
+							throw (new Exception("exception on row edit"));
+						}
+
+					}
+					break;
 
 				default:
 					throw (new Exception("exception on row edit"));
 				}
-
 
 			}
 		} catch (Exception e) {
@@ -396,30 +410,29 @@ public class BasePage {
 				}
 				switch (page) {
 				case "Assignment":
-				if (cells.size() > 0 && cells.get(5) != null) {
-					cells.get(5).findElement(By.id("id of the Delete button")).isDisplayed();
-					if (cells.get(5).findElement(By.id("id of the Delete button")).isDisplayed()) {
-						parentWindowHandler = driver.getWindowHandle(); // Store your parent window
-						subWindowHandler = null;
-						cells.get(5).findElement(By.id("id of the Delete button")).click();
-						Set<String> handles = driver.getWindowHandles(); // get all window handles
-						Iterator<String> iterator3 = handles.iterator();
-						while (iterator3.hasNext()){
-						    subWindowHandler = iterator3.next();
+					if (cells.size() > 0 && cells.get(5) != null) {
+						cells.get(5).findElement(By.id("id of the Delete button")).isDisplayed();
+						if (cells.get(5).findElement(By.id("id of the Delete button")).isDisplayed()) {
+							parentWindowHandler = driver.getWindowHandle(); // Store your parent window
+							subWindowHandler = null;
+							cells.get(5).findElement(By.id("id of the Delete button")).click();
+							Set<String> handles = driver.getWindowHandles(); // get all window handles
+							Iterator<String> iterator3 = handles.iterator();
+							while (iterator3.hasNext()) {
+								subWindowHandler = iterator3.next();
+							}
+							driver.switchTo().window(subWindowHandler); // switch to popup window
+							return rowData;
+						} else if (cells.size() < 0) {
+							throw (new Exception("exception on row Delete"));
 						}
-						driver.switchTo().window(subWindowHandler); // switch to popup window
-						return rowData;
-					} else if (cells.size() < 0) {
-						throw (new Exception("exception on row Delete"));
-					}
 
-				}
-				break;
+					}
+					break;
 
 				default:
 					throw (new Exception("exception on row Delete"));
 				}
-
 
 			}
 		} catch (Exception e) {
@@ -427,7 +440,46 @@ public class BasePage {
 		}
 		return rowData;
 	}
-	
+
+	public ArrayList<String> clickCheckboxForRows(String page,int noOfCheckBox) throws Exception {
+
+		ArrayList<String> rowData = new ArrayList<>();
+		try {
+			int i=1;
+			for (Iterator iterator = tablerows.iterator(); iterator.hasNext();) {
+				WebElement rowElement = (WebElement) iterator.next();
+				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
+
+				switch (page) {
+				case "Assignment":
+					if (cells.size() > 0 && cells.get(0) != null) {
+						cells.get(0).findElement(By.id("id of the check box button")).isDisplayed();
+						if (cells.get(0).findElement(By.id("id of the check box button")).isDisplayed()) {
+							cells.get(0).findElement(By.id("id of the check box button")).click();
+							rowData.add(cells.get(1).getText());
+							i=i+1;
+							if(i>noOfCheckBox) {
+								return rowData;
+							}
+							
+						} else if (cells.size() < 0) {
+							throw (new Exception("exception on row Delete"));
+						}
+
+					}
+					break;
+
+				default:
+					throw (new Exception("exception on row Delete"));
+				}
+
+			}
+		} catch (Exception e) {
+			throw (new Exception("exception on Delete button click "));
+		}
+		return rowData;
+	}
+
 	public Boolean verifyAddButtonDisplayed(String addBtnName) {
 		if (AddNewElmt.getText().contains(addBtnName)) {
 			return AddNewElmt.isDisplayed();
@@ -436,53 +488,75 @@ public class BasePage {
 
 	}
 
-	
-	
 	public boolean isNextLinkDisplayed() {
-		if(!nextlink.isDisplayed()) return true;
-		else return false;
+		if (!nextlink.isDisplayed())
+			return true;
+		else
+			return false;
 	}
-	
+
 	public boolean isPreviousLinkDisplayed() {
-		if(!prevlink.isDisplayed()) return true;
-		else return false;
+		if (!prevlink.isDisplayed())
+			return true;
+		else
+			return false;
 	}
-	
+
 	public boolean isNextLinkDisabled() {
-		//Get Total no.of pages count
+		// Get Total no.of pages count
 		int paginationSize = driver.findElements(By.xpath("//span/a[@class='paginate_button]")).size();
 
-		//Click on the last page
-		driver.findElement(By.xpath("//span/a[@class='paginate_button]["+paginationSize+"]")).click();
-		
-		//verify the Next link is disabled
-		if(!nextlink.isEnabled()) return true;
-		else return false;
+		// Click on the last page
+		driver.findElement(By.xpath("//span/a[@class='paginate_button][" + paginationSize + "]")).click();
+
+		// verify the Next link is disabled
+		if (!nextlink.isEnabled())
+			return true;
+		else
+			return false;
 	}
-	
+
 	public boolean isFirstLinkDisabled() {
-		//Click on the first page link
+		// Click on the first page link
 		driver.findElement(By.xpath("//span/a[@class='paginate_button][1]")).click();
-		
-		//verify the Next link is disabled
-		if(!prevlink.isEnabled()) return true;
-		else return false;
+
+		// verify the Next link is disabled
+		if (!prevlink.isEnabled())
+			return true;
+		else
+			return false;
 	}
 
 	public void redirectToPage(String pageName) throws Exception {
-		switch(pageName) {
-		case "Student": studentLink.click(); break;
-		case "Program": programLink.click();break;
-		case "Batch": batchLink.click();break;
-		case "Class": classLink.click();break;
-		case "User": userLink.click();break;
-		case "Attendance": attendanceLink.click();break;
-		case "Assignment": assignmentLink.click();break;
-		case "Logout": logoutLink.click();break;
+		switch (pageName) {
+		case "Student":
+			studentLink.click();
+			break;
+		case "Program":
+			programLink.click();
+			break;
+		case "Batch":
+			batchLink.click();
+			break;
+		case "Class":
+			classLink.click();
+			break;
+		case "User":
+			userLink.click();
+			break;
+		case "Attendance":
+			attendanceLink.click();
+			break;
+		case "Assignment":
+			assignmentLink.click();
+			break;
+		case "Logout":
+			logoutLink.click();
+			break;
 		default:
-			throw(new Exception("Unable to redirect to the specified page"));
+			throw (new Exception("Unable to redirect to the specified page"));
 		}
-		}
+	}
 
 	public int getRowCountinPage() {
 		totalRowsinpage = tablerows.size();
@@ -544,8 +618,6 @@ public class BasePage {
 		return inputTextBoxes;
 	}
 
-	
-
 	public boolean verifyCalenderIcon() {
 		if (calenderelement.isDisplayed()) {
 			return true;
@@ -575,39 +647,37 @@ public class BasePage {
 	}
 
 	public String verifyPopUpforDelete(String page) {
-		
+
 		deleteAlert = (Alert) driver.switchTo().window(subWindowHandler);
 		return deleteAlert.getText();
 	}
 
 	public boolean verifyAlertButtons(String buttonName) {
 		boolean buttonDisplayed = false;
-		if(buttonName.contains("yes")) {
-			if(yes.isDisplayed()) {
+		if (buttonName.contains("yes")) {
+			if (yes.isDisplayed()) {
 				buttonDisplayed = true;
-			} 
-		}else {
-			if(no.isDisplayed()) {
+			}
+		} else {
+			if (no.isDisplayed()) {
 				buttonDisplayed = true;
-			} 
+			}
 		}
 		return buttonDisplayed;
 	}
 
 	public void clickAlertButtons(String buttonName) {
-		if(buttonName.contains("yes")) {
-			if(yes.isDisplayed()) {
+		if (buttonName.contains("yes")) {
+			if (yes.isDisplayed()) {
 				yes.click();
-			} 
-		}else {
-			if(no.isDisplayed()) {
+			}
+		} else {
+			if (no.isDisplayed()) {
 				no.click();
-			} 
+			}
 		}
-		
-	}
 
-	
+	}
 
 	
 
