@@ -2,9 +2,12 @@ package pageObjects;
 
 import static org.testng.Assert.assertTrue;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -54,7 +57,7 @@ public class ProgramPage extends BasePage {
 	@FindBy(xpath="//i[@class='oxd-icon bi-chevron-left']") static WebElement moveLefticon;		
 	@FindBy(xpath="//i[@class='oxd-icon bi-chevron-right']") static WebElement moveRighticon;
 	
-	//Add New Program-Edit Existing Program pop up	
+	//Add New Program-Edit Existing Program pop up	ur
 	@FindBy(xpath="//h6[@class='header']") static WebElement addProgramHeader;	
 	@FindBy(xpath="//div[@class='modal-form-group']/input[@name='programname']") static WebElement txtaddNewProgramName;	
 	@FindBy(xpath="//div[@class='modal-form-group']/input[@name='programdesc']") static WebElement txtaddNewProgramDescription;	
@@ -64,6 +67,8 @@ public class ProgramPage extends BasePage {
 	@FindBy(xpath="//button[@type='Save']") static WebElement btnSave;	
 	@FindBy(xpath="//button[@type='Close']") static WebElement iconClose;
 	
+	@FindBy(xpath = "//div[@class='alert alert-primary']") WebElement errorElement;
+
 	static WebElement checkboxElmt;
 	static WebElement programName;
 	static WebElement programDesc;
@@ -125,7 +130,98 @@ public class ProgramPage extends BasePage {
 
 	}
 	
+	public void clickAddButton() {
+		BtnaddNewProgram.click();
+	}
 	
+	public void getProgramStatus(String programStatus) {
+		if(programStatus.equals("Active")) {
+			rbaddNewProgramstatusActive.click();
+		} else if (programStatus.equals("InActive")){
+			rbaddNewProgramstatusInActive.click();
+		}	
+		
+	}
+		
 	
+ public void addNewEditExistProgramDetails(Map<String, String> excelDataMap) {
+	 
+	 	String popUpWindowHandle = driver.getWindowHandle();
+	 	driver.switchTo().window(popUpWindowHandle);
+		
+		if(!excelDataMap.get("programName").isEmpty()) {
+			txtaddNewProgramName.clear();
+			txtaddNewProgramName.sendKeys(excelDataMap.get("programName"));
+		}
+		if(!excelDataMap.get("programDescription").isEmpty()) {
+			txtaddNewProgramDescription.clear();
+			txtaddNewProgramDescription.sendKeys(excelDataMap.get("programDescription"));
+		}
+		if(!excelDataMap.get("programStatus").isEmpty()) {
+			getProgramStatus(excelDataMap.get("programStatus"));
+		}
+		
+		btnSave.click();
+		driver.switchTo().defaultContent();
+				
+	}
+ 
+
+ 
+ 
+ public String getErrorElement() {
+
+		return (errorElement).getText();
+
+	}
+ 
+ public List<String> getProgramDataForSearch(String fieldName) throws Exception {
+		List<String> dataList = new ArrayList<>();
+		try {
+
+			for (Iterator iterator = tablerows.iterator(); iterator.hasNext();) {
+				WebElement rowElement = (WebElement) iterator.next();
+				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
+				if (cells.size() > 0) {
+					String dataValue = null;
+					switch (fieldName) {
+					case "name":
+						if (cells.get(1) != null) {
+							dataValue = cells.get(1).findElement(By.id("id of the Program Name class")).getText();
+						} else if (cells.size() > 0) {
+							throw (new Exception("exception on retrieving search"));
+						}
+						break;
+					case "desc":
+						if (cells.get(2) != null) {
+							dataValue = cells.get(2).findElement(By.id("id of the Program Desc class")).getText();
+						} else if (cells.size() > 0) {
+							throw (new Exception("exception on retrieving search"));
+						}
+						break;
+					case "status":
+						if (cells.get(3) != null) {
+							dataValue = cells.get(3).findElement(By.id("id of the Assignment status class")).getText();
+						} else if (cells.size() > 0) {
+							throw (new Exception("exception on retrieving search"));
+						}
+						break;
+					
+					default:
+						throw (new Exception("exception on retrving search"));
+
+					}
+					if (!dataValue.isEmpty()) {
+						dataList.add(dataValue);
+					}
+				}
+
+			}
+
+		} catch (Exception e) {
+			throw (new Exception("exception on row checkbox"));
+		}
+		return dataList;
+	}
 
 }

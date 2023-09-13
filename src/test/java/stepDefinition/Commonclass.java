@@ -32,6 +32,17 @@ public class Commonclass {
 		newAssignmentInputFeilds.add("Assignment File5");
 		return newAssignmentInputFeilds ;
 	}
+	
+	public ArrayList<String>  getNewProgramInputFields() {
+		
+		newAssignmentInputFeilds.add("Name");
+		newAssignmentInputFeilds.add("Description");
+		newAssignmentInputFeilds.add("Active");
+		newAssignmentInputFeilds.add("InActive");
+		
+		return newAssignmentInputFeilds ;
+	}
+	
 	static long startTime;
 	static long endTime;
 	static long totalTime;

@@ -193,5 +193,14 @@ Feature: Program Page Verification
       | Attendance |
       | Logout     |
       
+   Scenario Outline: Verify if Program link is broken
+    Given Admin is on dashboard page after Login
+    When Admin clicks program button on the navigation bar
+    Then Admin should see if the link is broken for "<module>" page
+
+    Examples: 
+ 			| module     |
+      | Program     |
+      
 
   
