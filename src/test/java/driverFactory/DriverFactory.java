@@ -9,7 +9,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import io.cucumber.java.Scenario;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.LoggerLoad;
 
 
@@ -21,22 +20,22 @@ public class DriverFactory {
 
 		if (browser.equalsIgnoreCase("firefox")) {
 			LoggerLoad.logInfo("Testing on firefox");
-			WebDriverManager.firefoxdriver().setup();
+//			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 
 		} else if (browser.equalsIgnoreCase("chrome")) {
 			LoggerLoad.logInfo("Testing on chrome");
-			WebDriverManager.chromedriver().browserVersion("108.0.0").setup();
+//			WebDriverManager.chromedriver().browserVersion("108.0.0").setup();
 			driver = new ChromeDriver();
 
 		} else if (browser.equalsIgnoreCase("safari")) {
 			LoggerLoad.logInfo("Testing on safari");
-			WebDriverManager.safaridriver().setup();
+//			WebDriverManager.safaridriver().setup();
 			driver = new SafariDriver();
 
 		} else if (browser.equalsIgnoreCase("edge")) {
 			LoggerLoad.logInfo("Testing on Edge");
-			WebDriverManager.edgedriver().setup();
+//			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 
 		}

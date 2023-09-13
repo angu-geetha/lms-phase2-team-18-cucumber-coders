@@ -238,18 +238,31 @@ public class BaseSD extends Commonclass {
 	@Then("Admin should see input fields Text  {string}")
 	public void admin_should_see_input_fields_text(String page) {
 		try {
-			ArrayList<String> inputFeilds= null;
+			ArrayList<String> inputFields= null;
 			List<WebElement> webElmts = basePage.getInputFeilds();
 			switch (page) {
 			case "Assignment":
-				inputFeilds = getNewAssignmentInputFeilds();
+				inputFields = getNewAssignmentInputFeilds();
 				for (Iterator iterator = webElmts.iterator(); iterator.hasNext();) {
 					WebElement webElement = (WebElement) iterator.next();
-					if(inputFeilds.contains(webElement.getText())) {
+					if(inputFields.contains(webElement.getText())) {
 						LoggerLoad.logInfo("Feild is present in the page");
 					} else {
 						assertFalse(false,
 								"Failed - Feild is not present in the page");
+					}
+				}
+				break;
+				
+			case "Program":
+				inputFields = getNewProgramInputFields();
+				for (Iterator iterator = webElmts.iterator(); iterator.hasNext();) {
+					WebElement webElement = (WebElement) iterator.next();
+					if(inputFields.contains(webElement.getText())) {
+						LoggerLoad.logInfo("Field is present in the page");
+					} else {
+						assertFalse(false,
+								"Failed - Field is not present in the page");
 					}
 				}
 				break;
@@ -274,6 +287,17 @@ public class BaseSD extends Commonclass {
 					"Failed - Admin should see input fields Text  {string}");
 		}
 	    
+	}
+	
+	@Then("{string} radio buttons should be  present in {string} details popup window")
+	public void radio_buttons_should_be_present_in_details_popup_window(String noOfRadioButtons, String page) {
+		try {
+	    	List<WebElement> webElmts = basePage.getRadioButtonsinPage();
+	    	assertEquals(Integer.parseInt(noOfRadioButtons), webElmts.size());
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Admin should see correct number of radio buttons");
+		}
 	}
 
 	@Then("Admin should see dropdown option for Batch Number")
@@ -426,6 +450,7 @@ public class BaseSD extends Commonclass {
 					} else {
 						assertFalse(true, "Add button is not displayed in Assignment page");
 					}
+				
 				}
 
 		} catch (Exception e) {
@@ -587,6 +612,52 @@ public class BaseSD extends Commonclass {
 	@Then("Admin should get redirected to {string} page")
 	public void admin_should_get_redirected_to_page(String pageName) throws Exception {
 	    basePage.redirectToPage(pageName);
+	}
+
+	@When("Admin clicks Edit button in data table")
+	public void admin_clicks_edit_button_in_data_table() {
+		try {
+			basePage.clickEditIconForRows();
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Admin clicks Edit button in data table");
+		}		
+	}
+	
+	@Then("Edit popup window appears with heading {string}")
+	public void edit_popup_window_appears_with_heading(String headingTitle) {
+		try {
+			String heading = basePage.getPopUpPageHeadingString();
+			assertEquals(heading, headingTitle);
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Admin should see a popup  with  heading {string}");
+		}
+	}
+	
+	@Then("Admin should see if the link is broken for {string} page")
+	public void admin_should_see_if_the_link_is_broken_for_page(String pageName) {
+		try {
+			boolean brokenFlag = basePage.isBrokenLink(pageName);
+			if (!brokenFlag) {
+				assertTrue(true, "Link is not broken for "+pageName+ " page");
+			} else {
+				assertFalse(true, "Link is broken for "+pageName+ " page");
+			}
+		} catch (Exception e) {
+			LoggerLoad.logError(e.getMessage());
+			assertFalse(false, "Failed - Admin should see link is not broken in "+pageName+ " page");
+		}	
+	}
+	
+	@Then("Admin should see {string}  alert message")
+	public void admin_should_see_alert_message(String message) {
+		String actualAlertText = basePage.getAlertForAddUpdate();
+		if(actualAlertText.equals(message) ) {
+    		assertTrue(true, "Correct Alert message" +message+ "is displayed");
+    	} else {
+    		assertTrue(false, "Correct Alert message" +message+ "is NOT displayed");
+    	}	
+		
 	}
 
 

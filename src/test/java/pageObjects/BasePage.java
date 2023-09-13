@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -82,6 +84,10 @@ public class BasePage {
 	static List<WebElement> inputFeilds;
 	@FindBy(xpath = ".//input[@type='text'")
 	static List<WebElement> inputTextBoxes;
+	
+	@FindBy(xpath = ".//input[@type='radio'")
+	static List<WebElement> inputRadioButtons;
+	
 	@FindBy(xpath = "//select")
 	static WebElement batchdropdown;
 	@FindBy(xpath = "//select")
@@ -97,7 +103,11 @@ public class BasePage {
 
 	@FindBy(xpath = "//button[text()='Cancel']")
 	static WebElement cancelbtn;
-
+	
+	//Xpath for message (successfully added, deleted and updated)
+	@FindBy(xpath = "//")
+	static WebElement alertMessage;
+	
 	public BasePage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -294,7 +304,7 @@ public class BasePage {
 
 	}
 	
-
+	
 	
 	
 	public boolean isNextLinkDisplayed() {
@@ -404,6 +414,10 @@ public class BasePage {
 		return inputTextBoxes;
 	}
 
+	public List<WebElement> getRadioButtonsinPage() {
+
+		return inputRadioButtons;
+	}
 	public boolean verifyDropdown() {
 		if (batchdropdown.isDisplayed()) {
 			return true;
@@ -447,5 +461,83 @@ public class BasePage {
 			return true;
 		} else
 			return false;
+	}
+	
+	public ArrayList<String> clickEditIconForRows() throws Exception {
+
+		ArrayList<String> rowData = new ArrayList<>();
+		try {
+			for (Iterator iterator = tablerows.iterator(); iterator.hasNext();) {
+				WebElement rowElement = (WebElement) iterator.next();
+				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
+
+				for (Iterator iterator2 = cells.iterator(); iterator2.hasNext();) {
+					WebElement webElement = (WebElement) iterator2.next();
+					rowData.add(webElement.getText());
+				}
+				if (cells.size() > 0 && cells.get(5) != null) {
+					cells.get(5).findElement(By.id("id of the edit button")).isDisplayed();
+					if (cells.get(5).findElement(By.id("id of the edit button")).isDisplayed()) {
+						cells.get(5).findElement(By.id("id of the edit button")).click();
+						return rowData;
+					} else if (cells.size() < 0) {
+						throw (new Exception("exception on row edit"));
+					}
+
+				}
+
+			}
+		} catch (Exception e) {
+			throw (new Exception("exception on edit button click "));
+		}
+		return rowData;
+	}
+	
+	
+	//Broken Links
+	public boolean isBrokenLink(String moduleName) throws Exception {
+		String url="";
+		HttpURLConnection huc = null;
+		int respCode;
+		switch(moduleName) {
+		case "Program": 
+			url = programLink.getAttribute("href");break;	
+		case "Student": 
+			url = studentLink.getAttribute("href");break;
+		case "Batch": 
+			url = batchLink.getAttribute("href"); break;
+		case "Class": 
+			url = classLink.getAttribute("href"); break;
+		case "Attendance": 
+			url = attendanceLink.getAttribute("href");break;
+		case "Assignment": 
+			url = assignmentLink.getAttribute("href"); break;
+		case "User": 
+			url = userLink.getAttribute("href"); break;
+		case "Logout": 
+			url = logoutLink.getAttribute("href"); break;
+			
+			}
+		
+		try {
+			huc = (HttpURLConnection)(new URL(url).openConnection());           
+            huc.setRequestMethod("HEAD");            
+            huc.connect();            
+            respCode = huc.getResponseCode();              
+            if(respCode >= 400){
+                return true;
+            }
+            else{
+                return false;
+            }
+		} catch (Exception e) {
+			throw (new Exception("exception on edit button click "));
+		}
+		
+	}
+	
+	public String getAlertForAddUpdate() {
+		return (driver.switchTo().alert().getText());
+		
 	}
 }
