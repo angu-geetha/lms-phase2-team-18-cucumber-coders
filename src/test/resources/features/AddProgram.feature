@@ -11,7 +11,7 @@ Feature: Verify Program - Add/Edit functionality
 
   Scenario Outline: Validate admin able to add new program with mandatory or optional feilds
     Given Admin is in  program details popup window
-    When Admin enters data for add program from "<dataKey>" and "<sheetName>"
+    When Admin enters data for add|edit assignment from "<dataKey>" and "<sheetName>"
     Then Admin should see new program details is added in the data table from "<dataKey>" and "<sheetName>"
 
     Examples: 
@@ -22,8 +22,8 @@ Feature: Verify Program - Add/Edit functionality
       
    Scenario Outline: Validate admin able to add new program with invalid data
     Given Admin is in  program details popup window
-    When Admin enters data for add program from "<dataKey>" and "<sheetName>"
-    Then Error message should appear in alert of program page
+    When Admin enters data for add|edit assignment from "<dataKey>" and "<sheetName>"
+    Then Error message should appear in alert of "Program" page
 
     Examples: 
       | datakey                   | sheetName           |
@@ -33,26 +33,33 @@ Feature: Verify Program - Add/Edit functionality
     
     Scenario Outline: Validate admin able to add new program with missing data
     Given Admin is in  program details popup window
-    When Admin enters data for add program from "<dataKey>" and "<sheetName>"
-    Then Error message with "<message>" should be displayed from "<dataKey>" and "<sheetName>"
+    When Admin enters data for add|edit assignment from "<dataKey>" and "<sheetName>"
+    Then Error message with "<message>" should be displayed from "<dataKey>" and "<sheetName>" from "<page>" page
 
     Examples: 
-      | datakey               		 | sheetName          	| message                        |
-      | missing_ProgramName    		 | programSearchBox 	  | Name is required               |
-      | missing_ProgramDesc   		 | programSearchBox 	  | Description is required        |
-      | missing_ProgramAndDesc 		 | programSearchBox     | Name and Description required  |
-      | specialchar_ProgramAndDesc | programSearchBox     | Enter Valid Name and Desc      |
-      | blankdata                  | programSearchBox		  | Name is mandatory              |
+      | datakey               		 | sheetName          	| message                        | page |
+      | missing_ProgramName    		 | programSearchBox 	  | Name is required               |Program|
+      | missing_ProgramDesc   		 | programSearchBox 	  | Description is required        |Program|
+      | missing_ProgramAndDesc 		 | programSearchBox     | Name and Description required  |Program|
+      | specialchar_ProgramAndDesc | programSearchBox     | Enter Valid Name and Desc      |Program|
+      | blankdata                  | programSearchBox		  | Name is mandatory              |Program|
       
    
     Scenario Outline: Validate admin able to see the success message after adding a new program
     Given Admin is in  program details popup window
-    When Admin enters data for add program from "<dataKey>" and "<sheetName>"
+    When Admin enters data for add|edit assignment from "<dataKey>" and "<sheetName>"
     Then Admin should see "<successMessage>"  alert message
  		Examples: 
       | datakey              | sheetName        | successMessage |
       | mandatory_valid      | programSearchBox | Successful Program created |
       | valid_data_allfields | programSearchBox | Successful Program created |
+      
+      
+    Scenario: Validate admin able to see the success message after adding a new program
+    Given Admin is in  program details popup window
+    When Admin clicks close icon on Program details form
+    Then Admin should see Program Details popup window closed without saving
+ 		
     
 
     

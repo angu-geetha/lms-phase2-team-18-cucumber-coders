@@ -3,9 +3,11 @@ package pageObjects;
 import static org.testng.Assert.assertTrue;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -166,7 +168,14 @@ public class ProgramPage extends BasePage {
 				
 	}
  
-
+ public boolean verifyProgramPageAfterClickingCloseBtn() {
+	 Set mainHandle = driver.getWindowHandles();
+	//Handle will be 1 after redirecting to program page from popup
+	 if(mainHandle.size()==1) {
+		 return true;
+	 } else return false;
+	 
+ }
  
  
  public String getErrorElement() {
@@ -223,5 +232,33 @@ public class ProgramPage extends BasePage {
 		}
 		return dataList;
 	}
+ 
+public void clickOnSortIcon(String columnName) throws Exception{
+	 switch(columnName) {
+	 case "programName": 
+		 SortProgramNameHeader.click();break;
+	 case "programDescription": 
+		 SortDescriptionNameHeader.click();break;
+	 case "programStatus": 
+		 SortProgramStatusHeader.click();break;
+	 default: 
+		 throw (new Exception("wrong value given"));
+	 }
+}
+ 
+ //Verify sorting of values in a column
+ 
+ public boolean sortbyasc(String columnName) throws Exception {
+	 boolean sortasc = getSortAsc(columnName);
+	 return sortasc;
+	
+ }
+ 
+ public boolean sortbydesc(String columnName) throws Exception {
+	 clickOnSortIcon(columnName);
+	 boolean sortdesc = getSortAsc(columnName);
+	 return sortdesc;
+ }
+ 
 
 }
