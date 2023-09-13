@@ -800,5 +800,46 @@ public class BaseSD extends Commonclass {
 		}
 
 	}
+	
+	@Then("Error message should appear in alert of {string} page")
+	public void error_message_should_appear_in_alert(String page) {
+		switch(page) {
+		case "Program": assertTrue(!programPage.getErrorElement().isBlank(), programPage.getErrorElement()); break;
+		case "Assignment":assertTrue(!assignmentPage.getErrorElementg().isBlank(), assignmentPage.getErrorElementg());break;
+		}
+	}
+
+	@Then("Error message with {string} should be displayed from {string} and {string} from {string} page")
+	public void error_message_with_should_be_displayed_from_and(String dataKey, String sheetName, String message,String page) {
+	   
+	   switch(page) {
+		case "Program": assertEquals(programPage.getErrorElement(), message);; break;
+		case "Assignment":assertEquals(assignmentPage.getErrorElementg(), message);break;
+		}
+	}
+	
+	@When("Admin  clicks the sort icon of {string} name column")
+	public void admin_clicks_the_sort_icon_of_name_column(String columnName) {
+	//	basePage.clickOnSortIcon(columnName);
+	}
+	
+	@When("Admin  clicks the sort icon of {string} name column under {string}")
+	public void admin_clicks_the_sort_icon_of_name_column_under(String columnName, String module) throws Exception {
+	    switch(module) {
+	    case "Program": 
+	    	programPage.clickOnSortIcon(columnName); break;
+	    }
+	}
+	
+
+	@Then("Admin should see the data get sorted on the table based on the {string} column values in ascending order")
+	public void admin_should_see_the_data_get_sorted_on_the_table_based_on_the_column_values_in_ascending_order(String columnName) {
+		if(basePage.getSortAsc(columnName)) {
+			assertTrue(true, "Values are sorted correctly in ascending order");
+		} else {
+			assertTrue(false, "Values are NOT sorted correctly in ascending order");
+		}
+	}
+
 
 }

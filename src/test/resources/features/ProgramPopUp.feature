@@ -74,4 +74,25 @@ Scenario Outline: Verify cancel button is present in Program details popup windo
       | heading       				|
       | Program		|
       
+ 
+ Scenario: Verify the delete button Alert window
+  Given Admin is on manage program page
+  When Admin click delete button on the data table for any row
+  Then Admin should see alert with heading Confirm along with Yes and No button for deletion
+  And Admin should see a message Are you sure you want to delete program
+  
+ Scenario Outline: Verify the delete button Alert window
+  Given Admin is on manage program page
+  When Admin  clicks the sort icon of "<ColumnName>" name column under "Program"
+  Then Admin should see the data get sorted on the table based on the "<ColumnName>" column values in ascending order
+   Examples: 
+      | ColumnName   |
+      | Program Name		| 
+      | Program Description		|
+       
+      
+
+ 
+ 
+ 
 		 
