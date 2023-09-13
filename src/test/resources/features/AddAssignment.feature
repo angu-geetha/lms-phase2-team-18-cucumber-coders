@@ -30,7 +30,7 @@ Feature: Assignment.feature
 
   Scenario Outline: Validate admin able to add new assignment with mandatory or optional feilds
     Given Admin is in  assignment details popup window
-    When Admin enters data for add assignment from "<dataKey>" and "<sheetName>"
+    When Admin enters data for add|edit assignment from "<dataKey>" and "<sheetName>"
     Then Admin should see new assignment details is added in the data table from "<dataKey>" and "<sheetName>"
 
     Examples: 
@@ -40,7 +40,7 @@ Feature: Assignment.feature
 
   Scenario Outline: Validate admin able to add new assignment with invalid data
     Given Admin is in  assignment details popup window
-    When Admin enters data for add assignment from "<dataKey>" and "<sheetName>"
+    When Admin enters data for add|edit assignment from "<dataKey>" and "<sheetName>"
     Then Error message should appear in alert
 
     Examples: 
@@ -50,7 +50,7 @@ Feature: Assignment.feature
 
   Scenario Outline: Validate admin able to add new assignment with missing data
     Given Admin is in  assignment details popup window
-    When Admin enters data for add assignment from "<dataKey>" and "<sheetName>"
+    When Admin enters data for add|edit assignment from "<dataKey>" and "<sheetName>"
     Then Error message with "<message>" should be displayed from "<dataKey>" and "<sheetName>"
 
     Examples: 

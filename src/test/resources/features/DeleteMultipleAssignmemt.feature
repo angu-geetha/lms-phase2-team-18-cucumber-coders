@@ -23,7 +23,8 @@ Feature: Assignment.feature
     Given Admin is in login page
     When Admin enter valid credentials  and clicks login button
     And  Admin clicks assignment button on the navigation bar 
-    And Admin clicks check box in the data table for "Assignment" for 1 checkbox
+    And Admin clicks check box in the data table for "Assignment" for 2 checkbox
+    And Admin should click delete icon below the "manageAssignmentHeader"
     Then Admin should see dialog box for "Assignment"
 
     
@@ -31,12 +32,13 @@ Feature: Assignment.feature
   Scenario Outline: Validate accept in alert
     Given Admin is in delete alert for "Assignment"
     When Admin clicks "yes" button
-    Then Redirected to assignment page and selected assignment details are deleted from the data table for "single"
+    Then Redirected to assignment page and selected assignment details are deleted from the data table for "multiple"
 
     
 
   Scenario Outline: Validate reject in alert
-    Given Admin is in delete alert
+    Given Admin is in delete alert for "Assignment"
     When Admin clicks "No" button
-    Then Redirected to assignment page and selected assignment details are not deleted from the data table for "single"
+    Then Redirected to assignment page and selected assignment details are not deleted from the data table for "multiple"
+    
 
