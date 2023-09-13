@@ -14,7 +14,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.github.javafaker.Faker;
+//import com.github.javafaker.Faker;
 
 import dataProviders.ConfigReader;
 
@@ -107,14 +107,14 @@ public WebDriver driver;
 
 	
 	
-	Faker faker = new Faker();
+	/*Faker faker = new Faker();
 	
 	public void generateData() {
 		ipFirstName = faker.name().firstName();
 		ipMiddleName = faker.name().lastName();
 		ipLastName = faker.name().lastName();
 		
-	}
+	}*/
 	
 	
 	  public void user_page() {

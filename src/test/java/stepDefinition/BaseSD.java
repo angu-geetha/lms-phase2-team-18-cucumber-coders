@@ -800,5 +800,18 @@ public class BaseSD extends Commonclass {
 		}
 
 	}
+	
+	@Then("Error message should appear in alert of {string} page")
+	public void error_message_should_appear_in_alert(String page) {
+		switch(page) {
+		case "Program": assertTrue(!programPage.getErrorElement().isBlank(), programPage.getErrorElement()); break;
+		case "Assignment":assertTrue(!assignmentPage.getErrorElementg().isBlank(), assignmentPage.getErrorElementg());break;
+		}
+	}
+
+	@Then("Error message with {string} should be displayed from {string} and {string}")
+	public void error_message_with_should_be_displayed_from_and(String dataKey, String sheetName, String message) {
+	   assertEquals(assignmentPage.getErrorElementg(), message);
+	}
 
 }

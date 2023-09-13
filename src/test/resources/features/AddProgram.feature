@@ -23,7 +23,7 @@ Feature: Verify Program - Add/Edit functionality
    Scenario Outline: Validate admin able to add new program with invalid data
     Given Admin is in  program details popup window
     When Admin enters data for add program from "<dataKey>" and "<sheetName>"
-    Then Error message should appear in alert of program page
+    Then Error message should appear in alert of "Program" page
 
     Examples: 
       | datakey                   | sheetName           |

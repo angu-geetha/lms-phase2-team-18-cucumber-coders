@@ -125,7 +125,7 @@ public class ProgramSD extends Commonclass {
 
 	}
 	
-	@Then("Error message should appear in alert of program page")
+	/*@Then("Error message should appear in alert of program page")
 	public void error_message_should_appear_in_alert_of_program_page() {
 		assertTrue(!programPage.getErrorElement().isBlank(), programPage.getErrorElement());
 
@@ -136,6 +136,6 @@ public class ProgramSD extends Commonclass {
 	public void error_message_with_should_be_displayed_from_and(String dataKey, String sheetName, String message) {
 		   assertEquals(programPage.getErrorElement(), message);
 
-	}
+	}*/
 	
 }

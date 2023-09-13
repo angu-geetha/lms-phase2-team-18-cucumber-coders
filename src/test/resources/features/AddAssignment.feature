@@ -41,7 +41,7 @@ Feature: Assignment.feature
   Scenario Outline: Validate admin able to add new assignment with invalid data
     Given Admin is in  assignment details popup window
     When Admin enters data for add|edit assignment from "<dataKey>" and "<sheetName>"
-    Then Error message should appear in alert
+    Then Error message should appear in alert of "Assignment" page
 
     Examples: 
       | datakey                   | sheetName           |
