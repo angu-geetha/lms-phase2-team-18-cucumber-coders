@@ -22,7 +22,7 @@ Feature: Assignment.feature
   Background: Admin is Logged In LMS portal
     Given Admin is in login page
     When Admin enter valid credentials  and clicks login button
-    And  Admin clicks assignment button on the navigation bar  
+    And Admin clicks assignment button on the navigation bar
     Then Admin should land on manage assignment page
 
   Scenario Outline: Validate valid search box function for Assignment
@@ -31,25 +31,52 @@ Feature: Assignment.feature
     Then Displays entries with that "<feildName>" from "<dataKey>" and "<sheetName>"
 
     Examples: 
-      | datakey       			|sheetName						|feildName		|
-      | valid_assgn_name		|assignmentSearchBox	|name					|
-      | valid_assgn_desc		|assignmentSearchBox	|desc					|
-      | valid_assgn_duedate	|assignmentSearchBox	|dueDate			|
-      | valid_assgn_grade		|assignmentSearchBox	|grade				|
+      | datakey             | sheetName           | feildName |
+      | valid_assgn_name    | assignmentSearchBox | name      |
+      | valid_assgn_desc    | assignmentSearchBox | desc      |
+      | valid_assgn_duedate | assignmentSearchBox | dueDate   |
+      | valid_assgn_grade   | assignmentSearchBox | grade     |
 
-
-
- Scenario Outline: Validate invalid search box function for Assignment
+  Scenario Outline: Validate invalid search box function for Assignment
     Given Admin is on manage assignment page
     When Admin enters "<feildName>" into search box  from "<dataKey>" and "<sheetName>"
     Then Displays empty details in the data table
 
     Examples: 
-      | datakey       				|sheetName						|feildName		|
-      | invalid_assgn_name		|assignmentSearchBox	|name					|
-      | invalid_assgn_desc		|assignmentSearchBox	|desc					|
-      | invalid_assgn_duedate	|assignmentSearchBox	|dueDate			|
-      | invalid_assgn_grade		|assignmentSearchBox	|grade				|
+      | datakey               | sheetName           | feildName |
+      | invalid_assgn_name    | assignmentSearchBox | name      |
+      | invalid_assgn_desc    | assignmentSearchBox | desc      |
+      | invalid_assgn_duedate | assignmentSearchBox | dueDate   |
+      | invalid_assgn_grade   | assignmentSearchBox | grade     |
 
-  
-  
+  Scenario Outline: Verify Edit assignment popup window
+    Given Admin is on manage assignment page
+    When Admin clicks Edit button in data table for "Assignmemt"
+    Then Edit popup window appears with heading "<heading title>"
+
+    Examples: 
+      | heading title      |
+      | Assignment Details |
+
+  Scenario Outline: Verify values in popup window
+    Given Admin is on manage assignment page
+    When Admin clicks Edit button in data table for "Assignmemt"
+    Then Edit popup window appears with same row values in the all fields
+
+  Scenario Outline: Verify Delete Assignment alert
+    Given Admin is on manage assignment page
+    When Admin clicks delete button in data table for "Assignmemt"
+    Then Admin should see dialog box for "Assignment"
+
+  Scenario Outline: Verify  accept enabled in alert
+    Given Admin is on manage assignment page
+    When Admin clicks delete button in data table for "Assignmemt"
+    Then Alert should have "yes" button to accept
+
+  Scenario Outline: Verify reject enabled in alert
+    Given Admin is on manage assignment page
+    When Admin clicks delete button in data table for "Assignmemt"
+    Then Alert should have "No" button to accept
+
+ 
+    

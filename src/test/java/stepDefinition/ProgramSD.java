@@ -75,10 +75,7 @@ public class ProgramSD extends Commonclass {
 		}
 	}
 
-	@Then("Admin should see a popup  with  heading {string}")
-	public void admin_should_see_a_popup_with_heading(String string) {
-	    
-	}
+	
 	
 	@When("Admin clicks + add new  button on manage program page")
 	public void admin_clicks_add_new_button_on_manage_program_page() {

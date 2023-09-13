@@ -15,6 +15,7 @@ public class Commonclass {
 	ProgramPage programPage = new ProgramPage();
 	
 	ArrayList<String> newAssignmentInputFeilds = new ArrayList<>();
+	ArrayList<String> rowData = new ArrayList<>();
 	
 	public ArrayList<String>  getNewAssignmentInputFeilds() {
 		

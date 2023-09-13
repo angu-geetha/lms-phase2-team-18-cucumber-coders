@@ -25,7 +25,7 @@ public class AssignmentSD extends Commonclass {
 	public void admin_clicks_assignment_button_on_the_navigation_bar() {
 
 		try {
-
+			startTime = System.currentTimeMillis();
 			assignmentPage.selectHeaderLink("Assignment");
 
 			LoggerLoad.logInfo("Admin clicks assignment button on the navigation bar");
@@ -241,7 +241,7 @@ public class AssignmentSD extends Commonclass {
 			}
 	}
 
-	@When("Admin enters data for add assignment from {string} and {string}")
+	@When("Admin enters data for add|edit assignment from {string} and {string}")
 	public void admin_enters_data_for_add_assignment_from_and(String dataKey, String sheetName) {
 		try {
 			excelDataMap = ExcelReader.getData(dataKey, sheetName);
@@ -256,6 +256,7 @@ public class AssignmentSD extends Commonclass {
 	@Then("Admin should see new assignment details is added in the data table from {string} and {string}")
 	public void admin_should_see_new_assignment_details_is_added_in_the_data_table(String dataKey, String sheetName) {
 		try {
+			
 			excelDataMap = ExcelReader.getData(dataKey, sheetName);
 			List<String> getAssignmentRow = assignmentPage.getDataForSearch("name");
 			assertTrue(getAssignmentRow.contains(excelDataMap.get("programName")));
@@ -275,6 +276,13 @@ public class AssignmentSD extends Commonclass {
 	   assertEquals(assignmentPage.getErrorElementg(), message);
 	}
 
-	
+	@Then("Edit popup window appears with same row values in the all fields")
+	public void edit_popup_window_appears_with_same_row_values_in_the_all_fields() {
+	   try {
+		   assignmentPage.validateAssignmentDetailsOfEdit(rowData);
+	} catch (Exception e) {
+		assertFalse(false, "Failed - Edit popup window appears with heading {string}");
+	}
+	}
 
 }
