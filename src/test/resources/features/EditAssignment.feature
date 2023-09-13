@@ -22,13 +22,13 @@ Feature: Assignment.feature
   Background: Admin is Logged In LMS portal
     Given Admin is in login page
     When Admin enter valid credentials  and clicks login button
-    And Admin clicks assignment button on the navigation bar
-    And Admin clicks + add new  button on manage assignment page
+    And  Admin clicks assignment button on the navigation bar 
+    And Admin clicks Edit button in data table for "Assignment"
     Then Admin should see a popup  with  heading "Assignment details"
 
     
 
-  Scenario Outline: Validate admin able to add new assignment with mandatory or optional feilds
+  Scenario Outline: Validate admin able to Edit assignment with mandatory or optional feilds
     Given Admin is in  assignment details popup window
     When Admin enters data for add|edit assignment from "<dataKey>" and "<sheetName>"
     Then Admin should see new assignment details is added in the data table from "<dataKey>" and "<sheetName>"
@@ -38,7 +38,7 @@ Feature: Assignment.feature
       | mandatory_valid      | assignmentSearchBox |
       | valid_data_allfields | assignmentSearchBox |
 
-  Scenario Outline: Validate admin able to add new assignment with invalid data
+  Scenario Outline: Validate admin able to Edit assignment with invalid data
     Given Admin is in  assignment details popup window
     When Admin enters data for add|edit assignment from "<dataKey>" and "<sheetName>"
     Then Error message should appear in alert
@@ -61,3 +61,4 @@ Feature: Assignment.feature
       | missing_dueDate        | assignmentSearchBox | Assignment due date is missing                   |
       | missing_gradeBy        | assignmentSearchBox | Grade by is missing                              |
       | invalid_passedDate     | assignmentSearchBox | Assignment cannot be created for the passed date |
+

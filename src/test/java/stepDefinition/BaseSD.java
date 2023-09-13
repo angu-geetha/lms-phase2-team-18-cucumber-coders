@@ -20,8 +20,6 @@ import pageObjects.BasePage;
 import utilities.LoggerLoad;
 
 public class BaseSD extends Commonclass {
-	
-	
 
 	@Given("Admin is in login page")
 	public void admin_is_in_login_page() {
@@ -37,8 +35,7 @@ public class BaseSD extends Commonclass {
 		String userName = null, password = null;
 		try {
 			excelDataMap = ExcelReader.getData("valid_login", "login");
-			if (null != excelDataMap && excelDataMap.size() > 0)
-			{
+			if (null != excelDataMap && excelDataMap.size() > 0) {
 				userName = excelDataMap.get("userName");
 				password = excelDataMap.get("password");
 			}
@@ -73,8 +70,6 @@ public class BaseSD extends Commonclass {
 
 		basePage.dashboardPage();
 
-		startTime = System.currentTimeMillis();
-
 	}
 
 	@Then("Admin should see URL with {string}")
@@ -96,17 +91,25 @@ public class BaseSD extends Commonclass {
 		}
 
 	}
+
 	@Then("Admin should see header with {string}")
 
 	public void admin_should_see_header_with_url_name(String urlName) {
 
 		try {
 
-			String header = assignmentPage.verifyManageAssignmentPageHeader();
+			switch (urlName) {
+			case "Assignment":
+				String header = assignmentPage.verifyManageAssignmentPageHeader();
 
-			LoggerLoad.logInfo("header of the Manage Assignment Page : \" " + header + "\" ");
+				LoggerLoad.logInfo("header of the Manage Assignment Page : \" " + header + "\" ");
 
-			assertEquals(header, ConfigReader.getProperty(urlName), "header do not match");
+				assertEquals(header, ConfigReader.getProperty(urlName), "header do not match");
+				break;
+
+			default:
+				break;
+			}
 
 		} catch (Exception e) {
 
@@ -117,6 +120,7 @@ public class BaseSD extends Commonclass {
 		}
 
 	}
+
 	@Then("Admin should see disabled delete icon below the {string}")
 
 	public void admin_should_see_disabled_delete_icon_below_the_url_name(String urlName) {
@@ -124,20 +128,34 @@ public class BaseSD extends Commonclass {
 			boolean isEnabled = basePage.verifyDeleteButtonEnabled();
 			LoggerLoad.logInfo("verify delete button enabled : \" " + isEnabled + "\" ");
 			if (isEnabled) {
-				assertFalse(true, "Delete button is enabled in "+urlName+ " page");
+				assertFalse(false, "Delete button is enabled in " + urlName + " page");
 			} else {
-				assertFalse(false, "Delete button is disabled"+urlName+ " page");
+				assertFalse(true, "Delete button is disabled" + urlName + " page");
 			}
 
 		} catch (Exception e) {
 
 			LoggerLoad.logError(e.getMessage());
 
-			assertFalse(false, "Failed - Admin should see disabled delete icon below the UrlName "+urlName+ " page");
+			assertFalse(false, "Failed - Admin should see disabled delete icon below the UrlName " + urlName + " page");
 
 		}
 	}
-	
+
+	@When("Admin should click delete icon below the {string}")
+	public void admin_should_click_delete_icon_below_the(String string) {
+		try {
+			basePage.clickDeleteButtonBelowHeader();
+
+		} catch (Exception e) {
+
+			LoggerLoad.logError(e.getMessage());
+
+			assertFalse(false, "Failed - Admin should click delete icon below the {string}");
+
+		}
+	}
+
 	@Then("Admin should see search bar on the {string}")
 
 	public void admin_should_see_search_bar(String urlName) {
@@ -155,21 +173,21 @@ public class BaseSD extends Commonclass {
 		}
 
 	}
-	
-	@Then("Edit Icon in each row of data table only  when entries are available")
-	public void edit_icon_in_each_row_of_data_table_only_when_entries_are_available() {
+
+	@Then("Edit Icon in each row of data table only  when entries are available for {string}")
+	public void edit_icon_in_each_row_of_data_table_only_when_entries_are_available(String page) {
 		try {
-			basePage.validateEditIconForRows();
+			basePage.validateEditIconForRows(page);
 		} catch (Exception e) {
 			assertFalse(false, "Failed - Edit Icon in each row of data table only  when entries are available");
 		}
 
 	}
 
-	@Then("Delete Icon in each row of data table only  when entries are available")
-	public void delete_icon_in_each_row_of_data_table_only_when_entries_are_available() {
+	@Then("Delete Icon in each row of data table only  when entries are available for {string}")
+	public void delete_icon_in_each_row_of_data_table_only_when_entries_are_available(String page) {
 		try {
-			basePage.validateDeleteIconForRows();
+			basePage.validateDeleteIconForRows(page);
 		} catch (Exception e) {
 			assertFalse(false, "Failed - Delete Icon in each row of data table only  when entries are available");
 		}
@@ -184,15 +202,14 @@ public class BaseSD extends Commonclass {
 					"Failed - Admin should see check box in the all rows  of data table when entries available");
 		}
 	}
-	
+
 	@When("Admin enters {string} into search box  from {string} and {string}")
 	public void admin_enters_valid_into_search_box_from_and(String feildName, String dataKey, String sheetName) {
 		try {
 			excelDataMap = ExcelReader.getData(dataKey, sheetName);
-			basePage.sendDataToSearchString(excelDataMap.get("feildValue"));
+			basePage.sendDataToSearchBox(excelDataMap.get("feildValue"));
 		} catch (Exception e) {
-			assertFalse(false,
-					"Failed - Admin enters valid {string} into search box  from {string} and {string}");
+			assertFalse(false, "Failed - Admin enters valid {string} into search box  from {string} and {string}");
 		}
 	}
 
@@ -206,50 +223,46 @@ public class BaseSD extends Commonclass {
 				assertTrue(searchValue.contains(excelDataMap.get("feildValue")));
 			}
 		} catch (Exception e) {
-			assertFalse(false,
-					"Failed - Displays entries with that {string} from {string} and {string}");
+			assertFalse(false, "Failed - Displays entries with that {string} from {string} and {string}");
 		}
-		
+
 	}
 
 	@Then("Displays empty details in the data table")
 	public void displays_empty_details_in_the_data_table() {
 		try {
-			
+
 			assertTrue(basePage.isEmptyTable(), "Table is empty");
 		} catch (Exception e) {
-			assertFalse(false,
-					"Failed - Displays empty details in the data table");
+			assertFalse(false, "Failed - Displays empty details in the data table");
 		}
-		
+
 	}
-	
+
 	@Then("Admin should see a popup  with  heading {string}")
 	public void admin_should_see_a_popup_with_heading(String headingTitle) {
-	    try {
+		try {
 			String heading = basePage.getPopUpPageHeadingString();
 			assertEquals(heading, headingTitle);
 		} catch (Exception e) {
-			assertFalse(false,
-					"Failed - Admin should see a popup  with  heading {string}");
+			assertFalse(false, "Failed - Admin should see a popup  with  heading {string}");
 		}
 	}
-	
+
 	@Then("Admin should see input fields Text  {string}")
 	public void admin_should_see_input_fields_text(String page) {
 		try {
-			ArrayList<String> inputFeilds= null;
+			ArrayList<String> inputFeilds = null;
 			List<WebElement> webElmts = basePage.getInputFeilds();
 			switch (page) {
 			case "Assignment":
 				inputFeilds = getNewAssignmentInputFeilds();
 				for (Iterator iterator = webElmts.iterator(); iterator.hasNext();) {
 					WebElement webElement = (WebElement) iterator.next();
-					if(inputFeilds.contains(webElement.getText())) {
+					if (inputFeilds.contains(webElement.getText())) {
 						LoggerLoad.logInfo("Feild is present in the page");
 					} else {
-						assertFalse(false,
-								"Failed - Feild is not present in the page");
+						assertFalse(false, "Failed - Feild is not present in the page");
 					}
 				}
 				break;
@@ -258,28 +271,26 @@ public class BaseSD extends Commonclass {
 				break;
 			}
 		} catch (Exception e) {
-			assertFalse(false,
-					"Failed - Admin should see input fields Text  {string}");
+			assertFalse(false, "Failed - Admin should see input fields Text  {string}");
 		}
-	    
+
 	}
 
 	@Then("{string} textbox should be  present in {string} details popup window")
 	public void textbox_should_be_present_in_details_popup_window(String noOfTextBox, String page) {
-	    try {
-	    	List<WebElement> webElmts = basePage.getTextBoxesinPage();
-	    	assertEquals(Integer.parseInt(noOfTextBox), webElmts.size());
+		try {
+			List<WebElement> webElmts = basePage.getTextBoxesinPage();
+			assertEquals(Integer.parseInt(noOfTextBox), webElmts.size());
 		} catch (Exception e) {
-			assertFalse(false,
-					"Failed - Admin should see input fields Text  {string}");
+			assertFalse(false, "Failed - Admin should see input fields Text  {string}");
 		}
-	    
+
 	}
 
 	@Then("Admin should see dropdown option for Batch Number")
 	public void admin_should_see_dropdown_option_for_batch_number() {
 		try {
-			boolean batchdropdowndisplayed = basePage.verifyDropdown();
+			boolean batchdropdowndisplayed = assignmentPage.verifyDropdown();
 			LoggerLoad.logInfo("verify batch Dropdown button is displayed \" " + batchdropdowndisplayed + "\" ");
 			if (batchdropdowndisplayed) {
 				assertFalse(true, "Dropdown button is displayed ");
@@ -294,13 +305,13 @@ public class BaseSD extends Commonclass {
 			assertFalse(false, "Admin should see dropdown option for Batch Number ");
 
 		}
-	    
+
 	}
 
 	@Then("Admin should see dropdown option for Program name")
 	public void admin_should_see_dropdown_option_for_program_name() {
 		try {
-			boolean progdropdowndisplayed = basePage.verifyProgramDropdown();
+			boolean progdropdowndisplayed = assignmentPage.verifyProgramDropdown();
 			LoggerLoad.logInfo("verify program Dropdown button is displayed  \" " + progdropdowndisplayed + "\" ");
 			if (progdropdowndisplayed) {
 				assertFalse(true, "Dropdown button is displayed ");
@@ -315,7 +326,7 @@ public class BaseSD extends Commonclass {
 			assertFalse(false, "Admin should see dropdown option for Program name ");
 
 		}
-	    
+
 	}
 
 	@Then("Admin should see  calendar icon for assignment due date")
@@ -336,7 +347,7 @@ public class BaseSD extends Commonclass {
 			assertFalse(false, "Admin should see  calendar icon for assignment due date ");
 
 		}
-	    
+
 	}
 
 	@Then("Admin should see  save button in the {string} popup window")
@@ -347,7 +358,7 @@ public class BaseSD extends Commonclass {
 			if (savebuttondisp) {
 				assertFalse(true, "save button is displayed for " + heading);
 			} else {
-				assertFalse(false, "save button is  not displayed for" + heading );
+				assertFalse(false, "save button is  not displayed for" + heading);
 			}
 
 		} catch (Exception e) {
@@ -357,7 +368,7 @@ public class BaseSD extends Commonclass {
 			assertFalse(false, "Admin should see  save button in the {string} popup window for " + heading);
 
 		}
-	    
+
 	}
 
 	@Then("Admin should see  close button on the {string} popup window")
@@ -378,7 +389,7 @@ public class BaseSD extends Commonclass {
 			assertFalse(false, "Admin should see  close button on the {string} popup window for " + heading);
 
 		}
-	    
+
 	}
 
 	@Then("Admin should see  cancel button in the {string} popup window")
@@ -399,118 +410,252 @@ public class BaseSD extends Commonclass {
 			assertFalse(false, "Admin should see  cancel button in the {string} popup window for" + heading);
 
 		}
-	    
-		
-		
+
 	}
-	
-	//common method to verify the Add New button
+
+	// common method to verify the Add New button
 	@Then("Admin should see {string} button on the {string} page")
 	public void admin_should_see_button_on_the_page(String addBtnName, String pageName) {
 		boolean addNewButtonDisplayed;
 		try {
-				switch(pageName) {
-				case "Manage Program":
-					addNewButtonDisplayed=programPage.verifyAddButtonDisplayed(addBtnName);
-					LoggerLoad.logInfo("verify Add new button is displayed : ");
-					if (addNewButtonDisplayed) {
-						assertTrue(true, "Add button is displayed in Program page");
-					} else {
-						assertFalse(true, "Add button is not displayed in Program page");
-					}
-				case "Manage Assignment":
-					addNewButtonDisplayed=assignmentPage.verifyAddButtonDisplayed(addBtnName);
-					LoggerLoad.logInfo("verify Add new button is displayed : ");
-					if (addNewButtonDisplayed) {
-						assertTrue(true, "Add button is displayed in Assignment page");
-					} else {
-						assertFalse(true, "Add button is not displayed in Assignment page");
-					}
+			switch (pageName) {
+			case "Manage Program":
+				addNewButtonDisplayed = programPage.verifyAddButtonDisplayed(addBtnName);
+				LoggerLoad.logInfo("verify Add new button is displayed : ");
+				if (addNewButtonDisplayed) {
+					assertTrue(true, "Add button is displayed in Program page");
+				} else {
+					assertFalse(true, "Add button is not displayed in Program page");
 				}
+			case "Manage Assignment":
+				addNewButtonDisplayed = assignmentPage.verifyAddButtonDisplayed(addBtnName);
+				LoggerLoad.logInfo("verify Add new button is displayed : ");
+				if (addNewButtonDisplayed) {
+					assertTrue(true, "Add button is displayed in Assignment page");
+				} else {
+					assertFalse(true, "Add button is not displayed in Assignment page");
+				}
+			}
 
 		} catch (Exception e) {
 			LoggerLoad.logError(e.getMessage());
-			assertFalse(false, "Failed - Admin should see "+addBtnName+" button on the "+pageName+" page");
+			assertFalse(false, "Failed - Admin should see " + addBtnName + " button on the " + pageName + " page");
 		}
 
 	}
-	
-	//Common method to verify entries along with Pagination
+
+	// Common method to verify entries along with Pagination
 	@Then("Admin should see text Showing x to y of z entries along with pagination icon on {string} page")
 	public void admin_should_see_text_showing_x_to_y_of_z_entries_along_with_pagination_icon_on_page(String pageName) {
-	  try {
-		  switch(pageName) {
-		  case "Program":
-			    LoggerLoad.logInfo("verify correct footer is displayed in Program page : ");
-			    if(programPage.verifyPaginationEntriesText("Programs")) {
-			    	assertTrue(true,"Correct entry details are displayed in Program Page");
-			    }else {
-			    	assertFalse(false,"Correct entry details are not displayed in Program Page");
-			    }
-		  case "Assignment":
-			    LoggerLoad.logInfo("verify correct entry details are displayed in Assignment page : ");
-			    if(assignmentPage.verifyPaginationEntriesText("Assignments")) {
-			    	assertTrue(true,"Correct entry details are displayed in Assignments Page");
-			    }else {
-			    	assertFalse(false,"Correct entry details are not displayed in Assignments Page");
-			    }
-		   			  
-		  }
-	  } catch(Exception e) {
-		  LoggerLoad.logError(e.getMessage());
-			assertFalse(false, "Correct entry details are not displayed in "+pageName+" page");
-	  }  
-	    
+		try {
+			switch (pageName) {
+			case "Program":
+				LoggerLoad.logInfo("verify correct footer is displayed in Program page : ");
+				if (programPage.verifyPaginationEntriesText("Programs")) {
+					assertTrue(true, "Correct entry details are displayed in Program Page");
+				} else {
+					assertFalse(false, "Correct entry details are not displayed in Program Page");
+				}
+			case "Assignment":
+				LoggerLoad.logInfo("verify correct entry details are displayed in Assignment page : ");
+				if (assignmentPage.verifyPaginationEntriesText("Assignments")) {
+					assertTrue(true, "Correct entry details are displayed in Assignments Page");
+				} else {
+					assertFalse(false, "Correct entry details are not displayed in Assignments Page");
+				}
+
+			}
+		} catch (Exception e) {
+			LoggerLoad.logError(e.getMessage());
+			assertFalse(false, "Correct entry details are not displayed in " + pageName + " page");
+		}
+
 	}
-	
-	
-	//Common method to verify the footer text
+
+	// Common method to verify the footer text
 	@Then("Admin should see correct footer text on {string} page")
 	public void admin_should_see_correct_footer_text_on_page(String pageName) {
 		try {
-			  switch(pageName) {
-			  case "Program":
-				    LoggerLoad.logInfo("verify correct footer is displayed in Program page : ");
-				    if(programPage.verifyFooter("Programs")) {
-				    	assertTrue(true,"Correct Footer displayed in Program Page");
-				    }else {
-				    	assertFalse(false,"Correct Footer is not displayed in Program Page");
-				    }
-			  case "Assignment":
-				    LoggerLoad.logInfo("verify correct footer is displayed in Program page : ");
-				    if(programPage.verifyFooter("Assignments")) {
-				    	assertTrue(true,"Correct Footer displayed in Assignments Page");
-				    }else {
-				    	assertFalse(false,"Correct Footer is not displayed in Assignments Page");
-				    }
-			   			  
-			  }
-		  } catch(Exception e) {
-			  LoggerLoad.logError(e.getMessage());
-				assertFalse(false, "Correct Footer is not displayed in "+pageName+" page");
-		  }  
-		    
-	}
-	
-	//Common method to verify the no.of rows displayed in a page is 5
-	@Then("Admin should see {int} records displayed on the {string} page")
-	public void admin_should_see_records_displayed_on_the_page(Integer number, String pageName) {
-	    try {
-	    	switch(pageName) {
-	    		case "Program":
-	    			  LoggerLoad.logInfo("verify correct number of records(5) are displayed in Program page : ");
-	    			  if(programPage.verifyRecordCountinPage(number)) {
-	    				  assertTrue(true, number+"records are displayed in Program Page");
-	    			  } else {
-	    				  assertFalse(false, number+"records are not displayed in Program Page");
-	    			  }
-	    	}
-	    } catch (Exception e) {
-	    	 LoggerLoad.logError(e.getMessage());
-				assertFalse(false, "Correct number of records are not displayed in "+pageName+" page");
-	    }
+			switch (pageName) {
+			case "Program":
+				LoggerLoad.logInfo("verify correct footer is displayed in Program page : ");
+				if (programPage.verifyFooter("Programs")) {
+					assertTrue(true, "Correct Footer displayed in Program Page");
+				} else {
+					assertFalse(false, "Correct Footer is not displayed in Program Page");
+				}
+			case "Assignment":
+				LoggerLoad.logInfo("verify correct footer is displayed in Program page : ");
+				if (programPage.verifyFooter("Assignments")) {
+					assertTrue(true, "Correct Footer displayed in Assignments Page");
+				} else {
+					assertFalse(false, "Correct Footer is not displayed in Assignments Page");
+				}
+
+			}
+		} catch (Exception e) {
+			LoggerLoad.logError(e.getMessage());
+			assertFalse(false, "Correct Footer is not displayed in " + pageName + " page");
+		}
+
 	}
 
+	// Common method to verify the no.of rows displayed in a page is 5
+	@Then("Admin should see {int} records displayed on the {string} page")
+	public void admin_should_see_records_displayed_on_the_page(Integer number, String pageName) {
+		try {
+			switch (pageName) {
+			case "Program":
+				LoggerLoad.logInfo("verify correct number of records(5) are displayed in Program page : ");
+				if (programPage.verifyRecordCountinPage(number)) {
+					assertTrue(true, number + "records are displayed in Program Page");
+				} else {
+					assertFalse(false, number + "records are not displayed in Program Page");
+				}
+			}
+		} catch (Exception e) {
+			LoggerLoad.logError(e.getMessage());
+			assertFalse(false, "Correct number of records are not displayed in " + pageName + " page");
+		}
+	}
+
+	@When("Admin clicks Edit button in data table for {string}")
+	public void admin_clicks_edit_button_in_data_table(String page) {
+		try {
+			rowData = basePage.clickEditIconForRows(page);
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Admin clicks Edit button in data table");
+		}
+
+	}
+
+	@Then("Edit popup window appears with heading {string}")
+	public void edit_popup_window_appears_with_heading(String headingTitle) {
+		try {
+			String heading = basePage.getPopUpPageHeadingString();
+			assertEquals(heading, headingTitle);
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Admin should see a popup  with  heading {string}");
+		}
+	}
+
+	@When("Admin clicks delete button in data table for {string}")
+	public void admin_clicks_delete_button_in_data_table_for(String page) {
+		try {
+			rowData = basePage.clickDeleteIconForRows(page);
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Admin clicks Edit button in data table");
+		}
+
+	}
+
+	@Then("Admin should see dialog box for {string}")
+	public void admin_should_see_dialog_box_for(String page) {
+		try {
+			String confirmText = basePage.verifyPopUpforDelete(page);
+			assertTrue(confirmText.contains("Are you sure you want to delele"));
+		} catch (Exception e) {
+			assertFalse(false, "Admin should see dialog box for {string}");
+		}
+	}
+
+	@Then("Alert should have {string} button to accept")
+	public void alert_should_have_button_to_accept(String buttonName) {
+		try {
+			basePage.verifyAlertButtons(buttonName);
+		} catch (Exception e) {
+			assertFalse(false, "Admin should see dialog box for {string}");
+		}
+
+	}
+
+	@Given("Admin is in delete alert for {string}")
+	public void admin_is_in_delete_alert(String page) {
+		try {
+			switch (page) {
+			case "Assignmemt":
+				rowData = assignmentPage.navigateToAssignmentDeletePage();
+				break;
+
+			default:
+				break;
+			}
+
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Admin is in delete alert for {string}");
+		}
+	}
+
+	@When("Admin clicks {string} button")
+	public void admin_clicks_button(String buttonName) {
+		try {
+			basePage.clickAlertButtons(buttonName);
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Admin clicks {string} button");
+		}
+
+	}
+
+	@When("Admin clicks check box in the data table for {string} for {int} checkbox")
+	public void admin_clicks_check_box_in_the_data_table_for(String page, int noOfCheckBox) {
+		try {
+			basePage.clickCheckboxForRows(page, noOfCheckBox);
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Admin clicks check box in the data table for {string}");
+		}
+	}
+
+	@Then("Admin should see delete icon below the header is enabled")
+	public void admin_should_see_delete_icon_below_the_header_is_enabled() {
+		try {
+			assertTrue(basePage.verifyDeleteButtonEnabled(), "Delete button enabled");
+		} catch (Exception e) {
+			assertFalse(false, "Failed - Admin clicks check box in the data table for {string}");
+		}
+	}
+
+	@Then("Redirected to assignment page and selected assignment details are deleted from the data table for {string}")
+	public void redirected_to_assignment_page_and_selected_assignment_details_are_deleted_from_the_data_table(
+			String deleteOption) {
+
+		try {
+			assignmentPage.verifyManageAssignmentPage();
+			for (int i = 0; i < rowData.size(); i++) {
+				basePage.sendDataToSearchBox(rowData.get(0));
+				List<String> result = basePage.getDataForSearch("name");
+				if (result.size() == 0) {
+					assertTrue(true, "Item Deleted");
+				} else {
+					assertFalse(false, "Item did not get Deleted");
+				}
+			}
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Redirected to assignment page and selected assignment details are deleted from the data table");
+		}
+	}
+
+	@Then("Redirected to assignment page and selected assignment details are not deleted from the data table for {string}")
+	public void redirected_to_assignment_page_and_selected_assignment_details_are_not_deleted_from_the_data_table(
+			String deleteOption) {
+		try {
+			assignmentPage.verifyManageAssignmentPage();
+
+			for (int i = 0; i < rowData.size(); i++) {
+				basePage.sendDataToSearchBox(rowData.get(i));
+				List<String> result = basePage.getDataForSearch("name");
+				if (result.size() > 0) {
+					assertTrue(true, "Item did not get Deleted");
+				} else {
+					assertFalse(false, "Item  Deleted");
+				}
+			}
+
+		} catch (Exception e) {
+			assertFalse(false,
+					"Failed - Redirected to assignment page and selected assignment details are not deleted from the data table");
+		}
+	}
 
 	@Then("Admin should see the pagination has Next link in {string} Page")
 	public void admin_should_see_the_pagination_has_next_link_in_page(String pageName) {
@@ -518,14 +663,14 @@ public class BaseSD extends Commonclass {
 			boolean isDisplayed = basePage.isNextLinkDisplayed();
 			LoggerLoad.logInfo("verify Next link is displayed : \" " + isDisplayed + "\" ");
 			if (isDisplayed) {
-				assertTrue(true, "Next link is displayed"+pageName+ " page");
+				assertTrue(true, "Next link is displayed" + pageName + " page");
 			} else {
-				assertFalse(false, "Next link is not displayed"+pageName+ " page");
+				assertFalse(false, "Next link is not displayed" + pageName + " page");
 			}
 
 		} catch (Exception e) {
 			LoggerLoad.logError(e.getMessage());
-			assertFalse(false, "Failed - Admin should see Next link displayed in "+pageName+ " page");
+			assertFalse(false, "Failed - Admin should see Next link displayed in " + pageName + " page");
 
 		}
 	}
@@ -536,14 +681,15 @@ public class BaseSD extends Commonclass {
 			boolean isDisabled = basePage.isNextLinkDisabled();
 			LoggerLoad.logInfo("verify Next link is disabled  on clicking last page record: \" " + isDisabled + "\" ");
 			if (isDisabled) {
-				assertTrue(true, "Next link is disabled on clicking last page record of "+pageName+ " page");
+				assertTrue(true, "Next link is disabled on clicking last page record of " + pageName + " page");
 			} else {
-				assertFalse(false, "Next link is not disabled on clicking last page record of "+pageName+ " page");
+				assertFalse(false, "Next link is not disabled on clicking last page record of " + pageName + " page");
 			}
 
 		} catch (Exception e) {
 			LoggerLoad.logError(e.getMessage());
-			assertFalse(false, "Failed - Admin should see Next link disabled on clicking last page record of  "+pageName+ " page");
+			assertFalse(false, "Failed - Admin should see Next link disabled on clicking last page record of  "
+					+ pageName + " page");
 
 		}
 	}
@@ -554,14 +700,14 @@ public class BaseSD extends Commonclass {
 			boolean isDisplayed = basePage.isPreviousLinkDisplayed();
 			LoggerLoad.logInfo("verify Previous link is displayed : \" " + isDisplayed + "\" ");
 			if (isDisplayed) {
-				assertTrue(true, "Previous link is displayed"+pageName+ " page");
+				assertTrue(true, "Previous link is displayed" + pageName + " page");
 			} else {
-				assertFalse(false, "Previous link is not displayed"+pageName+ " page");
+				assertFalse(false, "Previous link is not displayed" + pageName + " page");
 			}
 
 		} catch (Exception e) {
 			LoggerLoad.logError(e.getMessage());
-			assertFalse(false, "Failed - Admin should see Previous link displayed in "+pageName+ " page");
+			assertFalse(false, "Failed - Admin should see Previous link displayed in " + pageName + " page");
 
 		}
 	}
@@ -570,24 +716,26 @@ public class BaseSD extends Commonclass {
 	public void admin_should_see_previous_page_link_disabled_on_clicking_first_page_record_in_page(String pageName) {
 		try {
 			boolean isDisabled = basePage.isFirstLinkDisabled();
-			LoggerLoad.logInfo("verify Previous link is disabled  on clicking first page record: \" " + isDisabled + "\" ");
+			LoggerLoad.logInfo(
+					"verify Previous link is disabled  on clicking first page record: \" " + isDisabled + "\" ");
 			if (isDisabled) {
-				assertTrue(true, "Previous link is disabled on clicking first page record of "+pageName+ " page");
+				assertTrue(true, "Previous link is disabled on clicking first page record of " + pageName + " page");
 			} else {
-				assertFalse(false, "Previous link is not disabled on clicking first page record of "+pageName+ " page");
+				assertFalse(false,
+						"Previous link is not disabled on clicking first page record of " + pageName + " page");
 			}
 
 		} catch (Exception e) {
 			LoggerLoad.logError(e.getMessage());
-			assertFalse(false, "Failed - Admin should Previous link disabled on clicking first page record of  "+pageName+ " page");
+			assertFalse(false, "Failed - Admin should Previous link disabled on clicking first page record of  "
+					+ pageName + " page");
 
 		}
 	}
 
 	@Then("Admin should get redirected to {string} page")
 	public void admin_should_get_redirected_to_page(String pageName) throws Exception {
-	    basePage.redirectToPage(pageName);
+		basePage.redirectToPage(pageName);
 	}
-
 
 }
