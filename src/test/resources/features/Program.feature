@@ -1,4 +1,3 @@
-#Author: your.email@your.domain.com
 #Keywords Summary :
 #Feature: List of scenarios.
 #Scenario: Business rule through list of steps with arguments.
@@ -42,7 +41,7 @@ Feature: Program Page Verification
 
     Examples: 
       | UrlName    |
-      | Assignment |
+      | Program |
       
       
     Scenario Outline: Verify delete icon below the header
@@ -129,12 +128,12 @@ Feature: Program Page Verification
     Scenario: Verify Edit icon in the data table
     Given Admin is on dashboard page after Login
     When Admin clicks program button on the navigation bar
-    Then Edit Icon in each row of data table only  when entries are available
+    Then Edit Icon in each row of data table only  when entries are available for "Program"
   
    Scenario: Verify Delete icon in the data table
     Given Admin is on dashboard page after Login
     When Admin clicks program button on the navigation bar
-    Then Delete Icon in each row of data table only  when entries are available
+    Then Delete Icon in each row of data table only  when entries are available for "Program"
     
   Scenario: Verify check box in the data table
     Given Admin is on dashboard page after Login
@@ -201,6 +200,12 @@ Feature: Program Page Verification
     Examples: 
  			| module     |
       | Program     |
+      
+    
+      
+      
+   
+      
       
 
   

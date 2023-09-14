@@ -106,6 +106,20 @@ public class BaseSD extends Commonclass {
 
 				assertEquals(header, ConfigReader.getProperty(urlName), "header do not match");
 				break;
+			case "Program":
+				String header1 = programPage.verifyManageProgramPageHeader();
+
+				LoggerLoad.logInfo("header of the Manage Program Page : \" " + header1 + "\" ");
+
+				assertEquals(header1, ConfigReader.getProperty(urlName), "header do not match");
+				break;
+			case "User":
+				String header2 = userPage.verifyManageUserPageHeader();
+
+				LoggerLoad.logInfo("header of the Manage Assignment Page : \" " + header2 + "\" ");
+
+				assertEquals(header2, ConfigReader.getProperty(urlName), "header do not match");
+				break;
 
 			default:
 				break;
@@ -462,8 +476,18 @@ public class BaseSD extends Commonclass {
 				} else {
 					assertFalse(true, "Add button is not displayed in Assignment page");
 				}
+			case "Manage User":
+				addNewButtonDisplayed = userPage.verifyAddButtonDisplayed(addBtnName);
+				LoggerLoad.logInfo("verify Add new button is displayed : ");
+				if (addNewButtonDisplayed) {
+					assertTrue(true, "Add button is displayed in User page");
+				} else {
+					assertFalse(true, "Add button is not displayed in User page");
+				}
 
 			}
+			
+			
 
 		} catch (Exception e) {
 			LoggerLoad.logError(e.getMessage());
@@ -472,6 +496,7 @@ public class BaseSD extends Commonclass {
 
 	}
 
+	
 	// Common method to verify entries along with Pagination
 	@Then("Admin should see text Showing x to y of z entries along with pagination icon on {string} page")
 	public void admin_should_see_text_showing_x_to_y_of_z_entries_along_with_pagination_icon_on_page(String pageName) {
@@ -632,7 +657,7 @@ public class BaseSD extends Commonclass {
 		}
 	}
 
-	@Then("Redirected to assignment page and selected assignment details are deleted from the data table for {string}")
+	@Then("Redirected to Assignment page and selected assignment details are deleted from the data table for {string}")
 	public void redirected_to_assignment_page_and_selected_assignment_details_are_deleted_from_the_data_table(
 			String deleteOption) {
 
@@ -800,5 +825,46 @@ public class BaseSD extends Commonclass {
 		}
 
 	}
+	
+	@Then("Error message should appear in alert of {string} page")
+	public void error_message_should_appear_in_alert(String page) {
+		switch(page) {
+		case "Program": assertTrue(!programPage.getErrorElement().isBlank(), programPage.getErrorElement()); break;
+		case "Assignment":assertTrue(!assignmentPage.getErrorElementg().isBlank(), assignmentPage.getErrorElementg());break;
+		}
+	}
+
+	@Then("Error message with {string} should be displayed from {string} and {string} from {string} page")
+	public void error_message_with_should_be_displayed_from_and(String dataKey, String sheetName, String message,String page) {
+	   
+	   switch(page) {
+		case "Program": assertEquals(programPage.getErrorElement(), message);; break;
+		case "Assignment":assertEquals(assignmentPage.getErrorElementg(), message);break;
+		}
+	}
+	
+	@When("Admin  clicks the sort icon of {string} name column")
+	public void admin_clicks_the_sort_icon_of_name_column(String columnName) {
+	//	basePage.clickOnSortIcon(columnName);
+	}
+	
+	@When("Admin  clicks the sort icon of {string} name column under {string}")
+	public void admin_clicks_the_sort_icon_of_name_column_under(String columnName, String module) throws Exception {
+	    switch(module) {
+	    case "Program": 
+	    	programPage.clickOnSortIcon(columnName); break;
+	    }
+	}
+	
+
+	@Then("Admin should see the data get sorted on the table based on the {string} column values in ascending order")
+	public void admin_should_see_the_data_get_sorted_on_the_table_based_on_the_column_values_in_ascending_order(String columnName) {
+		if(basePage.getSortAsc(columnName)) {
+			assertTrue(true, "Values are sorted correctly in ascending order");
+		} else {
+			assertTrue(false, "Values are NOT sorted correctly in ascending order");
+		}
+	}
+
 
 }

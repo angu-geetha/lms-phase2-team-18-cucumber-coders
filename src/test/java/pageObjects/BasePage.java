@@ -1,14 +1,13 @@
 package pageObjects;
 
-
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -120,15 +119,13 @@ public class BasePage {
 	@FindBy(xpath = ".//input[@type='text'")
 	static List<WebElement> inputTextBoxes;
 
-	
 	@FindBy(xpath = ".//input[@type='radio'")
 	static List<WebElement> inputRadioButtons;
-	
+
 	@FindBy(xpath = "//select")
 	static WebElement batchdropdown;
 	@FindBy(xpath = "//select")
 	static WebElement programdropdown;
-
 
 	// Elmts for Calendar -Date Picker
 
@@ -145,12 +142,9 @@ public class BasePage {
 	@FindBy(xpath = "//button[text()='Cancel']")
 	static WebElement cancelbtn;
 
-	
-	//Xpath for message (successfully added, deleted and updated)
+	// Xpath for message (successfully added, deleted and updated)
 	@FindBy(xpath = "//")
 	static WebElement alertMessage;
-	
-
 
 	// Delete Alert components
 	String parentWindowHandler;
@@ -160,7 +154,6 @@ public class BasePage {
 	static WebElement yes;
 	@FindBy(xpath = "//button[text()='Delete Alert No ']")
 	static WebElement no;
-
 
 	public BasePage() {
 		PageFactory.initElements(driver, this);
@@ -224,10 +217,10 @@ public class BasePage {
 	public boolean verifyDeleteButtonEnabled() {
 		return deleteElmt.isEnabled();
 	}
-	
+
 	public void clickDeleteButtonBelowHeader() {
 		deleteElmt.click();
-		
+
 	}
 
 	public boolean verifySearchButton() {
@@ -241,9 +234,16 @@ public class BasePage {
 				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
 
 				switch (page) {
-				case "Assignment":
+				case "Assignment": case "User":
 					if (cells.size() > 0 && cells.get(5) != null) {
 						cells.get(5).findElement(By.id("id of the edit button")).isDisplayed();
+					} else if (cells.size() < 0) {
+						throw (new Exception("exception on row edit"));
+					}
+					break;
+				case "Program":
+					if (cells.size() > 0 && cells.get(4) != null) {
+						cells.get(4).findElement(By.id("id of the edit button")).isDisplayed();
 					} else if (cells.size() < 0) {
 						throw (new Exception("exception on row edit"));
 					}
@@ -266,14 +266,21 @@ public class BasePage {
 				WebElement rowElement = (WebElement) iterator.next();
 				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
 				switch (page) {
-				case "Assignment":
+				case "Assignment":case "User":
 					if (cells.size() > 0 && cells.get(5) != null) {
 						cells.get(5).findElement(By.id("id of the Delete button")).isDisplayed();
 					} else if (cells.size() > 0) {
 						throw (new Exception("exception on row delete"));
 					}
 					break;
-
+				case "Program":
+					if (cells.size() > 0 && cells.get(4) != null) {
+						cells.get(4).findElement(By.id("id of the Delete button")).isDisplayed();
+					} else if (cells.size() > 0) {
+						throw (new Exception("exception on row delete"));
+					}
+					break;
+				
 				default:
 					throw (new Exception("exception on row delete"));
 				}
@@ -408,6 +415,27 @@ public class BasePage {
 
 					}
 					break;
+				case "Program":
+					if (cells.size() > 0 && cells.get(4) != null) {
+						cells.get(4).findElement(By.id("id of the edit button")).isDisplayed();
+						if (cells.get(4).findElement(By.id("id of the edit button")).isDisplayed()) {
+							parentWindowHandler = driver.getWindowHandle(); // Store your parent window
+							subWindowHandler = null;
+							cells.get(4).findElement(By.id("id of the edit button")).click();
+							Set<String> handles = driver.getWindowHandles(); // get all window handles
+							Iterator<String> iterator3 = handles.iterator();
+							while (iterator3.hasNext()) {
+								subWindowHandler = iterator3.next();
+							}
+							driver.switchTo().window(subWindowHandler); // switch to popup window
+
+							return rowData;
+						} else if (cells.size() < 0) {
+							throw (new Exception("exception on row edit"));
+						}
+
+					}
+					break;
 
 				default:
 					throw (new Exception("exception on row edit"));
@@ -454,6 +482,27 @@ public class BasePage {
 					}
 					break;
 
+				case "Program":
+					if (cells.size() > 0 && cells.get(5) != null) {
+						cells.get(5).findElement(By.id("id of the Delete button")).isDisplayed();
+						if (cells.get(5).findElement(By.id("id of the Delete button")).isDisplayed()) {
+							parentWindowHandler = driver.getWindowHandle(); // Store your parent window
+							subWindowHandler = null;
+							cells.get(5).findElement(By.id("id of the Delete button")).click();
+							Set<String> handles = driver.getWindowHandles(); // get all window handles
+							Iterator<String> iterator3 = handles.iterator();
+							while (iterator3.hasNext()) {
+								subWindowHandler = iterator3.next();
+							}
+							driver.switchTo().window(subWindowHandler); // switch to popup window
+							return rowData;
+						} else if (cells.size() < 0) {
+							throw (new Exception("exception on row Delete"));
+						}
+
+					}
+					break;
+
 				default:
 					throw (new Exception("exception on row Delete"));
 				}
@@ -465,33 +514,34 @@ public class BasePage {
 		return rowData;
 	}
 
-	public ArrayList<String> clickCheckboxForRows(String page,int noOfCheckBox) throws Exception {
+	public ArrayList<String> clickCheckboxForRows(String page, int noOfCheckBox) throws Exception {
 
 		ArrayList<String> rowData = new ArrayList<>();
 		try {
-			int i=1;
+			int i = 1;
 			for (Iterator iterator = tablerows.iterator(); iterator.hasNext();) {
 				WebElement rowElement = (WebElement) iterator.next();
 				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
 
 				switch (page) {
-				case "Assignment":
+				case "Assignment":case "Program":case "User":
 					if (cells.size() > 0 && cells.get(0) != null) {
 						cells.get(0).findElement(By.id("id of the check box button")).isDisplayed();
 						if (cells.get(0).findElement(By.id("id of the check box button")).isDisplayed()) {
 							cells.get(0).findElement(By.id("id of the check box button")).click();
 							rowData.add(cells.get(1).getText());
-							i=i+1;
-							if(i>noOfCheckBox) {
+							i = i + 1;
+							if (i > noOfCheckBox) {
 								return rowData;
 							}
-							
+
 						} else if (cells.size() < 0) {
 							throw (new Exception("exception on row Delete"));
 						}
 
 					}
 					break;
+					
 
 				default:
 					throw (new Exception("exception on row Delete"));
@@ -511,13 +561,6 @@ public class BasePage {
 			return false;
 
 	}
-
-	
-	
-	
-	
-
-
 
 	public boolean isNextLinkDisplayed() {
 		if (!nextlink.isDisplayed())
@@ -649,11 +692,11 @@ public class BasePage {
 		return inputTextBoxes;
 	}
 
-
 	public List<WebElement> getRadioButtonsinPage() {
 
 		return inputRadioButtons;
 	}
+
 	public boolean verifyDropdown() {
 		if (batchdropdown.isDisplayed()) {
 			return true;
@@ -668,7 +711,6 @@ public class BasePage {
 		} else
 			return false;
 	}
-
 
 	public boolean verifyCalenderIcon() {
 		if (calenderelement.isDisplayed()) {
@@ -691,6 +733,10 @@ public class BasePage {
 			return false;
 	}
 
+	public void clickClosebutton() {
+		closebtn.click();
+	}
+
 	public boolean verifycancelbutton() {
 		if (cancelbtn.isDisplayed()) {
 			return true;
@@ -698,7 +744,10 @@ public class BasePage {
 			return false;
 	}
 
-	
+	public void clickCancelbutton() {
+		cancelbtn.click();
+	}
+
 	public ArrayList<String> clickEditIconForRows() throws Exception {
 
 		ArrayList<String> rowData = new ArrayList<>();
@@ -728,55 +777,60 @@ public class BasePage {
 		}
 		return rowData;
 	}
-	
-	
-	//Broken Links
+
+	// Broken Links
 	public boolean isBrokenLink(String moduleName) throws Exception {
-		String url="";
+		String url = "";
 		HttpURLConnection huc = null;
 		int respCode;
-		switch(moduleName) {
-		case "Program": 
-			url = programLink.getAttribute("href");break;	
-		case "Student": 
-			url = studentLink.getAttribute("href");break;
-		case "Batch": 
-			url = batchLink.getAttribute("href"); break;
-		case "Class": 
-			url = classLink.getAttribute("href"); break;
-		case "Attendance": 
-			url = attendanceLink.getAttribute("href");break;
-		case "Assignment": 
-			url = assignmentLink.getAttribute("href"); break;
-		case "User": 
-			url = userLink.getAttribute("href"); break;
-		case "Logout": 
-			url = logoutLink.getAttribute("href"); break;
-			
-			}
-		
+		switch (moduleName) {
+		case "Program":
+			url = programLink.getAttribute("href");
+			break;
+		case "Student":
+			url = studentLink.getAttribute("href");
+			break;
+		case "Batch":
+			url = batchLink.getAttribute("href");
+			break;
+		case "Class":
+			url = classLink.getAttribute("href");
+			break;
+		case "Attendance":
+			url = attendanceLink.getAttribute("href");
+			break;
+		case "Assignment":
+			url = assignmentLink.getAttribute("href");
+			break;
+		case "User":
+			url = userLink.getAttribute("href");
+			break;
+		case "Logout":
+			url = logoutLink.getAttribute("href");
+			break;
+
+		}
+
 		try {
-			huc = (HttpURLConnection)(new URL(url).openConnection());           
-            huc.setRequestMethod("HEAD");            
-            huc.connect();            
-            respCode = huc.getResponseCode();              
-            if(respCode >= 400){
-                return true;
-            }
-            else{
-                return false;
-            }
+			huc = (HttpURLConnection) (new URL(url).openConnection());
+			huc.setRequestMethod("HEAD");
+			huc.connect();
+			respCode = huc.getResponseCode();
+			if (respCode >= 400) {
+				return true;
+			} else {
+				return false;
+			}
 		} catch (Exception e) {
 			throw (new Exception("exception on edit button click "));
 		}
-		
-	}
-	
-	public String getAlertForAddUpdate() {
-		return (driver.switchTo().alert().getText());
-		
+
 	}
 
+	public String getAlertForAddUpdate() {
+		return (driver.switchTo().alert().getText());
+
+	}
 
 	public String verifyPopUpforDelete(String page) {
 
@@ -811,7 +865,45 @@ public class BasePage {
 
 	}
 
+	public void clickCloseOnDeleteAlert() {
+		((JavascriptExecutor) driver).executeScript("window.close()");
+	}
+
+	public boolean getSortAsc(String columnName) {
+		ArrayList<String> obtainedList = new ArrayList<>();
+		List<WebElement> elementList = driver.findElements(By.xpath("//td[contains" + columnName + "]"));
+		for (WebElement e : elementList) {
+			obtainedList.add(e.getText());
+		}
+		ArrayList<String> sortedList = new ArrayList<>();
+		for (String s : obtainedList) {
+			sortedList.add(s);
+		}
+		Collections.sort(sortedList);
+		if (sortedList.equals(obtainedList)) {
+			return true;
+		} else
+			return false;
+	}
 	
-
-
+	public boolean getSortDesc(String columnName) {
+		ArrayList<String> obtainedList = new ArrayList<>();
+		List<WebElement> elementList = driver.findElements(By.xpath("//td[contains" + columnName + "]"));
+		for (WebElement e : elementList) {
+			obtainedList.add(e.getText());
+		}
+		ArrayList<String> sortedList = new ArrayList<>();
+		for (String s : obtainedList) {
+			sortedList.add(s);
+		}
+		Collections.sort(sortedList);
+		Collections.reverse(sortedList);
+		
+		if (sortedList.equals(obtainedList)) {
+			return true;
+		} else
+			return false;
+	}
+	
+	
 }
