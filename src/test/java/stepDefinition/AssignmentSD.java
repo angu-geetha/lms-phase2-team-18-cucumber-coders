@@ -267,6 +267,16 @@ public class AssignmentSD extends Commonclass {
 	}
 
 
+	/*@Then("Error message should appear in alert")
+	public void error_message_should_appear_in_alert() {
+		assertTrue(!assignmentPage.getErrorElementg().isBlank(), assignmentPage.getErrorElementg());
+	}
+
+	@Then("Error message with {string} should be displayed from {string} and {string}")
+	public void error_message_with_should_be_displayed_from_and(String dataKey, String sheetName, String message) {
+	   assertEquals(assignmentPage.getErrorElementg(), message);
+	}
+*/
 
 	@Then("Edit popup window appears with same row values in the all fields")
 	public void edit_popup_window_appears_with_same_row_values_in_the_all_fields() {

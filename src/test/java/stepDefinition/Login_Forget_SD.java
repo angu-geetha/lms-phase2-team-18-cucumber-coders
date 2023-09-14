@@ -11,10 +11,7 @@ public class Login_Forget_SD {
 	Login_CredentialPO lc=new Login_CredentialPO(DriverFactory.getdriver());
 	Login_ForgetPO lf=new Login_ForgetPO(DriverFactory.getdriver());
 	
-	@Given("Admin is in login page")
-	public void admin_is_in_login_page() {
-		lc.login_page();
-	}
+	
 
 	@When("Admin clicks forgot username or password link")
 	public void admin_clicks_forgot_username_or_password_link() {

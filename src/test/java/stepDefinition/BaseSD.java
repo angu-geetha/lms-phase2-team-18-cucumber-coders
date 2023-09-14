@@ -834,6 +834,7 @@ public class BaseSD extends Commonclass {
 		}
 	}
 
+
 	@Then("Error message with {string} should be displayed from {string} and {string} from {string} page")
 	public void error_message_with_should_be_displayed_from_and(String dataKey, String sheetName, String message,String page) {
 	   
@@ -864,6 +865,12 @@ public class BaseSD extends Commonclass {
 		} else {
 			assertTrue(false, "Values are NOT sorted correctly in ascending order");
 		}
+	}
+
+
+	@Then("Error message with {string} should be displayed from {string} and {string}")
+	public void error_message_with_should_be_displayed_from_and(String dataKey, String sheetName, String message) {
+	   assertEquals(assignmentPage.getErrorElementg(), message);
 	}
 
 

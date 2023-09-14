@@ -48,10 +48,7 @@ public class Login_Credential_SD {
 	    lc.login_entry_keyboard();
 	}
 
-	@Then("Admin should land on dashboard page")
-	public void admin_should_land_on_dashboard_page() {
-	    lc.success_login();
-	}
+	
 
 	@When("Admin enter valid credentials  and clicks login button through mouse")
 	public void admin_enter_valid_credentials_and_clicks_login_button_through_mouse() {

@@ -125,11 +125,17 @@ public class ProgramSD extends Commonclass {
 
 	}
 	
+
 	
 	@When("Admin clicks close icon on Program details form")
 	public void admin_clicks_close_icon_on_program_details_form() {
 	    programPage.clickClosebutton();
 	}
+
+	/*@Then("Error message should appear in alert of program page")
+	public void error_message_should_appear_in_alert_of_program_page() {
+		assertTrue(!programPage.getErrorElement().isBlank(), programPage.getErrorElement());
+*/
 
 	@Then("Admin should see Program Details popup window closed without saving")
 	public void admin_should_see_program_details_popup_window_closed_without_saving() {
@@ -172,6 +178,7 @@ public class ProgramSD extends Commonclass {
 	@Then("Redirected to program page and selected program details are deleted from the data table for {string}")
 	public void redirected_to_program_page_and_selected_program_details_are_deleted_from_the_data_table(
 			String deleteOption) {
+
 
 		try {
 			programPage.verifyManageProgramPage();
@@ -245,5 +252,7 @@ public class ProgramSD extends Commonclass {
 	}
 	
 	
+
+	}
 	
 }
