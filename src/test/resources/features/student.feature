@@ -2,7 +2,7 @@ Feature: Student Page Verification
 
 Background:
     Given Admin is logged into the LMS portal
-    And Admin is on the dashboard page after login
+    And Admin land on the dashboard page after login
 
 Scenario Outline: Validate navigations and elements on student page
     When Admin clicks Student on the navigation bar
@@ -22,7 +22,7 @@ Examples:
 
 Scenario: Validate the broken link
     When Admin clicks Student on the navigation bar
-    Then if HTTP response is >= 400 the link is broken
+    Then HTTP response >= 400 the link is broken
 
 #Scenario Outline: Validate dropdown attributes
  #   When Admin clicks Student on the navigation bar
@@ -42,7 +42,7 @@ When Admin clicks Student on the navigation bar
 Then Admin should see "Select batch Id" in second dropdown
 
 Scenario Outline: Dropdown interactions
-    Given Admin is on the student details page
+    Given Admin is in the student details page
     When Admin selects <action> from the <dropdown>
     Then Admin should <result>
 
@@ -56,7 +56,7 @@ Examples:
     | "x" number in the search box    | batch ID dropdown    | see batch IDs starting with "x" listed below   |
 
 Scenario: Display student info when both student name and batch ID are selected
-    Given Admin is on the student details page
+    Given Admin is in the student details page
     When Admin selects both a student name and batch ID from their respective dropdowns
     Then The selected student information should be displayed
 
