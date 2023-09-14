@@ -9,7 +9,7 @@ Then Admin should land on the login page
 Scenario: Verify for broken link
 Given Admin is in home page
 When Admin clicks Login button
-Then Admin should not see >=404 Http code
+Then HTTP response >= 400 the link is broken
 And Admin Should redirected to login Page
 
 Scenario: Verify the Title of the login page 

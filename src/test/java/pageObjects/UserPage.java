@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,8 +14,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
-//import com.github.javafaker.Faker;
+
+import com.github.javafaker.Faker;
+import com.github.javafaker.PhoneNumber;
 
 import dataProviders.ConfigReader;
 
@@ -22,9 +26,12 @@ public class UserPage extends BasePage{
 	
 public WebDriver driver;
 	
-	public UserPage(WebDriver driver) {
+	public UserPage() {
+		super();
 		PageFactory.initElements(driver, this);
 	}
+	
+	
 	@FindBy(id="title")      static WebElement userpageTitle;	
 	@FindBy(id="header")      static WebElement userpageHeader;	
 	@FindBy (xpath="xpath for manage LMS Header']") static WebElement    lmsheaderElmt;
@@ -47,6 +54,8 @@ public WebDriver driver;
 	@FindBy(xpath="") static WebElement sortPhoneNumber;
 	@FindBy(xpath="") static WebElement Footer;
 	@FindBy(xpath="") static WebElement txtNoOfEntries;
+	
+	@FindBy(xpath="") static WebElement addStaffBtn;
 	
 	//Pagination
 	
@@ -104,28 +113,44 @@ public WebDriver driver;
 	public static String ipPostGrad="";
 	public static String ipTimeZone="";
 	public static String ipUserComments="";
+	public static String userRole="";
+	public static String roleStatus="";
+	public static String visaStatus="";
 
 	
 	
-	/*Faker faker = new Faker();
+	Faker faker = new Faker();
 	
-	public void generateData() {
+	public void generateInputData() {
 		ipFirstName = faker.name().firstName();
 		ipMiddleName = faker.name().lastName();
 		ipLastName = faker.name().lastName();
+		ipLocation = faker.address().city();
+		ipPhoneNumber = faker.phoneNumber().toString();
+		ipLinkedinUrl = "www.linkedin.com/in/"+ipFirstName+"/";
+		//pass value
+		userRoleDropdownOptions();
+		roleStatusDropdownOptions();
+		visaStatusDropdownOptions();
+		ipEmailAddress = ipFirstName + "." +ipLastName + "@gmail.com";
+		ipUnderGrad=faker.educator().secondarySchool();
+		ipPostGrad=faker.educator().university();
+		ipTimeZone = faker.address().timeZone();
+		ipUserComments=faker.name().title();
 		
-	}*/
+	}
+	
 	
 	
 	  public void user_page() {
 			driver.get(userPageUrl);
 		}
 		
-		public String verifyManageProgramPage() {
+		public String verifyManageUserPage() {
 			return  userpageTitle.getText();
 		}
 
-		public String verifyManageProgramPageHeader() {
+		public String verifyManageUserPageHeader() {
 			return  userpageHeader.getText();
 		}
 		public String verifyLMSPageHeader() {
@@ -143,33 +168,34 @@ public WebDriver driver;
 
 		}
 		
-		public void userRoleDropdownOptions(String userRole) {
-			 for (int i = 0; i < allUserRoleOptions.size(); i++) {
-				 if (allUserRoleOptions.get(i).getText().contains(userRole)) {
-					 allUserRoleOptions.get(i).click();
-				 break;
-				 }
-			 }			 
+		
+		//code to select a random value of existing values from drop down 
+		public void userRoleDropdownOptions() {		 
+				 Random r = new Random();
+				 int low = 0;
+				 int high =allUserRoleOptions.size();
+				 int randomnum = r.nextInt(high-low);
+				 userRole = allUserRoleOptions.get(randomnum).getText();
+				 allUserRoleOptions.get(randomnum).click();		 		 
 		  }
 		
-		public void roleStatusDropdownOptions(String roleStatus) {
-			 for (int i = 0; i < allRoleStatusOptions.size(); i++) {
-				 if (allRoleStatusOptions.get(i).getText().contains(roleStatus)) {
-					 allRoleStatusOptions.get(i).click();
-				 break;
-				 }
-			 }			 
+		public void roleStatusDropdownOptions() {
+			 Random r = new Random();
+			 int low = 0;
+			 int high =allRoleStatusOptions.size();
+			 int randomnum = r.nextInt(high-low);
+			roleStatus = allRoleStatusOptions.get(randomnum).getText();
+			allRoleStatusOptions.get(randomnum).click();			 
 		  }
 		
-		public void visaStatusDropdownOptions(String visaStatus) {
-			 for (int i = 0; i < allVisaStatusOptions.size(); i++) {
-				 if (allVisaStatusOptions.get(i).getText().contains(visaStatus)) {
-					 allVisaStatusOptions.get(i).click();
-				 break;
-				 }
-			 }			 
+		public void visaStatusDropdownOptions() {
+			 Random r = new Random();
+			 int low = 0;
+			 int high =allVisaStatusOptions.size();
+			 int randomnum = r.nextInt(high-low);
+			 visaStatus = allVisaStatusOptions.get(randomnum).getText();
+			 allVisaStatusOptions.get(randomnum).click();		 
 		  }
-		
 		
 		
 		public void validateTableHeaders(Map<String, String> excelDataMap) {
@@ -204,32 +230,124 @@ public WebDriver driver;
 		public void clickAddButton() {
 			BtnaddNewUser.click();
 		}
-		
-		////code to select from drop down
 			
+		public void selectValueForUserRoleDropDown(WebElement sel) {
+			Select s = new Select(sel);
+			s.selectByValue(userRole);
+		}
 		
-	 public void addNewEditExistProgramDetails(Map<String, String> excelDataMap) {
+		public void selectValueForRoleStatusDropDown(WebElement sel) {
+			Select s = new Select(sel);
+			s.selectByValue(roleStatus);
+		}
+		
+		public void selectValueForVisaStatusDropDown(WebElement sel) {
+			Select s = new Select(sel);
+			s.selectByValue(visaStatus);
+		}
+		
+		
+	 public void addNewUserDetails() {
 		 
 		 	String popUpWindowHandle = driver.getWindowHandle();
 		 	driver.switchTo().window(popUpWindowHandle);
-			
-			if(!excelDataMap.get("firstName").isEmpty()) {
-				txtaddFirstName.clear();
-				txtaddFirstName.sendKeys(excelDataMap.get("firstName"));
+		 	generateInputData();
+		 	if(txtaddFirstName.getText().isBlank()) {
+		 		txtaddFirstName.clear();
+		 		txtaddFirstName.sendKeys(ipFirstName);
+			}
+		 	if(txtaddMiddleName.getText().isBlank()) {
+		 		txtaddMiddleName.clear();
+		 		txtaddMiddleName.sendKeys(ipMiddleName);
+			}
+			if(txtaddLastName.getText().isBlank()) {
+				txtaddLastName.clear();
+				txtaddLastName.sendKeys(ipLastName);
+			}
+			if(txtaddLocation.getText().isBlank()) {
+				txtaddLocation.clear();
+				txtaddLocation.sendKeys(ipLocation);
+			}
+			if(txtaddPhoneNumber.getText().isBlank()) {
+				txtaddPhoneNumber.clear();
+				txtaddPhoneNumber.sendKeys(ipPhoneNumber);
+			}
+			if(txtaddLinkedinUrl.getText().isBlank()) {
+				txtaddLinkedinUrl.clear();
+				txtaddLinkedinUrl.sendKeys(ipLinkedinUrl);
+			}
+			if(txtaddEmailAddress.getText().isBlank()) {
+				txtaddEmailAddress.clear();
+				txtaddEmailAddress.sendKeys(ipEmailAddress);
+			}
+			if(txtunderGraduate.getText().isBlank()) {
+				txtunderGraduate.clear();
+				txtunderGraduate.sendKeys(ipUnderGrad);
+			}
+			if(txtaddPostGraduate.getText().isBlank()) {
+				txtaddPostGraduate.clear();
+				txtaddPostGraduate.sendKeys(ipPostGrad);
+			}
+			if(txtaddTimezone.getText().isBlank()) {
+				txtaddTimezone.clear();
+				txtaddTimezone.sendKeys(ipTimeZone);
+			}
+			if(txtaddUserComments.getText().isBlank()) {
+				txtaddUserComments.clear();
+				txtaddUserComments.sendKeys(ipUserComments);		
 			}
 			
+			selectValueForUserRoleDropDown(rbUserRole);
+			selectValueForRoleStatusDropDown(rbRoleStatus);
+			selectValueForVisaStatusDropDown(rbVisaStatus);
 			
 			btnSubmit.click();
 			driver.switchTo().defaultContent();
 					
 		}
 	 
-
-	 
+	 public void addNewUserMandatoryDetails() {
+		 
+		 	String popUpWindowHandle = driver.getWindowHandle();
+		 	driver.switchTo().window(popUpWindowHandle);
+		 	generateInputData();
+		 	if(txtaddFirstName.getText().isBlank()) {
+		 		txtaddFirstName.clear();
+		 		txtaddFirstName.sendKeys(ipFirstName);
+			}
+			if(txtaddLastName.getText().isBlank()) {
+				txtaddLastName.clear();
+				txtaddLastName.sendKeys(ipLastName);
+			}
+			if(txtaddLocation.getText().isBlank()) {
+				txtaddLocation.clear();
+				txtaddLocation.sendKeys(ipLocation);
+			}
+			if(txtaddPhoneNumber.getText().isBlank()) {
+				txtaddPhoneNumber.clear();
+				txtaddPhoneNumber.sendKeys(ipPhoneNumber);
+			}	
+			
+			selectValueForUserRoleDropDown(rbUserRole);
+			selectValueForRoleStatusDropDown(rbRoleStatus);
+			selectValueForVisaStatusDropDown(rbVisaStatus);
+			
+			btnSubmit.click();
+			driver.switchTo().defaultContent();
+					
+		}
 	 
 	 public String getErrorElement() {
 
 			return (errorElement).getText();
+
+		}
+	 
+	 public Boolean verifyAddStaffButtonDisplayed(String addStaffBtnName) {
+			if (addStaffBtn.getText().contains(addStaffBtnName)) {
+				return addStaffBtn.isDisplayed();
+			} else
+				return false;
 
 		}
 	 
@@ -274,7 +392,7 @@ public WebDriver driver;
 							break;
 						
 						default:
-							throw (new Exception("exception on retrving search"));
+							throw (new Exception("exception on retrieving search"));
 
 						}
 						if (!dataValue.isEmpty()) {

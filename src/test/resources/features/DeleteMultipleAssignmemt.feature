@@ -32,13 +32,13 @@ Feature: Assignment.feature
   Scenario Outline: Validate accept in alert
     Given Admin is in delete alert for "Assignment"
     When Admin clicks "yes" button
-    Then Redirected to assignment page and selected assignment details are deleted from the data table for "multiple"
+    Then Redirected to Assignment page and selected assignment details are deleted from the data table for "multiple"
 
     
 
   Scenario Outline: Validate reject in alert
     Given Admin is in delete alert for "Assignment"
     When Admin clicks "No" button
-    Then Redirected to assignment page and selected assignment details are not deleted from the data table for "multiple"
+    Then Redirected to Assignment page and selected assignment details are deleted from the data table for "multiple"
     
 

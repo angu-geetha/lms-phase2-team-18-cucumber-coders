@@ -51,13 +51,13 @@ Feature: Assignment.feature
   Scenario Outline: Validate admin able to add new assignment with missing data
     Given Admin is in  assignment details popup window
     When Admin enters data for add|edit assignment from "<dataKey>" and "<sheetName>"
-    Then Error message with "<message>" should be displayed from "<dataKey>" and "<sheetName>"
+    Then Error message with "<message>" should be displayed from "<dataKey>" and "<sheetName>" from "<page>" page
 
     Examples: 
-      | datakey                | sheetName           | message                                          |
-      | missing_ProgramName    | assignmentSearchBox | Program Name is missing                          |
-      | missing_batchNo        | assignmentSearchBox | Batch number is missing                          |
-      | missing_assignmentName | assignmentSearchBox | Assignment name is missing                       |
-      | missing_dueDate        | assignmentSearchBox | Assignment due date is missing                   |
-      | missing_gradeBy        | assignmentSearchBox | Grade by is missing                              |
-      | invalid_passedDate     | assignmentSearchBox | Assignment cannot be created for the passed date |
+      | datakey                | sheetName           | message                                          |page|
+      | missing_ProgramName    | assignmentSearchBox | Program Name is missing                          |Assignment|
+      | missing_batchNo        | assignmentSearchBox | Batch number is missing                          |Assignment|
+      | missing_assignmentName | assignmentSearchBox | Assignment name is missing                       |Assignment|
+      | missing_dueDate        | assignmentSearchBox | Assignment due date is missing                   |Assignment|
+      | missing_gradeBy        | assignmentSearchBox | Grade by is missing                              |Assignment|
+      | invalid_passedDate     | assignmentSearchBox | Assignment cannot be created for the passed date |Assignment|

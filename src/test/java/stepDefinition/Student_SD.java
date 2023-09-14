@@ -19,8 +19,8 @@ public class Student_SD {
 	private static WebDriver driver;
 	StudentPage stPg = new StudentPage(driver);
 	DashboardPage dashboardPage = new DashboardPage(driver);
-
-	@Given("Admin is on the dashboard page after login")
+	//Admin land on the dashboard page after login
+	@Given("Admin land on the dashboard page after login")
 	public void admin_is_on_the_dashboard_page_after_login() throws InterruptedException {
 	// open dashboard url
 	dashboardPage.visit_LMS_url();

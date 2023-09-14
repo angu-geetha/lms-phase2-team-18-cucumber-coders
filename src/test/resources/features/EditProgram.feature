@@ -7,24 +7,26 @@ Feature: Verify Edit functionality of Program Page
     Given Admin is in login page
     When Admin enter valid credentials  and clicks login button
     And  Admin clicks program button on the navigation bar 
-    And Admin clicks Edit button in data table
+    And Admin clicks Edit button in data table for "Program"
     Then Admin should see a popup  with  heading "Program details"
 
     
  
-    Scenario Outline: Validate admin able to edit program with mandatory or optional feilds
+    Scenario Outline: Validate admin able to edit program with mandatory or optional fields
     Given Admin is in  program details popup window
-    When Admin enters data for editing program from "<dataKey>" and "<sheetName>"
-    Then Admin should see program details is updated in the data table from "<dataKey>" and "<sheetName>"
+    When Admin enters data for add|edit program from "<dataKey>" and "<sheetName>"
+    Then Admin should see new program details is added in the data table from "<dataKey>" and "<sheetName>"
 
     Examples: 
       | datakey              | sheetName           |
       | mandatory_valid      | programSearchBox |
       | valid_data_allfields | programSearchBox |
 
-  Scenario Outline: Validate admin able to add new program with invalid data
+  Scenario Outline: Validate admin able to edit existing program with invalid data
     Given Admin is in  program details popup window
-    When Admin enters data for add program from "<dataKey>" and "<sheetName>"
+
+    When Admin enters data for add|edit program from "<dataKey>" and "<sheetName>"
+
     Then Error message should appear in alert of "Program" page
 
     Examples: 
@@ -35,8 +37,8 @@ Feature: Verify Edit functionality of Program Page
 
   Scenario Outline: Validate admin able to add new program with missing data
     Given Admin is in  program details popup window
-    When Admin enters data for add program from "<dataKey>" and "<sheetName>"
-    Then Error message with "<message>" should be displayed from "<dataKey>" and "<sheetName>"
+    When Admin enters data for add|edit program from "<dataKey>" and "<sheetName>"
+    Then Error message with "<message>" should be displayed from "<dataKey>" and "<sheetName>" from "<page>" page
 
     Examples: 
      | datakey               		 | sheetName          	| message                        |
@@ -48,7 +50,7 @@ Feature: Verify Edit functionality of Program Page
       
     Scenario Outline: Validate admin able to see the success message after adding a new program
     Given Admin is in  program details popup window
-    When Admin enters data for add program from "<dataKey>" and "<sheetName>"
+    When Admin enters data for add|edit program from "<dataKey>" and "<sheetName>"
     Then Admin should see "<successUpdateMessage>"  alert message
  		Examples: 
       | datakey              | sheetName        | successUpdateMessage |
