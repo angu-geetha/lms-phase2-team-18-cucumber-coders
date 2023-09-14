@@ -1,4 +1,3 @@
-#Author: your.email@your.domain.com
 #Keywords Summary :
 #Feature: List of scenarios.
 #Scenario: Business rule through list of steps with arguments.
@@ -42,7 +41,7 @@ Feature: Program Page Verification
 
     Examples: 
       | UrlName    |
-      | Assignment |
+      | Program |
       
       
     Scenario Outline: Verify delete icon below the header

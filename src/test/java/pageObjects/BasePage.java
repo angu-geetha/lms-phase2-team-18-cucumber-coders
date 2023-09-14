@@ -234,9 +234,16 @@ public class BasePage {
 				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
 
 				switch (page) {
-				case "Assignment":
+				case "Assignment": case "User":
 					if (cells.size() > 0 && cells.get(5) != null) {
 						cells.get(5).findElement(By.id("id of the edit button")).isDisplayed();
+					} else if (cells.size() < 0) {
+						throw (new Exception("exception on row edit"));
+					}
+					break;
+				case "Program":
+					if (cells.size() > 0 && cells.get(4) != null) {
+						cells.get(4).findElement(By.id("id of the edit button")).isDisplayed();
 					} else if (cells.size() < 0) {
 						throw (new Exception("exception on row edit"));
 					}
@@ -259,14 +266,21 @@ public class BasePage {
 				WebElement rowElement = (WebElement) iterator.next();
 				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
 				switch (page) {
-				case "Assignment":
+				case "Assignment":case "User":
 					if (cells.size() > 0 && cells.get(5) != null) {
 						cells.get(5).findElement(By.id("id of the Delete button")).isDisplayed();
 					} else if (cells.size() > 0) {
 						throw (new Exception("exception on row delete"));
 					}
 					break;
-
+				case "Program":
+					if (cells.size() > 0 && cells.get(4) != null) {
+						cells.get(4).findElement(By.id("id of the Delete button")).isDisplayed();
+					} else if (cells.size() > 0) {
+						throw (new Exception("exception on row delete"));
+					}
+					break;
+				
 				default:
 					throw (new Exception("exception on row delete"));
 				}
@@ -510,7 +524,7 @@ public class BasePage {
 				List<WebElement> cells = rowElement.findElements(By.tagName("td"));
 
 				switch (page) {
-				case "Assignment":
+				case "Assignment":case "Program":case "User":
 					if (cells.size() > 0 && cells.get(0) != null) {
 						cells.get(0).findElement(By.id("id of the check box button")).isDisplayed();
 						if (cells.get(0).findElement(By.id("id of the check box button")).isDisplayed()) {
@@ -527,6 +541,7 @@ public class BasePage {
 
 					}
 					break;
+					
 
 				default:
 					throw (new Exception("exception on row Delete"));
