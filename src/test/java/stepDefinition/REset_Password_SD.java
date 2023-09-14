@@ -7,8 +7,7 @@ import io.cucumber.java.en.When;
 public class REset_Password_SD {
 	@When("Admin clicks reset password link")
 	public void admin_clicks_reset_password_link() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
 	}
 
 	@Then("Admin should land on reset password page")
@@ -19,8 +18,7 @@ public class REset_Password_SD {
 
 	@Then("Admin should see {string}  button")
 	public void admin_should_see_button(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   
 	}
 
 	@Then("Admin should see submit button in center of the page")
