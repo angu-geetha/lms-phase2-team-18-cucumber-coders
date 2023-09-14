@@ -19,7 +19,7 @@ import io.cucumber.junit.CucumberOptions;
 					
 			
 
-			glue= "stepdefinitions" //location of step definition files
+			glue = { "stepDefinition", "utilities" } //location of step definition files
 		)
 public class TestRunner {
 	

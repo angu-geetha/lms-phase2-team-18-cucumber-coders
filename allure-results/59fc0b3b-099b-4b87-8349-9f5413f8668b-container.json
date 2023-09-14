@@ -1,1 +1,0 @@
-{"uuid":"59fc0b3b-099b-4b87-8349-9f5413f8668b","name":"Scenario Outline: To verify login with InValid username and  Invalid password and gets the result \"<result>\"","children":["a543314a-78d1-4a39-8622-23650e77611e"],"befores":[],"afters":[],"start":1694619669482,"stop":1694619669488}
