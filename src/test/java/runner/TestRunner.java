@@ -13,6 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 					"junit:target/cucumber-reports/Cucumber.xml",
 					"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 					"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+					"rerun:target/failedrerun.txt",
 					}, //reporting purpose
 			monochrome=false,  //console output color
 			features = {"src/test/resources/features/",
